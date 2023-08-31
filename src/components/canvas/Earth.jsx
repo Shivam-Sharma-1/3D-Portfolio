@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
 
@@ -21,9 +22,13 @@ function EarthCanvas() {
 	return (
 		<Canvas
 			shadows
-			frameloop="demand"
 			dpr={[1, 2]}
-			gl={{ preserveDrawingBuffer: true }}
+			gl={{
+				preserveDrawingBuffer: true,
+				antialias: true,
+				toneMappingExposure: 0.7,
+				outputEncoding: THREE.sRGBEncoding
+			}}
 			camera={{
 				fov: 45,
 				near: 0.1,
