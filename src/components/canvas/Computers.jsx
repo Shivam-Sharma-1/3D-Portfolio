@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import { Preload, useGLTF, OrbitControls } from "@react-three/drei";
+import * as THREE from "three";
+
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 import CanvasLoader from "../Loader";
@@ -50,11 +52,15 @@ const ComputersCanvas = () => {
 
 	return (
 		<Canvas
-			frameloop="demand"
 			shadows
 			dpr={[1, 2]}
 			camera={{ position: [20, 3, 5], fov: 25 }}
-			gl={{ antialias: true }}
+			gl={{
+				preserveDrawingBuffer: true,
+				antialias: true,
+				toneMappingExposure: 0.7,
+				outputEncoding: THREE.sRGBEncoding
+			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls

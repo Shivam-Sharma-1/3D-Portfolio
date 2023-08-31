@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import {
 	Decal,
@@ -40,9 +41,13 @@ const Ball = (props) => {
 const BallCanvas = ({ icon }) => {
 	return (
 		<Canvas
-			frameloop="demand"
 			dpr={[1, 2]}
-			gl={{ preserveDrawingBuffer: true }}
+			gl={{
+				preserveDrawingBuffer: true,
+				antialias: true,
+				toneMappingExposure: 0.7,
+				outputEncoding: THREE.sRGBEncoding
+			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls enableZoom={false} />
