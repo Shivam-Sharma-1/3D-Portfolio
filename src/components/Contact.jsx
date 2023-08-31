@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -13,12 +14,50 @@ function Contact() {
 		email: "",
 		message: ""
 	});
-
 	const [loading, setLoading] = useState(false);
 
-	const handleChange = (e) => {};
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setForm({ ...form, [name]: value });
+	};
 
-	const handleSubmit = (e) => {};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setLoading(true);
+
+		emailjs
+			.send(
+				"service_v24oiak",
+				"template_sqwax0b",
+				{
+					from_name: form.name,
+					to_name: "Shivam Sharma",
+					from_email: form.email,
+					to_email: "shivamsharma77607@gmail.com",
+					message: form.message
+				},
+				"ywtbnZ4k68zCCsf_2"
+			)
+			.then(
+				() => {
+					setLoading(false);
+					alert(
+						"Thank you for your message. I will get back to you soon."
+					);
+
+					setForm({
+						name: "",
+						email: "",
+						message: ""
+					});
+				},
+				(error) => {
+					setLoading(false);
+					console.log(error);
+					alert("Something went wrong. Please try again later.");
+				}
+			);
+	};
 
 	return (
 		<div
