@@ -59,7 +59,7 @@ function Feedback() {
 				</motion.div>
 			</div>
 			<div
-				className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}
+				className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 justify-center`}
 			>
 				{testimonials.map((testimonial, index) => (
 					<FeedbackCard

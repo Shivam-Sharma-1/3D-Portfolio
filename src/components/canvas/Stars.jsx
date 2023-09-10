@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as THREE from "three";
 import * as random from "maath/random/dist/maath-random.esm";
+import CanvasLoader from "../Loader";
 
 function Stars(props) {
 	const ref = useRef();
@@ -49,7 +50,7 @@ function StarsCanvas() {
 					outputEncoding: THREE.sRGBEncoding
 				}}
 			>
-				<Suspense fallback={null}>
+				<Suspense fallback={<CanvasLoader />}>
 					<Stars />
 				</Suspense>
 
