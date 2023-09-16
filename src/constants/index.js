@@ -8,22 +8,29 @@ import {
 	html,
 	css,
 	reactjs,
-	redux,
 	tailwind,
 	nodejs,
 	mongodb,
 	git,
 	figma,
-	docker,
-	meta,
-	starbucks,
-	tesla,
-	shopify,
-	carrent,
-	jobit,
-	tripguide,
-	threejs
+	threejs,
+	nextjs,
+	styledComponents,
+	expressjs,
+	firebase,
+	nextauthjs,
+	prisma,
+	c,
+	java,
+	python,
+	framerMotion,
+	postman,
+	netflixClone,
+	vanLife,
+	spookyRun
 } from "../assets";
+
+import GDSCLogo from "../assets/company/gdsc-logo.svg";
 
 export const navLinks = [
 	{
@@ -41,31 +48,31 @@ export const navLinks = [
 ];
 
 const services = [
+	// {
+	// 	title: "Full Stack Developer",
+	// 	icon: web
+	// },
 	{
-		title: "Web Developer",
-		icon: web
-	},
-	{
-		title: "React Native Developer",
+		title: "Frontend Developer",
 		icon: mobile
-	},
-	{
-		title: "Backend Developer",
-		icon: backend
-	},
-	{
-		title: "Content Creator",
-		icon: creator
 	}
+	// {
+	// 	title: "Backend Developer",
+	// 	icon: backend
+	// }
+	// {
+	// 	title: "Content Creator",
+	// 	icon: creator
+	// }
 ];
 
 const technologies = [
 	{
-		name: "HTML 5",
+		name: "HTML5",
 		icon: html
 	},
 	{
-		name: "CSS 3",
+		name: "CSS3",
 		icon: css
 	},
 	{
@@ -77,19 +84,31 @@ const technologies = [
 		icon: typescript
 	},
 	{
-		name: "React JS",
+		name: "React",
 		icon: reactjs
 	},
 	{
-		name: "Redux Toolkit",
-		icon: redux
+		name: "Next.js",
+		icon: nextjs
 	},
 	{
-		name: "Tailwind CSS",
+		name: "Three.js",
+		icon: threejs
+	},
+	{
+		name: "Styled-Components",
+		icon: styledComponents
+	},
+	{
+		name: "TailwindCSS",
 		icon: tailwind
 	},
 	{
-		name: "Node JS",
+		name: "Framer-motion",
+		icon: framerMotion
+	},
+	{
+		name: "Node.js",
 		icon: nodejs
 	},
 	{
@@ -97,43 +116,54 @@ const technologies = [
 		icon: mongodb
 	},
 	{
-		name: "Three JS",
-		icon: threejs
+		name: "Express.js",
+		icon: expressjs
+	},
+	{
+		name: "Firebase",
+		icon: firebase
+	},
+	{
+		name: "NextAuth.js",
+		icon: nextauthjs
+	},
+	{
+		name: "Prisma",
+		icon: prisma
+	},
+	{
+		name: "C",
+		icon: c
+	},
+	{
+		name: "Java",
+		icon: java
+	},
+	{
+		name: "Python",
+		icon: python
 	},
 	{
 		name: "git",
 		icon: git
 	},
 	{
-		name: "figma",
-		icon: figma
+		name: "Postman",
+		icon: postman
 	},
 	{
-		name: "docker",
-		icon: docker
+		name: "figma",
+		icon: figma
 	}
 ];
 
 const experiences = [
 	{
-		title: "React.js Developer",
-		company_name: "Starbucks",
-		icon: starbucks,
-		iconBg: "#383E56",
-		date: "March 2020 - April 2021",
-		points: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
-			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
-			"Participating in code reviews and providing constructive feedback to other developers."
-		]
-	},
-	{
-		title: "React Native Developer",
-		company_name: "Tesla",
-		icon: tesla,
+		title: "Full Stack Developer",
+		company_name: "Tech Lead at GDSC MVJCE",
+		icon: GDSCLogo,
 		iconBg: "#E6DEDD",
-		date: "Jan 2021 - Feb 2022",
+		date: "July 2023 - Present",
 		points: [
 			"Developing and maintaining web applications using React.js and other related technologies.",
 			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -142,24 +172,11 @@ const experiences = [
 		]
 	},
 	{
-		title: "Web Developer",
-		company_name: "Shopify",
-		icon: shopify,
-		iconBg: "#383E56",
-		date: "Jan 2022 - Jan 2023",
-		points: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
-			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
-			"Participating in code reviews and providing constructive feedback to other developers."
-		]
-	},
-	{
-		title: "Full stack Developer",
-		company_name: "Meta",
-		icon: meta,
+		title: "Frontend Developer",
+		company_name: "Tech team member at GDSC MVJCE",
+		icon: GDSCLogo,
 		iconBg: "#E6DEDD",
-		date: "Jan 2023 - Present",
+		date: "February 2022 - July 2023",
 		points: [
 			"Developing and maintaining web applications using React.js and other related technologies.",
 			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -167,6 +184,32 @@ const experiences = [
 			"Participating in code reviews and providing constructive feedback to other developers."
 		]
 	}
+	// {
+	// 	title: "Web Developer",
+	// 	company_name: "Shopify",
+	// 	icon: shopify,
+	// 	iconBg: "#383E56",
+	// 	date: "Jan 2022 - Jan 2023",
+	// 	points: [
+	// 		"Developing and maintaining web applications using React.js and other related technologies.",
+	// 		"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+	// 		"Implementing responsive design and ensuring cross-browser compatibility.",
+	// 		"Participating in code reviews and providing constructive feedback to other developers."
+	// 	]
+	// },
+	// {
+	// 	title: "Full stack Developer",
+	// 	company_name: "Meta",
+	// 	icon: meta,
+	// 	iconBg: "#E6DEDD",
+	// 	date: "Jan 2023 - Present",
+	// 	points: [
+	// 		"Developing and maintaining web applications using React.js and other related technologies.",
+	// 		"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+	// 		"Implementing responsive design and ensuring cross-browser compatibility.",
+	// 		"Participating in code reviews and providing constructive feedback to other developers."
+	// 	]
+	// }
 ];
 
 const testimonials = [
@@ -198,67 +241,71 @@ const testimonials = [
 
 const projects = [
 	{
-		name: "Car Rent",
+		name: "Netflix Clone",
 		description:
-			"Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+			"Netflix-Clone is a fully responsive web application that replicates the popular streaming platform Netflix. It is built using Next.js, Prisma, React, NextAuth.js, Tailwind CSS, MongoDB and TypeScript. This project aims to showcase the implementation of these technologies to create a feature-rich clone of Netflix.",
 		tags: [
 			{
-				name: "react",
+				name: "next.js",
 				color: "blue-text-gradient"
+			},
+			{
+				name: "typescript",
+				color: "green-text-gradient"
+			},
+			{
+				name: "tailwindcss",
+				color: "pink-text-gradient"
 			},
 			{
 				name: "mongodb",
-				color: "green-text-gradient"
-			},
-			{
-				name: "tailwind",
-				color: "pink-text-gradient"
+				color: "white-text-gradient"
 			}
 		],
-		image: carrent,
-		source_code_link: "https://github.com/"
+		image: netflixClone,
+		source_code_link: "https://github.com/Shivam-Sharma-1/Netflix-Clone.git"
 	},
 	{
-		name: "Job IT",
+		name: "Van-Life",
 		description:
-			"Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+			"VanLife is a user-friendly website built with React that simplifies van searches. It is a web app used to browse different types of vans. It allows users to log in and offers convenient tag-based filtering for easy browsing.",
 		tags: [
 			{
 				name: "react",
 				color: "blue-text-gradient"
 			},
 			{
-				name: "restapi",
+				name: "mirage.js",
 				color: "green-text-gradient"
 			},
 			{
-				name: "scss",
+				name: "firebase-firestore",
 				color: "pink-text-gradient"
 			}
 		],
-		image: jobit,
-		source_code_link: "https://github.com/"
+		image: vanLife,
+		source_code_link: "https://github.com/Shivam-Sharma-1/Van-Life.git"
 	},
 	{
-		name: "Trip Guide",
+		name: "Spooky-Run",
 		description:
-			"A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+			"Spooky Run is a web based 2D arcade style game that allows players to play as a lost dog finding its way back home through a spooky forest. The game is built using vanilla JavaScript and utilizes HTML5 and the 'canvas' element to render graphics and handle user input.",
 		tags: [
 			{
-				name: "nextjs",
+				name: "html5",
 				color: "blue-text-gradient"
 			},
 			{
-				name: "supabase",
+				name: "css3",
 				color: "green-text-gradient"
 			},
 			{
-				name: "css",
+				name: "javascript",
 				color: "pink-text-gradient"
 			}
 		],
-		image: tripguide,
-		source_code_link: "https://github.com/"
+		image: spookyRun,
+		source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git"
 	}
 ];
 

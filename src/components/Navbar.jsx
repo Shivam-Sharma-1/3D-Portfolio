@@ -34,7 +34,7 @@ const Navbar = () => {
 						Shivam Sharma &nbsp;
 						<span className="sm:block hidden">
 							{" "}
-							| Full Stack Developer
+							| Frontend Developer
 						</span>
 					</p>
 				</Link>
