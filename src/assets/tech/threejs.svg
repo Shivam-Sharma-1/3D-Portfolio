@@ -1,11 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg fill="none" stroke-linecap="square" stroke-miterlimit="10" version="1.1" viewBox="0 0 226.77 226.77" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(8.964 4.2527)" fill-rule="evenodd" stroke="#000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4">
-  <path d="m63.02 200.61-43.213-174.94 173.23 49.874z"/>
-  <path d="m106.39 50.612 21.591 87.496-86.567-24.945z"/>
-  <path d="m84.91 125.03-10.724-43.465 43.008 12.346z"/>
-  <path d="m63.458 38.153 10.724 43.465-43.008-12.346z"/>
-  <path d="m149.47 62.93 10.724 43.465-43.008-12.346z"/>
-  <path d="m84.915 125.06 10.724 43.465-43.008-12.346z"/>
- </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:10;">
+    <g transform="matrix(2.25096,0,0,2.25096,256.253,256.48)">
+        <g id="Three.js_Icon.svg" transform="matrix(1,0,0,1,-113.385,-113.385)">
+            <g transform="matrix(1,0,0,1,8.964,4.2527)">
+                <path d="M63.02,200.61L19.807,25.67L193.037,75.544L63.02,200.61Z" style="fill:none;stroke:black;stroke-width:4px;"/>
+                <path d="M106.39,50.612L127.981,138.108L41.414,113.163L106.39,50.612Z" style="fill:none;stroke:black;stroke-width:4px;"/>
+                <path d="M84.91,125.03L74.186,81.565L117.194,93.911L84.91,125.03Z" style="fill:none;stroke:black;stroke-width:4px;"/>
+                <path d="M63.458,38.153L74.182,81.618L31.174,69.272L63.458,38.153Z" style="fill:none;stroke:black;stroke-width:4px;"/>
+                <path d="M149.47,62.93L160.194,106.395L117.186,94.049L149.47,62.93Z" style="fill:none;stroke:black;stroke-width:4px;"/>
+                <path d="M84.915,125.06L95.639,168.525L52.631,156.179L84.915,125.06Z" style="fill:none;stroke:black;stroke-width:4px;"/>
+            </g>
+        </g>
+        <g id="Three.js_Icon.svg1" serif:id="Three.js_Icon.svg">
+        </g>
+    </g>
 </svg>
