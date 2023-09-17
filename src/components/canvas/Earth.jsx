@@ -27,7 +27,7 @@ function EarthCanvas() {
 				preserveDrawingBuffer: true,
 				antialias: true,
 				toneMappingExposure: 0.7,
-				outputEncoding: THREE.sRGBEncoding
+				outputColorSpace: THREE.SRGBColorSpace
 			}}
 			camera={{
 				fov: 45,

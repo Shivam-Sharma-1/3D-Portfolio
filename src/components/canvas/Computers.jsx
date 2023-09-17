@@ -59,7 +59,8 @@ const ComputersCanvas = () => {
 				preserveDrawingBuffer: true,
 				antialias: true,
 				toneMappingExposure: 0.7,
-				outputEncoding: THREE.sRGBEncoding
+				outputColorSpace: THREE.SRGBColorSpace,
+				alpha: true
 			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
