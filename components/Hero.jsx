@@ -13,11 +13,11 @@ const Hero = () => {
 				</div>
 
 				<div>
-					<h1 className={`heroHeadText text-white`}>
+					<h1 className={`heroHeadText`}>
 						Hi, I&apos;m{" "}
 						<span className="text-primary">Shivam</span>
 					</h1>
-					<p className={`heroSubText mt-2 text-white-100`}>
+					<p className={`heroSubText mt-2`}>
 						React.js/Next.js developer | Frontend developer |
 						<br className="sm:block hidden" />
 						Technical Team Lead at GDSC MVJCE{" "}
