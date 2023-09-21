@@ -131,16 +131,10 @@ const experiences = [
 		iconBg: "#E6DEDD",
 		date: "July 2023 - Present",
 		points: [
-			"Currently serving as the Tech Lead of GDSC, responsible for guiding and overseeing the technical aspects of the organization.",
-			"Led and managed the organization's induction programs, ensuring that new members are effectively onboarded and aligned with GDSC's mission and goals.",
-			"Led the development and creation of the GDSC MVJCE website, showcasing technical prowess and leadership in delivering a prominent online presence for the organization.",
-			"Spearheaded the promotional campaigns for GDSC's various events, driving engagement and participation within the community.",
-			"Demonstrated strong leadership by fostering collaboration among cross-functional teams, including designers, developers, and project managers, to deliver high-quality projects and events.",
-			"Provided technical guidance and mentorship to team members, helping them develop their skills and contribute effectively to the organization's projects.",
-			"Encouraged a culture of continuous learning and innovation within the organization, staying updated on the latest industry trends and technologies.",
-			"Actively engaged with the GDSC community, fostering a sense of belonging and encouraging knowledge sharing among members.",
-			"Played a key role in planning and executing GDSC's events, from concept to completion, ensuring their success and growth.",
-			"Participated in strategic decision-making processes for GDSC, helping shape the organization's future direction and goals."
+			"Currently serving as the Tech Lead of GDSC, responsible for guiding technical aspects, fostering collaboration, and contributing to strategic decisions.",
+			"Led induction programs, ensured new member alignment with GDSC's mission, and provided technical mentorship.",
+			"Developed GDSC MVJCE website, enhancing the organization's online visibility.",
+			"Spearheaded promotional campaigns, actively engaged with the GDSC community, and played a key role in planning and executing events."
 		]
 	},
 	{
@@ -150,41 +144,12 @@ const experiences = [
 		iconBg: "#E6DEDD",
 		date: "February 2022 - July 2023",
 		points: [
-			"Successfully planned and executed induction programs for new members, providing them with essential information about the organization's goals, values, and objectives.",
-			"Demonstrated expertise in web development by conducting workshops on CSS, equipping participants with practical skills and knowledge in web design and styling.",
-			"Played a crucial role in the promotion and campaigning of various GDSC events, contributing to their success and ensuring maximum participation.",
-			"Actively collaborated with cross-functional teams, including designers, product managers, and fellow developers, to deliver high-quality projects and events, fostering a culture of teamwork and innovation.",
-			"Assisted in various workshops by providing technical support, troubleshooting issues, and ensuring a smooth learning experience for participants.",
-			"Engaged with the GDSC community by actively participating in discussions, sharing knowledge, and fostering a sense of belonging among members.",
-			"Assisted in the planning and management of various GDSC events, from ideation to execution, contributing to their success and growth."
+			"Successfully planned and executed induction programs, providing new members with crucial information about the organization's goals and values.",
+			"Demonstrated web development expertise by conducting CSS workshops, equipping participants with practical web design and styling skills.",
+			"Played a crucial role in promoting GDSC events and actively collaborated with cross-functional teams to deliver high-quality projects, fostering teamwork and innovation.",
+			"Actively engaged with the GDSC community, assisted in workshops, and contributed to planning and managing GDSC events, ensuring their success and growth."
 		]
 	}
-	// {
-	// 	title: "Web Developer",
-	// 	company_name: "Shopify",
-	// 	icon: shopify,
-	// 	iconBg: "#383E56",
-	// 	date: "Jan 2022 - Jan 2023",
-	// 	points: [
-	// 		"Developing and maintaining web applications using React.js and other related technologies.",
-	// 		"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-	// 		"Implementing responsive design and ensuring cross-browser compatibility.",
-	// 		"Participating in code reviews and providing constructive feedback to other developers."
-	// 	]
-	// },
-	// {
-	// 	title: "Full stack Developer",
-	// 	company_name: "Meta",
-	// 	icon: meta,
-	// 	iconBg: "#E6DEDD",
-	// 	date: "Jan 2023 - Present",
-	// 	points: [
-	// 		"Developing and maintaining web applications using React.js and other related technologies.",
-	// 		"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-	// 		"Implementing responsive design and ensuring cross-browser compatibility.",
-	// 		"Participating in code reviews and providing constructive feedback to other developers."
-	// 	]
-	// }
 ];
 
 const testimonials = [

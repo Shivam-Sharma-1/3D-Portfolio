@@ -85,14 +85,11 @@ function Works() {
 					variants={fadeIn("", "", 0.1, 1)}
 					className="mt-3 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] max-w-3xl leading-[30px]"
 				>
-					The projects listed below provide tangible demonstrations of
-					my skills and expertise gained through practical experience.
-					Each project is accompanied by a brief description and
-					includes links to the corresponding code repositories and
-					live demos. These examples exemplify my proficiency in
-					tackling intricate challenges, adapting to various
-					technologies, and efficiently overseeing project development
-					from inception to completion.
+					These projects showcase my practical skills and experience,
+					each with descriptions and links to code repositories and
+					live demos. They demonstrate my ability to handle complex
+					challenges, adapt to different technologies, and oversee
+					projects from start to finish.
 				</motion.p>
 			</div>
 
