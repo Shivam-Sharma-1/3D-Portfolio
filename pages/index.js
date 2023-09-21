@@ -10,16 +10,6 @@ import {
 } from "@/components";
 import Head from "next/head";
 
-// export const metadata = {
-// 	viewport: {
-// 		width: "device-width",
-// 		height: "device-height",
-// 		initialScale: 1,
-// 		maximumScale: 1,
-// 		minimumScale: 1,
-// 		title: "Portfolio | Shivam Sharma"
-// 	}
-// };
 const App = () => {
 	return (
 		<>
@@ -31,7 +21,7 @@ const App = () => {
 				/>
 			</Head>
 
-			<div className="relative z-0 bg-primary">
+			<div className="relative z-0">
 				<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
 					<Navbar />
 					<Hero />

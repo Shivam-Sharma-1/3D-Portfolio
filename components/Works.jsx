@@ -23,7 +23,7 @@ function ProjectCard({
 					scale: 1,
 					speed: 450
 				}}
-				className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full"
 			>
 				<div className="relative w-full h-[230px]">
 					<img
@@ -49,8 +49,10 @@ function ProjectCard({
 				</div>
 
 				<div className="mt-5">
-					<h3 className="text-white font-bold text-[24px]">{name}</h3>
-					<p className="mt-2 text-secondary text-[14px]">
+					<h3 className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-bold text-[24px]">
+						{name}
+					</h3>
+					<p className="mt-2 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[14px]">
 						{description}
 					</p>
 				</div>
@@ -81,7 +83,7 @@ function Works() {
 			<div className="w-full flex">
 				<motion.p
 					variants={fadeIn("", "", 0.1, 1)}
-					className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+					className="mt-3 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] max-w-3xl leading-[30px]"
 				>
 					The projects listed below provide tangible demonstrations of
 					my skills and expertise gained through practical experience.

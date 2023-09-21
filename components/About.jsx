@@ -18,7 +18,7 @@ const ServiceCard = ({ index, title, icon }) => (
 					scale: 1,
 					speed: 450
 				}}
-				className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
 			>
 				<img
 					src={icon}
@@ -26,7 +26,7 @@ const ServiceCard = ({ index, title, icon }) => (
 					className="w-16 h-16 object-contain"
 				/>
 
-				<h3 className="text-white text-[20px] font-bold text-center w-[80%]">
+				<h3 className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[20px] font-bold text-center w-[80%]">
 					{title}
 				</h3>
 			</div>
@@ -44,7 +44,7 @@ const About = () => {
 
 			<motion.p
 				variants={fadeIn("", "", 0.1, 1)}
-				className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] max-w-3xl leading-[30px]"
 			>
 				Hello! I&apos;m Shivam Sharma, a passionate web developer and
 				problem solver. Currently, I&apos;m the Tech Team Lead at GDSC

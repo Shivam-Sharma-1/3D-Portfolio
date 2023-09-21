@@ -10,15 +10,33 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import { styles } from "@/constants/styles";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
-function ExperienceCard({ experience }) {
+function ExperienceCard({ experience, theme }) {
 	return (
 		<VerticalTimelineElement
 			contentStyle={{
-				background: "#1d1836",
-				color: "#fff"
+				background: theme
+					? theme === "dark"
+						? "#212134"
+						: "#e0eaf0"
+					: "#212134",
+				color: theme
+					? theme === "dark"
+						? "#e5e6e9"
+						: "#2e384d"
+					: "#e5e6e9"
 			}}
-			contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+			contentArrowStyle={{
+				borderRight: `7px solid ${
+					theme
+						? theme !== "dark"
+							? "#e0eaf0"
+							: "#212134"
+						: "#212134"
+				}`
+			}}
 			date={experience.date}
 			iconStyle={{ background: experience.iconBg }}
 			icon={
@@ -32,11 +50,11 @@ function ExperienceCard({ experience }) {
 			}
 		>
 			<div>
-				<h3 className="text-white text-[24px] font-bold">
+				<h3 className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[24px] font-bold">
 					{experience.title}
 				</h3>
 				<p
-					className="text-secondary text-[16px] font-semibold"
+					className="dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[16px] font-semibold"
 					style={{ margin: 0 }}
 				>
 					{experience.company_name}
@@ -47,7 +65,7 @@ function ExperienceCard({ experience }) {
 				{experience.points.map((point, index) => (
 					<li
 						key={`experience-point-${index}`}
-						className="text-white-100 text-[14px] pl-1 tracking-wider"
+						className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[14px] pl-1 tracking-wider"
 					>
 						{point}
 					</li>
@@ -58,6 +76,18 @@ function ExperienceCard({ experience }) {
 }
 
 function Experience() {
+	const { systemTheme, theme, setTheme } = useTheme();
+	const [mounted, setMounted] = useState(false);
+
+	// useEffect only runs on the client, so now we can safely show the UI
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	if (!mounted) {
+		return null;
+	}
+
 	return (
 		<>
 			<motion.div variants={textVariant()}>
@@ -70,11 +100,14 @@ function Experience() {
 			</motion.div>
 
 			<div className="mt-20 flex flex-col">
-				<VerticalTimeline>
+				<VerticalTimeline
+					lineColor={theme === "dark" ? "#7e8c9f" : "#8c9db1"}
+				>
 					{experiences.map((experience, index) => (
 						<ExperienceCard
 							key={`experience-${index}`}
 							experience={experience}
+							theme={theme}
 						/>
 					))}
 				</VerticalTimeline>

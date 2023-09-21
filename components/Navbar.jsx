@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { navLinks } from "../constants";
 import Link from "next/link";
-import { styles } from "@/constants/styles";
+import ThemeButton from "./ThemeButton";
 
 const Navbar = () => {
 	const [active, setActive] = useState("");
@@ -10,7 +10,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`paddingX w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+			className={`paddingX w-full flex items-center py-5 fixed top-0 z-20 dark:bg-bgPrimaryDark bg-bgPrimaryLight`}
 		>
 			<div className="w-full flex justify-between items-center max-w-7xl mx-auto">
 				<Link
@@ -27,7 +27,7 @@ const Navbar = () => {
 						className="w-9 h-9 object-contain
                         rounded-full"
 					/>
-					<p className="text-white text-[18px] font-bold cursor-pointer flex ">
+					<p className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[18px] font-bold cursor-pointer flex ">
 						Shivam Sharma &nbsp;
 						<span className="sm:block hidden">
 							{" "}
@@ -36,20 +36,25 @@ const Navbar = () => {
 					</p>
 				</Link>
 
-				<ul className="list-none hidden sm:flex flex-row gap-10">
+				<ul className="list-none hidden sm:flex flex-row gap-10 flex items-center">
 					{navLinks.map((nav) => (
 						<li
 							key={nav.id}
 							className={`${
 								active === nav.title
-									? "text-white"
-									: "text-secondary"
-							} hover:text-white text-[18px] font-medium cursor-pointer`}
+									? "text-secondary"
+									: "dark:text-ctnPrimaryDark text-ctnPrimaryLight"
+							} hover:text-quaternary text-[18px] font-medium cursor-pointer`}
 							onClick={() => setActive(nav.title)}
 						>
 							<a href={`#${nav.id}`}>{nav.title}</a>
 						</li>
 					))}
+					<li
+						className={`text-white hover:text-white text-[18px] font-medium cursor-pointer`}
+					>
+						<ThemeButton />
+					</li>
 				</ul>
 
 				<div className="sm:hidden flex flex-1 justify-end items-center">
@@ -71,8 +76,8 @@ const Navbar = () => {
 									key={nav.id}
 									className={`font-poppins font-medium cursor-pointer text-[16px] ${
 										active === nav.title
-											? "text-white"
-											: "text-secondary"
+											? "text-secondary"
+											: "dark:text-ctnPrimaryDark text-ctnPrimaryLight"
 									}`}
 									onClick={() => {
 										setToggle(!toggle);
