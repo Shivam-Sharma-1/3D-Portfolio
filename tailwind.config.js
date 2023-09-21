@@ -39,7 +39,7 @@ module.exports = {
 			backgroundImage: {
 				"hero-pattern": "url('/assets/herobg.png')",
 				bgPrimaryDark:
-					"linear-gradient(90deg, rgba(24,24,38,1) 0%, rgba(35,35,56,1) 50%, rgba(24,24,38,1) 100%)"
+					"linear-gradient(90deg, rgba(24,24,38,1) 0%, rgba(32,32,50,1) 50%, rgba(24,24,38,1) 100%)"
 			},
 			screens: {
 				xs: "320px",
