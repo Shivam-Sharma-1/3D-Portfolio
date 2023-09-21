@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-	content: ["./src/**/*.{js,jsx}"],
+module.exports = {
 	mode: "jit",
+	content: [
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./app/**/*.{js,ts,jsx,tsx,mdx}"
+	],
+	purge: [
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./app/**/*.{js,ts,jsx,tsx,mdx}"
+	],
 	theme: {
 		extend: {
 			colors: {
@@ -15,11 +24,15 @@ export default {
 			boxShadow: {
 				card: "0px 35px 120px -15px #211e35"
 			},
-			screens: {
-				xs: "450px"
-			},
 			backgroundImage: {
-				"hero-pattern": "url('/src/assets/herobg.png')"
+				"hero-pattern": "url('/assets/herobg.png')"
+			},
+			screens: {
+				xs: "320px",
+				sm: "640px",
+				md: "768px",
+				lg: "1024px",
+				xl: "1280px"
 			}
 		}
 	},

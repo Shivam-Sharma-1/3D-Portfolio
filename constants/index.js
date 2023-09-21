@@ -1,37 +1,3 @@
-import {
-	mobile,
-	backend,
-	creator,
-	web,
-	javascript,
-	typescript,
-	html,
-	css,
-	reactjs,
-	tailwind,
-	nodejs,
-	mongodb,
-	git,
-	figma,
-	threejs,
-	nextjs,
-	styledComponents,
-	expressjs,
-	firebase,
-	nextauthjs,
-	prisma,
-	c,
-	java,
-	python,
-	framerMotion,
-	postman,
-	netflixClone,
-	vanLife,
-	spookyRun
-} from "../assets";
-
-import GDSCLogo from "../assets/company/gdsc-logo.svg";
-
 export const navLinks = [
 	{
 		id: "about",
@@ -54,7 +20,7 @@ const services = [
 	// },
 	{
 		title: "Frontend Developer",
-		icon: mobile
+		icon: "/assets/web.png"
 	}
 	// {
 	// 	title: "Backend Developer",
@@ -69,119 +35,128 @@ const services = [
 const technologies = [
 	{
 		name: "HTML5",
-		icon: html
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "CSS3",
-		icon: css
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "JavaScript",
-		icon: javascript
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "TypeScript",
-		icon: typescript
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "React",
-		icon: reactjs
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Next.js",
-		icon: nextjs
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Three.js",
-		icon: threejs
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Styled-Components",
-		icon: styledComponents
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "TailwindCSS",
-		icon: tailwind
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Framer-motion",
-		icon: framerMotion
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Node.js",
-		icon: nodejs
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "MongoDB",
-		icon: mongodb
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Express.js",
-		icon: expressjs
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Firebase",
-		icon: firebase
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "NextAuth.js",
-		icon: nextauthjs
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Prisma",
-		icon: prisma
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "C",
-		icon: c
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Java",
-		icon: java
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Python",
-		icon: python
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "git",
-		icon: git
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "Postman",
-		icon: postman
+		icon: "/assets/tech/html.png"
 	},
 	{
 		name: "figma",
-		icon: figma
+		icon: "/assets/tech/html.png"
 	}
 ];
 
 const experiences = [
 	{
-		title: "Full Stack Developer",
+		title: "Frontend Developer",
 		company_name: "Tech Lead at GDSC MVJCE",
-		icon: GDSCLogo,
+		icon: "/assets/company/gdsc-logo.svg",
 		iconBg: "#E6DEDD",
 		date: "July 2023 - Present",
 		points: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
-			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
-			"Participating in code reviews and providing constructive feedback to other developers."
+			"Currently serving as the Tech Lead of GDSC, responsible for guiding and overseeing the technical aspects of the organization.",
+			"Led and managed the organization's induction programs, ensuring that new members are effectively onboarded and aligned with GDSC's mission and goals.",
+			"Led the development and creation of the GDSC MVJCE website, showcasing technical prowess and leadership in delivering a prominent online presence for the organization.",
+			"Spearheaded the promotional campaigns for GDSC's various events, driving engagement and participation within the community.",
+			"Demonstrated strong leadership by fostering collaboration among cross-functional teams, including designers, developers, and project managers, to deliver high-quality projects and events.",
+			"Provided technical guidance and mentorship to team members, helping them develop their skills and contribute effectively to the organization's projects.",
+			"Encouraged a culture of continuous learning and innovation within the organization, staying updated on the latest industry trends and technologies.",
+			"Actively engaged with the GDSC community, fostering a sense of belonging and encouraging knowledge sharing among members.",
+			"Played a key role in planning and executing GDSC's events, from concept to completion, ensuring their success and growth.",
+			"Participated in strategic decision-making processes for GDSC, helping shape the organization's future direction and goals."
 		]
 	},
 	{
 		title: "Frontend Developer",
 		company_name: "Tech team member at GDSC MVJCE",
-		icon: GDSCLogo,
+		icon: "/assets/company/gdsc-logo.svg",
 		iconBg: "#E6DEDD",
 		date: "February 2022 - July 2023",
 		points: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
-			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
-			"Participating in code reviews and providing constructive feedback to other developers."
+			"Successfully planned and executed induction programs for new members, providing them with essential information about the organization's goals, values, and objectives.",
+			"Demonstrated expertise in web development by conducting workshops on CSS, equipping participants with practical skills and knowledge in web design and styling.",
+			"Played a crucial role in the promotion and campaigning of various GDSC events, contributing to their success and ensuring maximum participation.",
+			"Actively collaborated with cross-functional teams, including designers, product managers, and fellow developers, to deliver high-quality projects and events, fostering a culture of teamwork and innovation.",
+			"Assisted in various workshops by providing technical support, troubleshooting issues, and ensuring a smooth learning experience for participants.",
+			"Engaged with the GDSC community by actively participating in discussions, sharing knowledge, and fostering a sense of belonging among members.",
+			"Assisted in the planning and management of various GDSC events, from ideation to execution, contributing to their success and growth."
 		]
 	}
 	// {
@@ -262,7 +237,7 @@ const projects = [
 				color: "white-text-gradient"
 			}
 		],
-		image: netflixClone,
+		image: "/assets/projects/netflix-clone.png",
 		source_code_link: "https://github.com/Shivam-Sharma-1/Netflix-Clone.git"
 	},
 	{
@@ -283,7 +258,7 @@ const projects = [
 				color: "pink-text-gradient"
 			}
 		],
-		image: vanLife,
+		image: "/assets/projects/vanlife.png",
 		source_code_link: "https://github.com/Shivam-Sharma-1/Van-Life.git"
 	},
 	{
@@ -304,7 +279,7 @@ const projects = [
 				color: "pink-text-gradient"
 			}
 		],
-		image: spookyRun,
+		image: "/assets/projects/spooky-run.png",
 		source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git"
 	}
 ];
