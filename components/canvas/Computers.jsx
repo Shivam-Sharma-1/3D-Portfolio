@@ -70,6 +70,7 @@ const ComputersCanvas = () => {
 					minPolarAngle={Math.PI / 2}
 					enableDamping={true}
 					dampingFactor={0.05}
+					enablePan={false}
 				/>
 				<Computers isMobile={isMobile} />
 			</Suspense>

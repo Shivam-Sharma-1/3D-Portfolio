@@ -56,6 +56,9 @@ const BallCanvas = ({ icon }) => {
 					maxAzimuthAngle={Math.PI / 4}
 					minPolarAngle={Math.PI / 3}
 					maxPolarAngle={Math.PI - Math.PI / 3}
+					enableDamping={true}
+					dampingFactor={0.05}
+					enablePan={false}
 				/>
 				<Ball imgUrl={icon} />
 			</Suspense>
