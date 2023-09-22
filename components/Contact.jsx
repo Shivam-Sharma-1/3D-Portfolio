@@ -83,6 +83,7 @@ function Contact() {
 							name="name"
 							value={form.name}
 							onChange={handleChange}
+							required
 							placeholder="What's your good name?"
 							className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
 						/>
@@ -96,6 +97,7 @@ function Contact() {
 							name="email"
 							value={form.email}
 							onChange={handleChange}
+							required
 							placeholder="What's your web address?"
 							className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
 						/>
@@ -109,6 +111,7 @@ function Contact() {
 							name="message"
 							value={form.message}
 							onChange={handleChange}
+							required
 							placeholder="What you want to say?"
 							className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
 						/>
