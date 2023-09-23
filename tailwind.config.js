@@ -10,10 +10,16 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#00ff00",
-				secondary: "#00b300",
-				tertiary: "#bfffbf",
-				quaternary: "#80ff80",
+				// primary: "#00ff00",
+				// secondary: "#00b300",
+				// tertiary: "#bfffbf",
+				// quaternary: "#80ff80",
+
+				primary: "#804dee",
+				secondary: "#4b42a7",
+				tertiary: "#9b4dee",
+				quaternary: "#4d9aee",
+				five: "#cbb8f5",
 
 				bgPrimaryLight: "#ffffff",
 				bgSecondaryLight: "#e0eaf0",

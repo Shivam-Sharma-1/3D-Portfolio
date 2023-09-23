@@ -32,6 +32,10 @@
 	.sectionSubText {
 		@apply sm:text-[18px] text-[14px] dark:text-ctnSecondaryDark text-ctnSecondaryLight uppercase tracking-wider;
 	}
+
+	.wave {
+		@apply absolute w-full bg-top bg-no-repeat bg-cover;
+	}
 }
 
 @layer base {

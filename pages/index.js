@@ -8,6 +8,7 @@ import {
 	Tech,
 	Works
 } from "@/components";
+import HeroBackground from "@/components/HeroBackground";
 import Head from "next/head";
 
 const App = () => {
@@ -22,8 +23,9 @@ const App = () => {
 			</Head>
 
 			<div className="relative z-0">
-				<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+				<div className=" bg-cover bg-no-repeat bg-center">
 					<Navbar />
+					<HeroBackground />
 					<Hero />
 				</div>
 				<About />

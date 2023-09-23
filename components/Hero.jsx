@@ -9,13 +9,15 @@ const Hero = () => {
 			>
 				<div className="flex flex-col justify-center items-center mt-5">
 					<div className="w-5 h-5 rounded-full bg-primary" />
-					<div className="w-1 sm:h-80 h-40 green-gradient" />
+					<div className="w-1 sm:h-80 h-40 violet-gradient" />
 				</div>
 
 				<div>
 					<h1 className={`heroHeadText`}>
 						Hi, I&apos;m{" "}
-						<span className="text-primary">Shivam</span>
+						<span className="dark:text-five text-primary">
+							Shivam
+						</span>
 					</h1>
 					<p className={`heroSubText mt-2`}>
 						React.js/Next.js developer | Frontend developer |
