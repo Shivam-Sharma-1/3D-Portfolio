@@ -48,7 +48,8 @@ function StarsCanvas() {
 					preserveDrawingBuffer: true,
 					antialias: true,
 					toneMappingExposure: 0.7,
-					outputColorSpace: THREE.SRGBColorSpace
+					outputColorSpace: THREE.SRGBColorSpace,
+					alpha: false
 				}}
 			>
 				<Suspense fallback={<CanvasLoader />}>

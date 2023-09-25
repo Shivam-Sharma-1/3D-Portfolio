@@ -1,12 +1,11 @@
-/* eslint-disable react/no-unknown-property */
-import { Preload, useGLTF, OrbitControls } from "@react-three/drei";
+import { Preload, useGLTF, OrbitControls, View } from "@react-three/drei";
 import * as THREE from "three";
 
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, forwardRef, useEffect, useState } from "react";
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+function Computers({ isMobile, computerRef }) {
 	const computer = useGLTF("desktop_pc/scene.gltf");
 
 	return (
@@ -24,59 +23,20 @@ const Computers = ({ isMobile }) => {
 			<pointLight intensity={1} />
 			<primitive
 				object={computer.scene}
-				scale={isMobile ? 0.6 : 0.75}
-				position={isMobile ? [0, -3, -1.2] : [0, -3.6, -1.5]}
-				rotation={[-0.01, -0.2, -0.1]}
+				scale={isMobile ? 0.6 : 0.12}
+				position={isMobile ? [0, -3, -1.2] : [0, 1, -1.5]}
+				rotation={[-0.01, -0.2, -0.3]}
+			/>
+			<OrbitControls
+				enableZoom={false}
+				maxPolarAngle={Math.PI / 2}
+				minPolarAngle={Math.PI / 2}
+				enableDamping={true}
+				dampingFactor={0.05}
+				enablePan={false}
 			/>
 		</mesh>
 	);
-};
+}
 
-const ComputersCanvas = () => {
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		const mediaQuery = window.matchMedia("(max-width: 768px)");
-		setIsMobile(mediaQuery.matches);
-
-		const handleMediaQueryChange = (event) => {
-			setIsMobile(event.matches);
-		};
-
-		mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-		return () => {
-			mediaQuery.removeEventListener("change", handleMediaQueryChange);
-		};
-	}, []);
-
-	return (
-		<Canvas
-			shadows
-			dpr={[1, 2]}
-			camera={{ position: [20, 3, 5], fov: 25 }}
-			gl={{
-				preserveDrawingBuffer: true,
-				antialias: true,
-				toneMappingExposure: 0.7,
-				outputColorSpace: THREE.SRGBColorSpace,
-				alpha: true
-			}}
-		>
-			<Suspense fallback={<CanvasLoader />}>
-				<OrbitControls
-					enableZoom={false}
-					maxPolarAngle={Math.PI / 2}
-					minPolarAngle={Math.PI / 2}
-					enableDamping={true}
-					dampingFactor={0.05}
-					enablePan={false}
-				/>
-				<Computers isMobile={isMobile} />
-			</Suspense>
-			<Preload all />
-		</Canvas>
-	);
-};
-
-export default ComputersCanvas;
+export default Computers;

@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import { EarthCanvas } from "./canvas";
+// import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
+import { slideIn, staggerContainer } from "../utils/motion";
 
 function Contact() {
 	const formRef = useRef();
@@ -59,81 +59,73 @@ function Contact() {
 	};
 
 	return (
-		<div
-			className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+		<motion.div
+			variants={slideIn("left", "tween", 0.2, 1)}
+			initial="hidden"
+			whileInView="show"
+			viewport={{ once: true }}
+			className="xl:my-36 w-2/5 dark:bg-bgSecondaryDark bg-bgSecondaryLight ml-36 p-8 rounded-2xl"
 		>
-			<motion.div
-				variants={slideIn("left", "tween", 0.2, 1)}
-				className="flex-[0.75] dark:bg-bgSecondaryDark bg-bgSecondaryLight p-8 rounded-2xl"
-			>
-				<p className={"sectionSubText"}>Get in touch</p>
-				<h3 className={"sectionHeadText"}>Contact.</h3>
+			<p className={"sectionSubText"}>Get in touch</p>
+			<h3 className={"sectionHeadText"}>Contact.</h3>
 
-				<form
-					ref={formRef}
-					onSubmit={handleSubmit}
-					className="mt-12 flex flex-col gap-8"
+			<form
+				ref={formRef}
+				onSubmit={handleSubmit}
+				className="mt-12 flex flex-col gap-8"
+			>
+				<label className="flex flex-col">
+					<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
+						Your Name
+					</span>
+					<input
+						type="text"
+						name="name"
+						value={form.name}
+						onChange={handleChange}
+						required
+						placeholder="What's your good name?"
+						className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
+					/>
+				</label>
+				<label className="flex flex-col">
+					<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
+						Your email
+					</span>
+					<input
+						type="email"
+						name="email"
+						value={form.email}
+						onChange={handleChange}
+						required
+						placeholder="What's your web address?"
+						className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
+					/>
+				</label>
+				<label className="flex flex-col">
+					<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
+						Your Message
+					</span>
+					<textarea
+						rows={7}
+						name="message"
+						value={form.message}
+						onChange={handleChange}
+						required
+						placeholder="What you want to say?"
+						className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
+					/>
+				</label>
+
+				<button
+					type="submit"
+					className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit dark:text-ctnSecondaryDark text-ctnPrimaryLight font-bold shadow-md shadow-primary"
 				>
-					<label className="flex flex-col">
-						<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
-							Your Name
-						</span>
-						<input
-							type="text"
-							name="name"
-							value={form.name}
-							onChange={handleChange}
-							required
-							placeholder="What's your good name?"
-							className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
-						/>
-					</label>
-					<label className="flex flex-col">
-						<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
-							Your email
-						</span>
-						<input
-							type="email"
-							name="email"
-							value={form.email}
-							onChange={handleChange}
-							required
-							placeholder="What's your web address?"
-							className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
-						/>
-					</label>
-					<label className="flex flex-col">
-						<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
-							Your Message
-						</span>
-						<textarea
-							rows={7}
-							name="message"
-							value={form.message}
-							onChange={handleChange}
-							required
-							placeholder="What you want to say?"
-							className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
-						/>
-					</label>
-
-					<button
-						type="submit"
-						className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit dark:text-ctnSecondaryDark text-ctnPrimaryLight font-bold shadow-md shadow-primary"
-					>
-						{loading ? "Sending..." : "Send"}
-					</button>
-				</form>
-			</motion.div>
-
-			<motion.div
-				variants={slideIn("right", "tween", 0.2, 1)}
-				className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-			>
-				<EarthCanvas />
-			</motion.div>
-		</div>
+					{loading ? "Sending..." : "Send"}
+				</button>
+			</form>
+		</motion.div>
 	);
 }
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;

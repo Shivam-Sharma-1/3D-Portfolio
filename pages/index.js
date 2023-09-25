@@ -9,9 +9,20 @@ import {
 	Works
 } from "@/components";
 import HeroBackground from "@/components/HeroBackground";
+import MainCanvas from "@/components/canvas/Canvas";
+import { Canvas } from "@react-three/fiber";
 import Head from "next/head";
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
+import { motion } from "framer-motion";
+import { slideIn } from "@/utils/motion";
+import EarthContainer from "@/components/EarthContainer";
 
-const App = () => {
+function App() {
+	const canvasref = useRef();
+	const computerRef = useRef();
+	const earthref = useRef();
+
 	return (
 		<>
 			<Head>
@@ -22,24 +33,31 @@ const App = () => {
 				/>
 			</Head>
 
-			<div className="relative z-0">
+			<div className="relative z-0 w-full h-full" ref={canvasref}>
 				<div className=" bg-cover bg-no-repeat bg-center">
 					<Navbar />
 					<HeroBackground />
-					<Hero />
+					<Hero computerRef={computerRef} />
 				</div>
 				<About />
 				<Experience />
 				{/* <Tech /> */}
 				<Works />
 				{/* <Feedbacks /> */}
-				<div className="relative z-0">
+				<div className="relative z-0 flex w-full h-full overflow-x-hidden">
 					<Contact />
+					<EarthContainer earthref={earthref} />
 					<StarsCanvas />
 				</div>
+
+				<MainCanvas
+					computerRef={computerRef}
+					earthref={earthref}
+					canvasref={canvasref}
+				/>
 			</div>
 		</>
 	);
-};
+}
 
 export default App;
