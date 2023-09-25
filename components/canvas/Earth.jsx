@@ -6,7 +6,7 @@ import * as THREE from "three";
 import CanvasLoader from "../Loader";
 
 function Earth({ earthref }) {
-	const earth = useGLTF("./planet/scene.gltf");
+	const earth = useGLTF("models/planet/scene.gltf");
 
 	return (
 		<View track={earthref}>
@@ -25,6 +25,7 @@ function Earth({ earthref }) {
 					enableDamping={true}
 					dampingFactor={0.05}
 					enablePan={false}
+					makeDefault
 				/>
 			</Suspense>
 		</View>

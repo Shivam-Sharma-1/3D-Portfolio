@@ -2,14 +2,11 @@ import { motion } from "framer-motion";
 import ComputersCanvas from "./canvas/Computers";
 import { forwardRef } from "react";
 
-function Hero({ computerRef }) {
+function Hero({ computerref }) {
 	return (
-		<section
-			ref={computerRef}
-			className={`relative w-full h-screen mx-auto`}
-		>
+		<section className={`relative w-full h-screen mx-auto flex flex-col`}>
 			<div
-				className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto paddingX flex flex-row items-start gap-5`}
+				className={`absolute inset-0 top-[120px] max-w-7xl mx-auto paddingX flex flex-row items-start gap-5`}
 			>
 				<div className="flex flex-col justify-center items-center mt-5">
 					<div className="w-5 h-5 rounded-full bg-primary" />
@@ -30,12 +27,12 @@ function Hero({ computerRef }) {
 					</p>
 				</div>
 			</div>
-			{/* <div
-				ref={computerRef}
-				className="w-full h-screen absolute top-[200px]"
-			></div> */}
+			<div
+				ref={computerref}
+				className="w-full h-[800px] absolute top-[170px]"
+			></div>
 
-			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-40">
 				<a href="#about">
 					<div className="w-[35px] h-[64px] rounded-3xl border-2 border-[#aaa6c3] flex justify-center items-start p-2">
 						<motion.div

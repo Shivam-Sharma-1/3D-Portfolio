@@ -20,7 +20,7 @@ import EarthContainer from "@/components/EarthContainer";
 
 function App() {
 	const canvasref = useRef();
-	const computerRef = useRef();
+	const computerref = useRef();
 	const earthref = useRef();
 
 	return (
@@ -37,7 +37,7 @@ function App() {
 				<div className=" bg-cover bg-no-repeat bg-center">
 					<Navbar />
 					<HeroBackground />
-					<Hero computerRef={computerRef} />
+					<Hero computerref={computerref} />
 				</div>
 				<About />
 				<Experience />
@@ -51,7 +51,7 @@ function App() {
 				</div>
 
 				<MainCanvas
-					computerRef={computerRef}
+					computerref={computerref}
 					earthref={earthref}
 					canvasref={canvasref}
 				/>

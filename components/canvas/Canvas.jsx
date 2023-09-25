@@ -6,7 +6,7 @@ import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import Earth from "./Earth";
 
-function MainCanvas({ computerRef, earthref, canvasref }) {
+function MainCanvas({ computerref, earthref, canvasref }) {
 	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ function MainCanvas({ computerRef, earthref, canvasref }) {
 
 	return (
 		<Canvas
-			computerRef={computerRef}
+			computerref={computerref}
 			earthref={earthref}
 			eventSource={canvasref}
 			shadows
@@ -47,9 +47,8 @@ function MainCanvas({ computerRef, earthref, canvasref }) {
 				left: 0
 			}}
 		>
-			<Computers isMobile={isMobile} />
+			<Computers computerref={computerref} isMobile={isMobile} />
 			<Earth earthref={earthref} />
-
 			<Preload all />
 		</Canvas>
 	);
