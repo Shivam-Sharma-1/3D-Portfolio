@@ -27,7 +27,7 @@ module.exports = {
 				ctnSecondaryLight: "#8c9db1",
 
 				// bgPrimaryDark: "#181826",
-				bgSecondaryDark: "#212134",
+				// bgSecondaryDark: "#212134",
 				ctnPrimaryDark: "#e5e6e9",
 				ctnSecondaryDark: "#7e8c9f",
 
@@ -45,7 +45,9 @@ module.exports = {
 			backgroundImage: {
 				"hero-pattern": "url('/assets/herobg.png')",
 				bgPrimaryDark:
-					"linear-gradient(90deg, rgba(24,24,38,1) 0%, rgba(32,32,50,1) 50%, rgba(24,24,38,1) 100%)"
+					"linear-gradient(90deg, rgba(24,24,38,1) 0%, rgba(32,32,50,1) 50%, rgba(24,24,38,1) 100%)",
+				bgSecondaryDark:
+					"linear-gradient(90deg, rgba(33,33,52,1) 0%, rgba(39,39,61,1) 50%, rgba(33,33,52,1) 100%)"
 			},
 			screens: {
 				xs: "320px",
