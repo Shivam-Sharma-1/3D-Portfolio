@@ -12,6 +12,7 @@ import { textVariant } from "../utils/motion";
 import { styles } from "@/constants/styles";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function ExperienceCard({ experience, theme }) {
 	return (
@@ -19,9 +20,9 @@ function ExperienceCard({ experience, theme }) {
 			contentStyle={{
 				background: theme
 					? theme === "dark"
-						? "#212134"
+						? "#2b2b42"
 						: "#e0eaf0"
-					: "#212134",
+					: "#2b2b42",
 				color: theme
 					? theme === "dark"
 						? "#e5e6e9"
@@ -33,19 +34,22 @@ function ExperienceCard({ experience, theme }) {
 					theme
 						? theme !== "dark"
 							? "#e0eaf0"
-							: "#212134"
-						: "#212134"
+							: "#2b2b42"
+						: "#2b2b42"
 				}`
 			}}
 			date={experience.date}
 			iconStyle={{ background: experience.iconBg }}
 			icon={
 				<div className="flex justify-center items-center w-full h-full">
-					<img
-						src={experience.icon}
-						alt={experience.company_name}
-						className="w-[60%] h-[60%] object-contain"
-					/>
+					<div className="w-[60%] h-[60%] relative">
+						<Image
+							src={experience.icon}
+							alt={experience.company_name}
+							fill={true}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+						/>
+					</div>
 				</div>
 			}
 		>

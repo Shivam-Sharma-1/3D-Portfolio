@@ -9,6 +9,7 @@ import { styles } from "@/constants/styles";
 import truncateText from "@/utils/truncate";
 import GithubLogo from "./../public/assets/icons/github.svg";
 import RocketLogo from "./../public/assets/icons/rocket.svg";
+import Image from "next/image";
 
 function ProjectCard({
 	index,
@@ -32,11 +33,15 @@ function ProjectCard({
 				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full h-[540px]"
 			>
 				<div className="relative w-full h-[230px]">
-					<img
-						src={image}
-						alt="project_image"
-						className="w-full h-full object-cover rounded-2xl"
-					/>
+					<div className="w-full h-full object-cover rounded-2xl relative">
+						<Image
+							src={image}
+							alt="project_image"
+							fill={true}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+							className="object-cover"
+						/>
+					</div>
 
 					<div className="absolute inset-0 flex justify-start m-3 card-img_hover">
 						<div
