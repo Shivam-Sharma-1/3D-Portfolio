@@ -72,7 +72,7 @@ function Contact() {
 			<form
 				ref={formRef}
 				onSubmit={handleSubmit}
-				className="mt-12 flex flex-col gap-8"
+				className="mt-8 flex flex-col gap-8"
 			>
 				<label className="flex flex-col">
 					<span className="dark:text-ctnPrimaryDark text-ctnPrimaryLight font-medium mb-4">
@@ -85,7 +85,7 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What's your good name?"
-						className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
+						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
 					/>
 				</label>
 				<label className="flex flex-col">
@@ -99,7 +99,7 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What's your web address?"
-						className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
+						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
 					/>
 				</label>
 				<label className="flex flex-col">
@@ -113,13 +113,13 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What you want to say?"
-						className="bg-tertiary py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight text-[#1f1f1f] rounded-lg outline-none border-none font-medium"
+						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
 					/>
 				</label>
 
 				<button
 					type="submit"
-					className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit dark:text-ctnSecondaryDark text-ctnPrimaryLight font-bold shadow-md shadow-primary"
+					className="bg-primary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-tertiary hover:shadow-primary hover:bg-tertiary transition-all duration-800 ease-in"
 				>
 					{loading ? "Sending..." : "Send"}
 				</button>
