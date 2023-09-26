@@ -17,11 +17,13 @@ import * as THREE from "three";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
 import EarthContainer from "@/components/EarthContainer";
+import PlayerContainer from "@/components/PlayerContainer";
 
 function App() {
 	const canvasref = useRef();
 	const computerref = useRef();
 	const earthref = useRef();
+	const playerref = useRef();
 
 	return (
 		<>
@@ -39,7 +41,10 @@ function App() {
 					<HeroBackground />
 					<Hero computerref={computerref} />
 				</div>
-				<About />
+				<div className="relative z-0 flex w-full h-full overflow-x-hidden">
+					<About />
+					<PlayerContainer playerref={playerref} />
+				</div>
 				<Experience />
 				{/* <Tech /> */}
 				<Works />
@@ -54,6 +59,7 @@ function App() {
 					computerref={computerref}
 					earthref={earthref}
 					canvasref={canvasref}
+					playerref={playerref}
 				/>
 			</div>
 		</>

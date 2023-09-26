@@ -21,6 +21,10 @@ const services = [
 	{
 		title: "Frontend Developer",
 		icon: "/assets/web.png"
+	},
+	{
+		title: "Leader",
+		icon: "/assets/web.png"
 	}
 	// {
 	// 	title: "Backend Developer",

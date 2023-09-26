@@ -89,6 +89,15 @@ body {
 	scroll-behavior: smooth;
 }
 
+body {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
 .hash-span {
 	margin-top: -100px;
 	padding-bottom: 100px;
@@ -198,6 +207,63 @@ body {
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.btn {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-appearance: button;
+	background-image: none;
+}
+
+.btn .original {
+	display: grid;
+	inset: 0;
+	place-content: center;
+	position: absolute;
+	transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn:hover .original {
+	transform: translateY(100%);
+}
+
+.btn .letters {
+	display: inline-flex;
+}
+
+.btn span {
+	opacity: 0;
+	transform: translateY(-15px);
+	transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn span:nth-child(2n) {
+	transform: translateY(15px);
+}
+
+.btn:hover span {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.btn:hover span:nth-child(2) {
+	transition-delay: 0.1s;
+}
+
+.btn:hover span:nth-child(3) {
+	transition-delay: 0.2s;
+}
+
+.btn:hover span:nth-child(4) {
+	transition-delay: 0.3s;
+}
+
+.btn:hover span:nth-child(5) {
+	transition-delay: 0.4s;
+}
+
+.btn:hover span:nth-child(6) {
+	transition-delay: 0.5s;
 }
 
 /* canvas- styles */

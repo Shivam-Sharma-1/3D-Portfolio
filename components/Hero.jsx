@@ -32,7 +32,7 @@ function Hero({ computerref }) {
 				className="w-full h-[800px] absolute top-[170px]"
 			></div>
 
-			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-40">
+			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-20">
 				<a href="#about">
 					<div className="w-[35px] h-[64px] rounded-3xl border-2 border-[#aaa6c3] flex justify-center items-start p-2">
 						<motion.div

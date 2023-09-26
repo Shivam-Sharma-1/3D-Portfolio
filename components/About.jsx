@@ -5,6 +5,7 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "@/constants/styles";
+import Link from "next/link";
 
 const ServiceCard = ({ index, title, icon }) => (
 	<Tilt className="lg:w-[250px] w-full">
@@ -36,29 +37,63 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
 	return (
-		<>
+		<div className="xl:my-36 w-2/3 ml-36 p-8">
 			<motion.div variants={textVariant()}>
 				<p className={"sectionSubText"}>Introduction</p>
 				<h2 className={"sectionHeadText"}>Overview.</h2>
 			</motion.div>
 
-			<motion.p
+			<motion.div
 				variants={fadeIn("", "", 0.1, 1)}
-				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] max-w-3xl leading-[30px]"
+				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] w-full leading-[30px] flex flex-col justify-between gap-4"
 			>
-				Hello! I&apos;m Shivam Sharma, a passionate web developer and
-				problem solver. Currently, I&apos;m the Tech Team Lead at GDSC
-				MVJCE, and I&apos;m pursuing a B.E. degree in Computer Science
-				and Engineering at MVJ College Of Engineering in Bengaluru,
-				India, with an expected graduation year of 2025. I&apos;m a
-				software developer with experience in TypeScript, TailwindCSS,
-				and JavaScript. I specialize in frameworks such as React,
-				Node.js, Next.js, React-Fiber, and Three.js. My knowledge
-				extends to fundamental data structures and algorithms, making me
-				well-versed in frontend web development.
-				<br className="sm:block hidden" />
-				Let&apos;s collaborate to bring your ideas to life!
-			</motion.p>
+				<div>
+					Hello! I&apos;m Shivam Sharma, a passionate web developer
+					and problem solver. Currently, I&apos;m the Tech Team Lead
+					at GDSC MVJCE, and I&apos;m pursuing a B.E. degree in
+					Computer Science and Engineering at MVJ College Of
+					Engineering in Bengaluru, India, with an expected graduation
+					year of 2025. I&apos;m a software developer with experience
+					in TypeScript, TailwindCSS, and JavaScript. I specialize in
+					frameworks such as React, Node.js, Next.js, React-Fiber, and
+					Three.js. My knowledge extends to fundamental data
+					structures and algorithms, making me well-versed in frontend
+					web development.
+					<br className="sm:block hidden" />
+					Let&apos;s collaborate to bring your ideas to life!
+				</div>
+				<div>
+					<span className="text-primary">Email: </span>
+					<Link
+						href="mailto:shivamsharma77607@gmail.com"
+						target="_blank"
+						rel="noreferrer"
+						className="hover:text-primary transition-all duration-100 ease-in"
+					>
+						&nbsp;shivamsharma77607@gmail.com
+					</Link>
+				</div>
+				<Link
+					href="document/shivam-resume.pdf"
+					style={{ textDecoration: "none" }}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div className="btn w-fit bg-tertiary text-white px-7 py-2 rounded-md overflow-hidden relative cursor-pointer">
+						<div className="original bg-primary text-white px-7 py-2">
+							Resume
+						</div>
+						<div className="letters">
+							<span>R</span>
+							<span>e</span>
+							<span>s</span>
+							<span>u</span>
+							<span>m</span>
+							<span>e</span>
+						</div>
+					</div>
+				</Link>
+			</motion.div>
 
 			<div className="mt-20 flex flex-wrap gap-10">
 				{services.map((service, index) => (
@@ -69,8 +104,8 @@ const About = () => {
 					/>
 				))}
 			</div>
-		</>
+		</div>
 	);
 };
 
-export default SectionWrapper(About, "about");
+export default About;

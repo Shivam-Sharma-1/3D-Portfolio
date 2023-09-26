@@ -21,7 +21,7 @@ const HeroBackground = () => {
 			<Mountain3 className="w-full h-[408px] wave top-[347px]" />
 			{/* <Mountain4 className="w-full h-[457px] wave top-[466px]" /> */}
 			<Mountain5 className="w-full h-[867px] wave top-[450px]" />
-			<HeroSvg className="w-full h-[900px] wave top-[100vh] dark:text-[#181826] text-bgPrimaryLight" />
+			<HeroSvg className="w-full h-[1200px] wave top-[100vh] dark:text-[#181826] text-bgPrimaryLight" />
 		</div>
 	);
 };
