@@ -6,6 +6,9 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "@/constants/styles";
+import truncateText from "@/utils/truncate";
+import GithubLogo from "./../public/assets/icons/github.svg";
+import RocketLogo from "./../public/assets/icons/rocket.svg";
 
 function ProjectCard({
 	index,
@@ -13,8 +16,11 @@ function ProjectCard({
 	description,
 	tags,
 	image,
-	source_code_link
+	source_code_link,
+	deployed_link
 }) {
+	const CHAR_LIMIT = 280;
+
 	return (
 		<motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
 			<Tilt
@@ -23,7 +29,7 @@ function ProjectCard({
 					scale: 1,
 					speed: 450
 				}}
-				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full"
+				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full h-[540px]"
 			>
 				<div className="relative w-full h-[230px]">
 					<img
@@ -32,6 +38,14 @@ function ProjectCard({
 						className="w-full h-full object-cover rounded-2xl"
 					/>
 
+					<div className="absolute inset-0 flex justify-start m-3 card-img_hover">
+						<div
+							onClick={() => window.open(deployed_link, "_blank")}
+							className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+						>
+							<RocketLogo className="w-1/2 h-1/2 mr-[2px] z-10" />
+						</div>
+					</div>
 					<div className="absolute inset-0 flex justify-end m-3 card-img_hover">
 						<div
 							onClick={() =>
@@ -39,11 +53,7 @@ function ProjectCard({
 							}
 							className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
 						>
-							<img
-								src={"/assets/github.png"}
-								alt="source code"
-								className="w-1/2 h-1/2 object-contain"
-							/>
+							<GithubLogo className="w-2/3 h-2/3 z-10" />
 						</div>
 					</div>
 				</div>
@@ -53,7 +63,7 @@ function ProjectCard({
 						{name}
 					</h3>
 					<p className="mt-2 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[14px]">
-						{description}
+						{truncateText(description, CHAR_LIMIT)}
 					</p>
 				</div>
 

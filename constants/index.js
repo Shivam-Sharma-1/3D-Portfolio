@@ -207,7 +207,9 @@ const projects = [
 			}
 		],
 		image: "/assets/projects/netflix-clone.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Netflix-Clone.git"
+		source_code_link:
+			"https://github.com/Shivam-Sharma-1/Netflix-Clone.git",
+		deployed_link: "https://netflix-clone12345.vercel.app"
 	},
 	{
 		name: "Van-Life",
@@ -228,7 +230,8 @@ const projects = [
 			}
 		],
 		image: "/assets/projects/vanlife.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Van-Life.git"
+		source_code_link: "https://github.com/Shivam-Sharma-1/Van-Life.git",
+		deployed_link: "https://myvanlife.netlify.app"
 	},
 	{
 		name: "Spooky-Run",
@@ -249,7 +252,8 @@ const projects = [
 			}
 		],
 		image: "/assets/projects/spooky-run.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git"
+		source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git",
+		deployed_link: "https://shivam-sharma-1.github.io/Spooky-Run"
 	}
 ];
 
