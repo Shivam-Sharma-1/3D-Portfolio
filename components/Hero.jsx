@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ComputersCanvas from "./canvas/Computers";
 import { forwardRef } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 function Hero({ computerref }) {
 	return (
@@ -21,9 +22,22 @@ function Hero({ computerref }) {
 						</span>
 					</h1>
 					<p className={`heroSubText mt-2`}>
-						React.js/Next.js developer | Frontend developer |
-						<br className="sm:block hidden" />
-						Technical Team Lead at GDSC MVJCE{" "}
+						<TypeAnimation
+							sequence={[
+								"React.js/Next.js developer",
+								100,
+								"Frontend developer",
+								100,
+								"Tech Team Lead at GDSC MVJCE",
+								100
+							]}
+							preRenderFirstString={true}
+							wrapper="span"
+							cursor={true}
+							repeat={Infinity}
+							speed={99}
+							deletionSpeed={200}
+						/>
 					</p>
 				</div>
 			</div>
