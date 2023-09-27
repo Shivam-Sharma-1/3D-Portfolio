@@ -49,9 +49,11 @@ function MainCanvas({ computerref, earthref, canvasref, playerref }) {
 				left: 0
 			}}
 		>
-			<Computers computerref={computerref} isMobile={isMobile} />
-			<Earth earthref={earthref} />
-			<Player playerref={playerref} isMobile={isMobile} />
+			<Suspense fallback={<CanvasLoader />}>
+				<Computers computerref={computerref} isMobile={isMobile} />
+				<Earth earthref={earthref} />
+				<Player playerref={playerref} isMobile={isMobile} />
+			</Suspense>
 			<Preload all />
 		</Canvas>
 	);
