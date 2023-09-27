@@ -18,12 +18,17 @@ import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
 import EarthContainer from "@/components/EarthContainer";
 import PlayerContainer from "@/components/PlayerContainer";
+import UpArrow from "./../public/assets/icons/up-arrow.svg";
 
 function App() {
 	const canvasref = useRef();
 	const computerref = useRef();
 	const earthref = useRef();
 	const playerref = useRef();
+
+	useEffect(() => {
+		window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+	}, []);
 
 	return (
 		<>
@@ -61,6 +66,18 @@ function App() {
 					canvasref={canvasref}
 					playerref={playerref}
 				/>
+				<button
+					onClick={() => {
+						window.scrollTo({
+							top: 0,
+							left: 0,
+							behavior: "smooth"
+						});
+					}}
+					className="fixed w-10 h-10 p-2 bottom-8 right-10 text-center text-secondary backdrop-filter backdrop-blur-xl bg-opacity-20 bg-tertiary rounded-lg hover:scale-110 transition-all duration-300"
+				>
+					<UpArrow />
+				</button>
 			</div>
 		</>
 	);
