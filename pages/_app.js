@@ -12,6 +12,14 @@ export default function App({ Component, pageProps }) {
 		}, 4800);
 	}, []);
 
+	useEffect(() => {
+		if (loading) {
+			document.body.style.overflowY = "hidden";
+		} else {
+			document.body.style.overflowY = "auto";
+		}
+	}, [loading]);
+
 	return (
 		<>
 			<Head>

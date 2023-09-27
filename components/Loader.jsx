@@ -1,4 +1,5 @@
 import { Html, useProgress } from "@react-three/drei";
+import { useEffect, useState } from "react";
 
 function CanvasLoader() {
 	const { progress } = useProgress();
@@ -18,6 +19,20 @@ function CanvasLoader() {
 }
 
 export function PreLoader() {
+	const [progress, setProgress] = useState(0);
+
+	useEffect(() => {
+		const updateProgress = () => {
+			for (let i = 0; i < 100; i++) {
+				setTimeout(() => {
+					setProgress(i);
+				}, 46 * i);
+			}
+		};
+
+		updateProgress();
+	}, []);
+
 	return (
 		<div className="w-screen h-screen overflow-hidden bg-bgPrimaryLight dark:bg-bgPrimaryDark z-40 fixed top-0 left-0 flex flex-col justify-center items-center gap-5">
 			<div className="loader w-[150px] h-[150px]">
@@ -26,7 +41,7 @@ export function PreLoader() {
 				<span className="loader-span"></span>
 			</div>
 			<h1 className="text-2xl text-ctnPrimaryLight dark:text-ctnPrimaryDark">
-				Loading...
+				{progress}%
 			</h1>
 		</div>
 	);
