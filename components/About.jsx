@@ -1,11 +1,13 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
-import { services } from "../constants";
+import { services, socials } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "@/constants/styles";
 import Link from "next/link";
+import EmailIcon from "./../public/assets/icons/email.svg";
+import Image from "next/image";
 
 const ServiceCard = ({ index, title, icon }) => (
 	<Tilt className="lg:w-[250px] w-full">
@@ -21,12 +23,15 @@ const ServiceCard = ({ index, title, icon }) => (
 				}}
 				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
 			>
-				<img
-					src={icon}
-					alt="web-development"
-					className="w-16 h-16 object-contain"
-				/>
-
+				<div className="w-16 h-16 object-contain relative">
+					<Image
+						src={icon}
+						alt="skill-icon"
+						className="object-cover"
+						fill={true}
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+					/>
+				</div>
 				<h3 className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[20px] font-bold text-center w-[80%]">
 					{title}
 				</h3>
@@ -55,29 +60,42 @@ const About = () => {
 					Engineering in Bengaluru, India, with an expected graduation
 					year of 2025. I&apos;m a software developer with experience
 					in TypeScript, TailwindCSS, and JavaScript. I specialize in
-					frameworks such as React, Node.js, Next.js, React-Fiber, and
-					Three.js. My knowledge extends to fundamental data
-					structures and algorithms, making me well-versed in frontend
-					web development.
+					frameworks such as React, Node.js, Next.js,
+					React-Three-Fiber, and Three.js. My knowledge extends to
+					fundamental data structures and algorithms, making me
+					well-versed in frontend web development.
 					<br className="sm:block hidden" />
 					Let&apos;s collaborate to bring your ideas to life!
 				</div>
 				<div>
-					<span className="text-primary">Email: </span>
+					{/* <span className="text-primary">Email: </span> */}
 					<Link
 						href="mailto:shivamsharma77607@gmail.com"
 						target="_blank"
 						rel="noreferrer"
-						className="hover:text-primary transition-all duration-100 ease-in"
+						className="hover:text-primary transition-all duration-100 ease-in flex items-center gap-2"
 					>
+						<EmailIcon className="w-[30px] h-[30px]" />
 						&nbsp;shivamsharma77607@gmail.com
 					</Link>
 				</div>
+				<div className="flex gap-5 items-center">
+					{socials.map((social) => (
+						<Link
+							href={social.link}
+							target="_blank"
+							key={social.id}
+							className="w-8 h-8"
+						>
+							{social.icon}
+						</Link>
+					))}
+				</div>
 				<Link
 					href="document/shivam-resume.pdf"
-					style={{ textDecoration: "none" }}
 					target="_blank"
 					rel="noreferrer"
+					className="w-fit"
 				>
 					<div className="btn w-fit bg-tertiary text-white px-7 py-2 rounded-md overflow-hidden relative cursor-pointer">
 						<div className="original bg-primary text-white px-7 py-2">

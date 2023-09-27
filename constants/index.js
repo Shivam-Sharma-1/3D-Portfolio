@@ -1,3 +1,8 @@
+import GithubIcon from "./../public/assets/icons/github.svg";
+import LinkedInIcon from "./../public/assets/icons/linkedin.svg";
+import XIcon from "./../public/assets/icons/x.svg";
+import InstagramIcon from "./../public/assets/icons/instagram.svg";
+
 export const navLinks = [
 	{
 		id: "about",
@@ -257,4 +262,27 @@ const projects = [
 	}
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const socials = [
+	{
+		id: "github",
+		icon: <GithubIcon />,
+		link: "https://github.com/Shivam-Sharma-1"
+	},
+	{
+		id: "linkedin",
+		icon: <LinkedInIcon />,
+		link: "https://www.linkedin.com/in/shivamsharma77607"
+	},
+	{
+		id: "x",
+		icon: <XIcon />,
+		link: "https://twitter.com/Shivam_1_Sharma"
+	},
+	{
+		id: "instagram",
+		icon: <InstagramIcon />,
+		link: "https://www.instagram.com/_.shivam._.here._"
+	}
+];
+
+export { services, technologies, experiences, testimonials, projects, socials };
