@@ -65,6 +65,7 @@ function Contact() {
 			whileInView="show"
 			viewport={{ once: true }}
 			className="xl:my-36 w-2/5 dark:bg-bgSecondaryDark bg-bgSecondaryLight ml-36 p-8 rounded-2xl"
+			id="contact"
 		>
 			<p className={"sectionSubText"}>Get in touch</p>
 			<h3 className={"sectionHeadText"}>Contact.</h3>

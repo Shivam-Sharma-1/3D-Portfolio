@@ -42,7 +42,7 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
 	return (
-		<div className="xl:my-36 w-2/3 ml-36 p-8">
+		<div className="xl:my-36 w-2/3 ml-36 p-8" id="about">
 			<motion.div variants={textVariant()}>
 				<p className={"sectionSubText"}>Introduction</p>
 				<h2 className={"sectionHeadText"}>Overview.</h2>
