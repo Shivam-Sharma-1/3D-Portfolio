@@ -24,19 +24,17 @@ function Hero({ computerref }) {
 					<p className={`heroSubText mt-2`}>
 						<TypeAnimation
 							sequence={[
-								"React.js/Next.js developer",
-								100,
+								"React/Next.js developer",
+								500,
 								"Frontend developer",
-								100,
+								500,
 								"Tech Team Lead at GDSC MVJCE",
-								100
+								500
 							]}
 							preRenderFirstString={true}
 							wrapper="span"
 							cursor={true}
 							repeat={Infinity}
-							speed={99}
-							deletionSpeed={200}
 						/>
 					</p>
 				</div>
