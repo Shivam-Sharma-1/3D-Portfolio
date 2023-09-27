@@ -16,10 +16,13 @@ const Navbar = () => {
 			<div className="w-full flex justify-between items-center max-w-7xl mx-auto">
 				<Link
 					href="/"
-					className="flex items-center gap-2"
+					className="flex items-center gap-6"
 					onClick={() => {
-						setActive("");
-						window.scrollTo(0, 0);
+						window.scrollTo({
+							top: 0,
+							left: 0,
+							behavior: "smooth"
+						});
 					}}
 				>
 					<div
@@ -27,7 +30,7 @@ const Navbar = () => {
                         rounded-full relative"
 					>
 						<Image
-							src="/avatar.jpg"
+							src="/assets/avatar.png"
 							alt="avatar"
 							fill={true}
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
