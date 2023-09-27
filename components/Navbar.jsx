@@ -3,6 +3,7 @@ import { useState } from "react";
 import { navLinks } from "../constants";
 import Link from "next/link";
 import ThemeButton from "./ThemeButton";
+import Image from "next/image";
 
 const Navbar = () => {
 	const [active, setActive] = useState("");
@@ -21,12 +22,19 @@ const Navbar = () => {
 						window.scrollTo(0, 0);
 					}}
 				>
-					<img
-						src={"/assets/logo.svg"}
-						alt="logo"
+					<div
 						className="w-9 h-9 object-contain
+                        rounded-full relative"
+					>
+						<Image
+							src="/avatar.jpg"
+							alt="avatar"
+							fill={true}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+							className="w-9 h-9 object-cover
                         rounded-full"
-					/>
+						/>
+					</div>
 					<p className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[18px] font-bold cursor-pointer flex ">
 						Shivam Sharma &nbsp;
 						<span className="sm:block hidden">
