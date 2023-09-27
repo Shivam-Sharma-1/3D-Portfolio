@@ -45,7 +45,6 @@ function Player({ playerref, isMobile }) {
 	return (
 		<View track={playerref}>
 			<ambientLight intensity={1} />
-
 			<PerspectiveCamera
 				makeDefault
 				position={[0, 0, 12]}
@@ -54,6 +53,21 @@ function Player({ playerref, isMobile }) {
 				far={120}
 			/>
 			<RandomizedLight position={[0, 1, 0]} />
+			<pointLight
+				intensity={2}
+				position={[1, 1.5, 0]}
+				color={"#804dee"}
+			/>
+			<pointLight
+				intensity={2}
+				position={[-1, 1.5, 1]}
+				color={"#4b42a7"}
+			/>
+			<pointLight
+				intensity={2}
+				position={[-1, 0.5, 1]}
+				color={"#804dee"}
+			/>
 			<OrbitControls
 				makeDefault
 				enableZoom={false}

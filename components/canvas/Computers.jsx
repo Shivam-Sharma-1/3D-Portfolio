@@ -29,8 +29,16 @@ function Computers({ isMobile, computerref }) {
 					shadow-mapSize={1024}
 				/>
 				<PerspectiveCamera makeDefault position={[0, 0, -8]} fov={30} />
-				<pointLight intensity={1} position={[1, 1.3, 0]} />
-				<pointLight intensity={1} position={[-1, 1.3, 1]} />
+				<pointLight
+					intensity={2}
+					position={[1, 1.3, 0]}
+					color={"#804dee"}
+				/>
+				<pointLight
+					intensity={2}
+					position={[-1, 1.3, 1]}
+					color={"#804dee"}
+				/>
 				<OrbitControls
 					enableZoom={false}
 					maxPolarAngle={Math.PI / 2}
