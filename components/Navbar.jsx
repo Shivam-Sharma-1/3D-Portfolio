@@ -5,26 +5,19 @@ import Link from "next/link";
 import ThemeButton from "./ThemeButton";
 import Image from "next/image";
 
+import Menu from "./../public/assets/icons/menu.svg";
+import Close from "./../public/assets/icons/close.svg";
+
 const Navbar = () => {
 	const [active, setActive] = useState("");
 	const [toggle, setToggle] = useState(false);
 
 	return (
 		<nav
-			className={`paddingX w-full flex items-center py-5 fixed top-0 z-30 dark:bg-transparent bg-bgPrimaryLight backdrop-filter backdrop-blur-xl bg-opacity-60`}
+			className={`paddingX w-full flex items-center py-5 fixed top-0 z-30 bg-transparent backdrop-filter backdrop-blur-xl bg-opacity-60`}
 		>
 			<div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-				<Link
-					href="/"
-					className="flex items-center gap-6"
-					onClick={() => {
-						window.scrollTo({
-							top: 0,
-							left: 0,
-							behavior: "smooth"
-						});
-					}}
-				>
+				<Link href="/" className="flex items-center gap-6">
 					<div
 						className="w-9 h-9 object-contain
                         rounded-full relative"
@@ -51,11 +44,11 @@ const Navbar = () => {
 					{navLinks.map((nav) => (
 						<li
 							key={nav.id}
-							className={`${
+							className={`dark:text-ctnPrimaryDark text-ctnPrimaryLight border-secondary transition-all duration-200 ease-in text-[18px] font-medium cursor-pointer ${
 								active === nav.title
-									? "text-secondary"
-									: "dark:text-ctnPrimaryDark text-ctnPrimaryLight"
-							} hover:text-quaternary text-[18px] font-medium cursor-pointer`}
+									? "text-quaternary dark:text-quaternary border-b-2 border-quaternary"
+									: "hover:text-tertiary hover:dark:text-tertiary hover:border-y-2"
+							}`}
 							onClick={() => setActive(nav.title)}
 						>
 							<a href={`#${nav.id}`}>{nav.title}</a>
@@ -69,12 +62,12 @@ const Navbar = () => {
 				</ul>
 
 				<div className="sm:hidden flex flex-1 justify-end items-center">
-					<img
-						src={toggle ? "/assets/close.svg" : "/assets/menu.svg"}
-						alt="menu"
-						className="w-[28px] h-[28px] object-contain"
+					<div
+						className="w-[28px] h-[28px] object-contain text-ctnPrimaryLight dark:text-ctnPrimaryDark "
 						onClick={() => setToggle(!toggle)}
-					/>
+					>
+						{toggle ? <Close /> : <Menu />}
+					</div>
 
 					<div
 						className={`${
