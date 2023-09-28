@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import ComputersCanvas from "./canvas/Computers";
 import { forwardRef } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { fadeIn, textVariant } from "@/utils/motion";
 
-function Hero({ computerref }) {
+function Hero({ computerref, loading }) {
 	return (
 		<section className={`relative w-full h-screen mx-auto flex flex-col`}>
 			<div
@@ -14,7 +15,12 @@ function Hero({ computerref }) {
 					<div className="w-1 sm:h-80 h-40 violet-gradient" />
 				</div>
 
-				<div>
+				<motion.div
+					variants={textVariant()}
+					initial="hidden"
+					whileInView={!loading && "show"}
+					viewport={{ once: true, amount: 0.25 }}
+				>
 					<h1 className={`heroHeadText`}>
 						Hi, I&apos;m{" "}
 						<span className="dark:text-five text-primary">
@@ -37,12 +43,16 @@ function Hero({ computerref }) {
 							repeat={Infinity}
 						/>
 					</p>
-				</div>
+				</motion.div>
 			</div>
-			<div
+			<motion.div
+				variants={fadeIn("up", "spring")}
+				initial="hidden"
+				whileInView={!loading && "show"}
+				viewport={{ once: true, amount: 0.25 }}
 				ref={computerref}
 				className="w-full h-[800px] absolute top-[170px]"
-			></div>
+			/>
 
 			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-20">
 				<a href="#about">

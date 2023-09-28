@@ -13,6 +13,9 @@ const ServiceCard = ({ index, title, icon }) => (
 	<Tilt className="lg:w-[250px] w-full">
 		<motion.div
 			variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+			initial="hidden"
+			whileInView="show"
+			viewport={{ once: true, amount: 0.25 }}
 			className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
 		>
 			<div
@@ -23,15 +26,7 @@ const ServiceCard = ({ index, title, icon }) => (
 				}}
 				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
 			>
-				<div className="w-16 h-16 object-contain relative">
-					<Image
-						src={icon}
-						alt="skill-icon"
-						className="object-cover"
-						fill={true}
-						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
-					/>
-				</div>
+				<div className="w-16 h-16 object-contain relative">{icon}</div>
 				<h3 className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[20px] font-bold text-center w-[80%]">
 					{title}
 				</h3>
@@ -43,13 +38,21 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
 	return (
 		<div className="xl:my-36 w-2/3 ml-36 p-8" id="about">
-			<motion.div variants={textVariant()}>
+			<motion.div
+				variants={textVariant()}
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.25 }}
+			>
 				<p className={"sectionSubText"}>Introduction</p>
 				<h2 className={"sectionHeadText"}>Overview.</h2>
 			</motion.div>
 
 			<motion.div
 				variants={fadeIn("", "", 0.1, 1)}
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.25 }}
 				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] w-full leading-[30px] flex flex-col justify-between gap-4"
 			>
 				<div>
@@ -68,7 +71,6 @@ const About = () => {
 					Let&apos;s collaborate to bring your ideas to life!
 				</div>
 				<div>
-					{/* <span className="text-primary">Email: </span> */}
 					<Link
 						href="mailto:shivamsharma77607@gmail.com"
 						target="_blank"

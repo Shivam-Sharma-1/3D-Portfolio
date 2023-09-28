@@ -21,7 +21,7 @@ import PlayerContainer from "@/components/PlayerContainer";
 import UpArrow from "./../public/assets/icons/up-arrow.svg";
 import { PreLoader } from "@/components/Loader";
 
-function App() {
+function App({ loading }) {
 	const canvasref = useRef();
 	const computerref = useRef();
 	const earthref = useRef();
@@ -37,7 +37,7 @@ function App() {
 				<div className=" bg-cover bg-no-repeat bg-center">
 					<Navbar />
 					<HeroBackground />
-					<Hero computerref={computerref} />
+					<Hero computerref={computerref} loading={loading} />
 				</div>
 				<div className="relative z-0 flex w-full h-full overflow-x-hidden">
 					<About />

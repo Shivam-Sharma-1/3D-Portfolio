@@ -52,7 +52,7 @@ export default function App({ Component, pageProps }) {
 			</Head>
 
 			<ThemeProvider attribute="class">
-				<Component {...pageProps} />
+				<Component {...pageProps} loading={loading} />
 				{loading && <PreLoader />}
 			</ThemeProvider>
 		</>
