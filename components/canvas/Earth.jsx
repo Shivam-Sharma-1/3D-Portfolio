@@ -12,11 +12,11 @@ import * as THREE from "three";
 import CanvasLoader from "../Loader";
 import EarthModel from "./models/EarthModel";
 
-function Earth({ earthref }) {
+function Earth() {
 	const { nodes, materials } = useGLTF("models/planet/scene.gltf");
 
 	return (
-		<View track={earthref}>
+		<>
 			<OrbitControls
 				autoRotate
 				enableZoom={false}
@@ -35,8 +35,27 @@ function Earth({ earthref }) {
 					position={[0, 0, 0]}
 				/>
 			</Suspense>
-		</View>
+		</>
 	);
 }
 
-export default Earth;
+function EarthCanvas() {
+	return (
+		<Canvas
+			shadows
+			dpr={[1, 2]}
+			// camera={{ position: [-150, 10, 5], fov: 25 }}
+			gl={{
+				preserveDrawingBuffer: true,
+				antialias: true,
+				toneMappingExposure: 0.7,
+				outputColorSpace: THREE.SRGBColorSpace,
+				alpha: true
+			}}
+		>
+			<Earth />
+		</Canvas>
+	);
+}
+
+export default EarthCanvas;

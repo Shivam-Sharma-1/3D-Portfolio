@@ -9,11 +9,12 @@ import {
 } from "@react-three/drei";
 import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import CanvasLoader from "../Loader";
-import { useFrame } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
 import PlayerModel from "./models/PlayerModel";
+import * as THREE from "three";
 
-function Player({ playerref, isMobile }) {
+function Player() {
 	const group = useRef();
 	const [animationsLoaded, setAnimationsLoaded] = useState(false);
 
@@ -43,7 +44,7 @@ function Player({ playerref, isMobile }) {
 	}, 2000);
 
 	return (
-		<View track={playerref}>
+		<>
 			<ambientLight intensity={1} />
 			<PerspectiveCamera
 				makeDefault
@@ -88,8 +89,27 @@ function Player({ playerref, isMobile }) {
 					group={group}
 				/>
 			</Suspense>
-		</View>
+		</>
 	);
 }
 
-export default Player;
+function PlayerCanvas() {
+	return (
+		<Canvas
+			shadows
+			dpr={[1, 2]}
+			// camera={{ position: [-150, 10, 5], fov: 25 }}
+			gl={{
+				preserveDrawingBuffer: true,
+				antialias: true,
+				toneMappingExposure: 0.7,
+				outputColorSpace: THREE.SRGBColorSpace,
+				alpha: true
+			}}
+		>
+			<Player />
+		</Canvas>
+	);
+}
+
+export default PlayerCanvas;

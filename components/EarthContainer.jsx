@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
+import Earth from "./canvas/Earth";
+import EarthCanvas from "./canvas/Earth";
 
-function EarthContainer({ earthref }) {
+function EarthContainer() {
 	return (
 		<motion.div
 			variants={slideIn("right", "tween", 0.2, 1)}
@@ -9,8 +11,9 @@ function EarthContainer({ earthref }) {
 			whileInView="show"
 			viewport={{ once: true }}
 			className="xl:w-1/2 xl:h-auto md:h-[550px] h-[350px]"
-			ref={earthref}
-		/>
+		>
+			<EarthCanvas />
+		</motion.div>
 	);
 }
 
