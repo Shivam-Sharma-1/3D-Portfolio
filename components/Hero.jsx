@@ -27,7 +27,7 @@ function Hero({ computerref, loading }) {
 							Shivam
 						</span>
 					</h1>
-					<p className={`heroSubText mt-2`}>
+					<p className={`heroSubText mt-2 tracking-wide`}>
 						<TypeAnimation
 							sequence={[
 								"React/Next.js developer",
