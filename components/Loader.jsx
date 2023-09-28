@@ -34,7 +34,7 @@ export function PreLoader() {
 	}, []);
 
 	return (
-		<div className="w-screen h-screen overflow-hidden bg-bgPrimaryLight dark:bg-bgPrimaryDark z-40 fixed top-0 left-0 flex flex-col justify-center items-center gap-5">
+		<div className="w-screen h-screen overflow-hidden bg-bgPrimaryLight dark:bg-bgPrimaryDark z-40 fixed top-0 left-0 flex flex-col justify-center items-center gap-8">
 			<div className="loader w-[150px] h-[150px]">
 				<div className="loader_cube loader_cube--color"></div>
 				<div className="loader_cube loader_cube--glowing"></div>
