@@ -52,88 +52,88 @@ const technologies = [
 	},
 	{
 		name: "CSS3",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/css.png"
 	},
 	{
 		name: "JavaScript",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/javascript.png"
 	},
 	{
 		name: "TypeScript",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/typescript.png"
 	},
 	{
 		name: "React",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/react.png"
 	},
 	{
 		name: "Next.js",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/nextjs.png"
 	},
 	{
 		name: "Three.js",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/threejs.png"
 	},
 	{
 		name: "Styled-Components",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/styled-components.png"
 	},
 	{
 		name: "TailwindCSS",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/tailwindcss.png"
 	},
 	{
 		name: "Framer-motion",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Node.js",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "MongoDB",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Express.js",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Firebase",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "NextAuth.js",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Prisma",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "C",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Java",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Python",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "git",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Postman",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "figma",
-		icon: "/assets/tech/html.png"
+		icon: "/assets/tech/framer-motion.png"
 	}
+	// {
+	// 	name: "Node.js",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "MongoDB",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "Express.js",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "Firebase",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "NextAuth.js",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "Prisma",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "C",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "Java",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "Python",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "git",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "Postman",
+	// 	icon: "/assets/tech/html.png"
+	// },
+	// {
+	// 	name: "figma",
+	// 	icon: "/assets/tech/html.png"
+	// }
 ];
 
 const experiences = [

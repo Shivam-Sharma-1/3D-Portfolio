@@ -1,4 +1,4 @@
-import { Suspense, forwardRef, useEffect, useState } from "react";
+import { Suspense, forwardRef, use, useEffect, useState } from "react";
 import CanvasLoader from "../Loader";
 import { OrbitControls, Preload } from "@react-three/drei";
 import Computers from "./Computers";
@@ -6,8 +6,25 @@ import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import Earth from "./Earth";
 import Player from "./Player";
+import Ball from "./Ball";
+import { technologies } from "@/constants";
 
-function MainCanvas({ computerref, earthref, canvasref, playerref }) {
+function MainCanvas({
+	computerref,
+	earthref,
+	canvasref,
+	playerref,
+	ballref1,
+	ballref2,
+	ballref3,
+	ballref4,
+	ballref5,
+	ballref6,
+	ballref7,
+	ballref8,
+	ballref9,
+	ballref10
+}) {
 	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
@@ -53,6 +70,33 @@ function MainCanvas({ computerref, earthref, canvasref, playerref }) {
 				<Computers computerref={computerref} isMobile={isMobile} />
 				<Earth earthref={earthref} />
 				<Player playerref={playerref} isMobile={isMobile} />
+				{technologies.map((tech, index) => (
+					<Ball
+						key={index}
+						ballref={
+							index === 0
+								? ballref1
+								: index === 1
+								? ballref2
+								: index === 2
+								? ballref3
+								: index === 3
+								? ballref4
+								: index === 4
+								? ballref5
+								: index === 5
+								? ballref6
+								: index === 6
+								? ballref7
+								: index === 7
+								? ballref8
+								: index === 8
+								? ballref9
+								: ballref10
+						}
+						imgUrl={tech.icon}
+					/>
+				))}
 			</Suspense>
 			<Preload all />
 		</Canvas>
