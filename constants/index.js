@@ -2,6 +2,9 @@ import GithubIcon from "./../public/assets/icons/github.svg";
 import LinkedInIcon from "./../public/assets/icons/linkedin.svg";
 import XIcon from "./../public/assets/icons/x.svg";
 import InstagramIcon from "./../public/assets/icons/instagram.svg";
+import FrontendIcon from "./../public/assets/icons/frontend.svg";
+import LeaderShipIcon from "./../public/assets/icons/leadership.svg";
+import ProblemSolvingIcon from "./../public/assets/icons/problem-solving.svg";
 
 export const navLinks = [
 	{
@@ -25,20 +28,21 @@ const services = [
 	// },
 	{
 		title: "Frontend Developer",
-		icon: "/assets/web.png"
+		icon: <FrontendIcon />
 	},
 	{
-		title: "Leader",
-		icon: "/assets/web.png"
+		title: "Leadership",
+		icon: <LeaderShipIcon />
+	},
+	{
+		title: "Problem Solving",
+		icon: <ProblemSolvingIcon />
 	}
 	// {
 	// 	title: "Backend Developer",
 	// 	icon: backend
 	// }
 	// {
-	// 	title: "Content Creator",
-	// 	icon: creator
-	// }
 ];
 
 const technologies = [
