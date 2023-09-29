@@ -27,20 +27,37 @@ function App({ loading }) {
 		window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 	}, []);
 
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(max-width: 768px)");
+		setIsMobile(mediaQuery.matches);
+
+		const handleMediaQueryChange = (event) => {
+			setIsMobile(event.matches);
+		};
+
+		mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+		return () => {
+			mediaQuery.removeEventListener("change", handleMediaQueryChange);
+		};
+	}, []);
+
 	return (
 		<>
 			<div className="relative z-0 w-full h-full">
 				<div className=" bg-cover bg-no-repeat bg-center">
 					<Navbar />
 					<HeroBackground />
-					<Hero loading={loading} />
+					<Hero loading={loading} isMobile={isMobile} />
 				</div>
 				<div className="relative z-0 flex w-full h-full overflow-x-hidden">
 					<About />
-					<PlayerContainer />
+					<PlayerContainer isMobile={isMobile} />
 				</div>
 				<Experience />
-				{/* <Tech/> */}
+				<Tech />
 				<Works />
 				{/* <Feedbacks /> */}
 				<div className="relative z-0 flex w-full h-full overflow-x-hidden">

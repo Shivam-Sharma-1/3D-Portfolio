@@ -14,7 +14,7 @@ import { Vector3 } from "three";
 import PlayerModel from "./models/PlayerModel";
 import * as THREE from "three";
 
-function Player() {
+function Player({ isMobile }) {
 	const group = useRef();
 	const [animationsLoaded, setAnimationsLoaded] = useState(false);
 
@@ -84,7 +84,7 @@ function Player() {
 					nodes={nodes}
 					materials={materials}
 					rotation={[-1.6, 0, 0]}
-					position={[0, -1.6, 0]}
+					position={[0, -1.4, 0]}
 					scale={2}
 					group={group}
 				/>
@@ -93,7 +93,7 @@ function Player() {
 	);
 }
 
-function PlayerCanvas() {
+function PlayerCanvas({ isMobile }) {
 	return (
 		<Canvas
 			shadows

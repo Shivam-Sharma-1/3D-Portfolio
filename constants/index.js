@@ -45,96 +45,135 @@ const services = [
 	// {
 ];
 
-const technologies = [
-	{
-		name: "HTML5",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "CSS3",
-		icon: "/assets/tech/css.png"
-	},
-	{
-		name: "JavaScript",
-		icon: "/assets/tech/javascript.png"
-	},
-	{
-		name: "TypeScript",
-		icon: "/assets/tech/typescript.png"
-	},
-	{
-		name: "React",
-		icon: "/assets/tech/react.png"
-	},
-	{
-		name: "Next.js",
-		icon: "/assets/tech/nextjs.png"
-	},
-	{
-		name: "Three.js",
-		icon: "/assets/tech/threejs.png"
-	},
-	{
-		name: "Styled-Components",
-		icon: "/assets/tech/styled-components.png"
-	},
-	{
-		name: "TailwindCSS",
-		icon: "/assets/tech/tailwindcss.png"
-	},
-	{
-		name: "Framer-motion",
-		icon: "/assets/tech/framer-motion.png"
-	}
-	// {
-	// 	name: "Node.js",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "MongoDB",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "Express.js",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "Firebase",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "NextAuth.js",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "Prisma",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "C",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "Java",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "Python",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "git",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "Postman",
-	// 	icon: "/assets/tech/html.png"
-	// },
-	// {
-	// 	name: "figma",
-	// 	icon: "/assets/tech/html.png"
-	// }
-];
+const technologies = {
+	languages: [
+		{
+			name: "HTML5",
+			icon: "/assets/tech/html.png",
+			link: "https://html.spec.whatwg.org/multipage/"
+		},
+		{
+			name: "CSS3",
+			icon: "/assets/tech/css.png",
+			link: "https://www.w3.org/Style/CSS/Overview.en.html"
+		},
+		{
+			name: "JavaScript",
+			icon: "/assets/tech/javascript.png",
+			link: "https://262.ecma-international.org/"
+		},
+		{
+			name: "TypeScript",
+			icon: "/assets/tech/typescript.png",
+			link: "https://www.typescriptlang.org/"
+		},
+		{
+			name: "C",
+			icon: "/assets/tech/c.png",
+			link: "https://en.cppreference.com/w/c"
+		},
+		{
+			name: "Java",
+			icon: "/assets/tech/java.png",
+			link: "https://www.java.com/en/"
+		},
+		{
+			name: "Python",
+			icon: "/assets/tech/python.png",
+			link: "https://www.python.org/"
+		}
+	],
+	frameworks: [
+		{
+			name: "Next.js",
+			icon: "/assets/tech/nextjs.png",
+			link: "https://nextjs.org/"
+		},
+		{
+			name: "TailwindCSS",
+			icon: "/assets/tech/tailwindcss.png",
+			link: "https://tailwindcss.com/"
+		},
+		{
+			name: "Express.js",
+			icon: "/assets/tech/expressjs.png",
+			link: "https://expressjs.com/"
+		}
+	],
+	libraries: [
+		{
+			name: "React",
+			icon: "/assets/tech/react.png",
+			link: "https://react.dev/"
+		},
+		{
+			name: "Three.js",
+			icon: "/assets/tech/threejs.png",
+			link: "https://threejs.org/"
+		},
+		{
+			name: "Styled-Components",
+			icon: "/assets/tech/styled-components.png",
+			link: "https://styled-components.com/"
+		},
+		{
+			name: "Framer-motion",
+			icon: "/assets/tech/framer-motion.png",
+			link: "https://www.framer.com/motion/"
+		},
+		{
+			name: "NextAuth.js",
+			icon: "/assets/tech/nextauthjs.png",
+			link: "https://next-auth.js.org/"
+		},
+		{
+			name: "Prisma",
+			icon: "/assets/tech/prisma.png",
+			link: "https://www.prisma.io/"
+		}
+	],
+	tools: [
+		{
+			name: "Git",
+			icon: "/assets/tech/git.png",
+			link: "https://git-scm.com/"
+		},
+		{
+			name: "Github",
+			icon: "/assets/icons/github.svg",
+			link: "https://github.com/"
+		},
+		{
+			name: "Postman",
+			icon: "/assets/tech/postman.png",
+			link: "https://www.postman.com/"
+		},
+		{
+			name: "Figma",
+			icon: "/assets/tech/figma.png",
+			link: "https://www.figma.com/"
+		}
+	],
+	environments: [
+		{
+			name: "Node.js",
+			icon: "/assets/tech/nodejs.png",
+			link: "https://nodejs.org/en"
+		}
+	],
+	databases: [
+		{
+			name: "MongoDB",
+			icon: "/assets/tech/mongodb.png",
+			link: "https://www.mongodb.com/"
+		},
+		{
+			name: "Firebase",
+			icon: "/assets/tech/firebase.png",
+			link: "https://firebase.google.com/"
+		}
+	]
+};
 
 const experiences = [
 	{

@@ -51,32 +51,15 @@ function Computers({ isMobile }) {
 			<ComputerModel
 				nodes={nodes}
 				materials={materials}
-				scale={isMobile ? 0.6 : 0.35}
-				position={isMobile ? [0, -3, -1.2] : [-0.5, -0.5, 0]}
+				scale={isMobile ? 0.45 : 0.35}
+				position={isMobile ? [-0.45, -0.7, 0] : [-0.5, -0.5, 0]}
 				rotation={[-0.01, 1.6, -0.1]}
 			/>
 		</mesh>
 	);
 }
 
-const ComputersCanvas = () => {
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		const mediaQuery = window.matchMedia("(max-width: 768px)");
-		setIsMobile(mediaQuery.matches);
-
-		const handleMediaQueryChange = (event) => {
-			setIsMobile(event.matches);
-		};
-
-		mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-		return () => {
-			mediaQuery.removeEventListener("change", handleMediaQueryChange);
-		};
-	}, []);
-
+function ComputersCanvas({ isMobile }) {
 	return (
 		<Canvas
 			shadows
@@ -103,6 +86,6 @@ const ComputersCanvas = () => {
 			<Preload all />
 		</Canvas>
 	);
-};
+}
 
 export default ComputersCanvas;

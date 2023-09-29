@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import { fadeIn, textVariant } from "@/utils/motion";
 import Computers from "./canvas/Computers";
 
-function Hero({ loading }) {
+function Hero({ loading, isMobile }) {
 	return (
 		<section className={`relative w-full h-screen mx-auto flex flex-col`}>
 			<div
@@ -51,12 +51,12 @@ function Hero({ loading }) {
 				initial="hidden"
 				whileInView={!loading && "show"}
 				viewport={{ once: true, amount: 0.25 }}
-				className="w-full h-[800px] absolute top-[170px]"
+				className="w-full md:h-[800px] h-[200px] absolute md:top-[170px] top-[350px]"
 			>
-				<ComputersCanvas />
+				<ComputersCanvas isMobile={isMobile} />
 			</motion.div>
 
-			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-20">
+			<div className="absolute xs:bottom-10 bottom-32 w-full justify-center items-center z-20 hidden md:flex">
 				<a href="#about">
 					<div className="w-[35px] h-[64px] rounded-3xl border-2 border-[#aaa6c3] flex justify-center items-start p-2">
 						<motion.div
