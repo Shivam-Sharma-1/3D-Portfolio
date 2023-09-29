@@ -86,7 +86,7 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What's your good name?"
-						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
+						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight placeholder:text-sm md:placeholder:text-lg h-fit placeholder:break-words break-words"
 					/>
 				</label>
 				<label className="flex flex-col">
@@ -100,7 +100,7 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What's your web address?"
-						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
+						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight placeholder:text-sm md:placeholder:text-lg h-fit placeholder:break-words break-words"
 					/>
 				</label>
 				<label className="flex flex-col">
@@ -114,7 +114,7 @@ function Contact() {
 						onChange={handleChange}
 						required
 						placeholder="What you want to say?"
-						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight"
+						className="dark:bg-bgPrimaryDark bg-bgPrimaryLight py-4 px-6 placeholder:dark:text-ctnSecondaryDark placeholder:text-ctnSecondaryLight rounded-lg outline-none border-none font-medium dark:text-ctnPrimaryDark text-ctnPrimaryLight placeholder:text-sm md:placeholder:text-lg h-fit placeholder:break-words break-words"
 					/>
 				</label>
 

@@ -7,7 +7,7 @@ import Computers from "./canvas/Computers";
 
 function Hero({ loading, isMobile }) {
 	return (
-		<section className={`relative w-full h-screen mx-auto flex flex-col`}>
+		<section className={`relative w-full h-[100dvh] mx-auto flex flex-col`}>
 			<div
 				className={`absolute inset-0 top-[120px] max-w-7xl mx-auto paddingX flex flex-row items-start gap-5`}
 			>
