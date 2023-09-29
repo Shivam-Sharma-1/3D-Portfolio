@@ -26,10 +26,12 @@ function Contact() {
 		e.preventDefault();
 		setLoading(true);
 
+		console.log(form, process.env.NEXT_APP_KEY);
+
 		emailjs
 			.send(
-				"service_v24oiak",
-				"template_sqwax0b",
+				process.env.NEXT_PUBLIC_SERVICE_ID,
+				process.env.NEXT_PUBLIC_TEMPLATE_ID,
 				{
 					from_name: form.name,
 					to_name: "Shivam Sharma",
@@ -37,7 +39,7 @@ function Contact() {
 					to_email: "shivamsharma77607@gmail.com",
 					message: form.message
 				},
-				"ywtbnZ4k68zCCsf_2"
+				process.env.NEXT_PUBLIC_EMAILJS_KEY
 			)
 			.then(
 				() => {
@@ -66,7 +68,7 @@ function Contact() {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true }}
-			className="xl:my-36 md:w-2/5 w-full bg-bgSecondaryDark  md:ml-36 p-8 rounded-2xl shadow-sm shadow-primary"
+			className="xl:my-36 md:w-2/5 w-full bg-bgSecondaryDark xl:ml-36 lg:ml-16 md:ml-10 p-8 rounded-2xl shadow-sm shadow-primary"
 			id="contact"
 		>
 			<p className={"sectionSubText text-ctnSecondaryDark"}>

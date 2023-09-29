@@ -60,7 +60,7 @@ function App({ loading }) {
 				<Tech />
 				<Works />
 				{/* <Feedbacks /> */}
-				<div className="relative z-0 flex md:flex-row flex-col-reverse w-full h-full overflow-x-hidden p-8">
+				<div className="relative z-0 flex md:flex-row justify-between flex-col-reverse w-full h-full overflow-x-hidden p-8">
 					<Contact />
 					<EarthContainer isMobile={isMobile} />
 					<StarsCanvas />
