@@ -62,7 +62,7 @@ function Contact() {
 
 	return (
 		<motion.div
-			variants={slideIn("-130%", "tween", 0.2, 1)}
+			variants={slideIn("left", "tween", 0.2, 1)}
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true }}
