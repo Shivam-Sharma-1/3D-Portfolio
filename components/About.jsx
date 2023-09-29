@@ -39,7 +39,7 @@ const ServiceCard = ({ index, title, icon }) => (
 function About({ isMobile }) {
 	return (
 		<div
-			className="md:my-36 md:w-2/3 w-full h-full xl:ml-36 lg:ml-12 p-8 md:mt-[200px] "
+			className="md:my-36 md:w-2/3 w-full h-full xl:ml-36 lg:ml-12 p-8 md:mt-[40svh] xl:mt-[150px]"
 			id="about"
 		>
 			<motion.div

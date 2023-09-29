@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import { navLinks } from "../constants";
 import Link from "next/link";
@@ -7,6 +8,7 @@ import Image from "next/image";
 
 import Menu from "./../public/assets/icons/menu.svg";
 import Close from "./../public/assets/icons/close.svg";
+import { slideIn } from "@/utils/motion";
 
 const Navbar = () => {
 	const [active, setActive] = useState("");
@@ -33,7 +35,7 @@ const Navbar = () => {
 					</div>
 					<p className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[18px] font-bold cursor-pointer flex ">
 						Shivam Sharma &nbsp;
-						<span className="sm:block hidden">
+						<span className="lg:block hidden">
 							{" "}
 							| Frontend Developer
 						</span>
@@ -73,7 +75,10 @@ const Navbar = () => {
 						)}
 					</div>
 
-					<div
+					<motion.div
+						variants={slideIn("right", "tween", 0, 0.3)}
+						initial="hidden"
+						whileInView="show"
 						className={`${
 							!toggle ? "hidden" : "flex"
 						} p-6 bg-bgSecondaryLight dark:bg-bgSecondaryDark absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
@@ -101,7 +106,7 @@ const Navbar = () => {
 								<ThemeButton />
 							</li>
 						</ul>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</nav>
