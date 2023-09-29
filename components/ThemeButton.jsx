@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 const ThemeButton = () => {
 	const [mounted, setMounted] = useState(false);
 	const { systemTheme, theme, setTheme } = useTheme("dark");
-	setTheme("dark");
 
 	useEffect(() => {
 		setMounted(true);
