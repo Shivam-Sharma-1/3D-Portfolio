@@ -60,7 +60,7 @@ function App({ loading }) {
 				<Tech />
 				<Works />
 				{/* <Feedbacks /> */}
-				<div className="relative z-0 flex w-full h-full overflow-x-hidden">
+				<div className="relative z-0 flex md:flex-row flex-col-reverse w-full h-full overflow-x-hidden p-8">
 					<Contact />
 					<EarthContainer />
 					<StarsCanvas />
@@ -73,7 +73,7 @@ function App({ loading }) {
 							behavior: "smooth"
 						});
 					}}
-					className="fixed w-10 h-10 p-2 bottom-8 right-10 text-center text-secondary backdrop-filter backdrop-blur-xl bg-opacity-20 bg-tertiary rounded-lg hover:scale-110 transition-all duration-300"
+					className="fixed md:w-10 md:h-10 h-8 w-8 p-2 bottom-8 md:right-10 right-8 text-center text-secondary backdrop-filter backdrop-blur-xl bg-opacity-20 bg-tertiary rounded-lg hover:scale-110 transition-all duration-300"
 				>
 					<UpArrow />
 				</button>

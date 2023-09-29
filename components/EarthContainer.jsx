@@ -10,7 +10,7 @@ function EarthContainer() {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true }}
-			className="xl:w-1/2 xl:h-auto md:h-[550px] h-[350px]"
+			className="xl:w-1/2 w-full xl:h-auto md:h-[550px] h-[350px]"
 		>
 			<EarthCanvas />
 		</motion.div>
