@@ -11,7 +11,7 @@ import Image from "next/image";
 import PlayerContainer from "./PlayerContainer";
 
 const ServiceCard = ({ index, title, icon }) => (
-	<Tilt className="lg:w-[250px] w-full">
+	<Tilt className="w-[250px]">
 		<motion.div
 			variants={fadeIn("right", "spring", index * 0.5, 0.75)}
 			initial="hidden"
@@ -39,14 +39,14 @@ const ServiceCard = ({ index, title, icon }) => (
 function About({ isMobile }) {
 	return (
 		<div
-			className="xl:my-36 md:w-2/3 w-full h-full md:ml-36 p-8 md:-mt-16 "
+			className="md:my-36 md:w-2/3 w-full h-full xl:ml-36 lg:ml-12 p-8 md:mt-[200px] "
 			id="about"
 		>
 			<motion.div
 				variants={textVariant()}
 				initial="hidden"
 				whileInView="show"
-				viewport={{ once: true, amount: isMobile ? 0 : 0.25 }}
+				viewport={{ once: true, amount: 0.25 }}
 			>
 				<p className={"sectionSubText"}>Introduction</p>
 				<h2 className={"sectionHeadText"}>Overview.</h2>
@@ -80,7 +80,7 @@ function About({ isMobile }) {
 						href="mailto:shivamsharma77607@gmail.com"
 						target="_blank"
 						rel="noreferrer"
-						className="hover:text-primary w-full transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-col word-break"
+						className="hover:text-primary w-full transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-wrap word-break"
 					>
 						<EmailIcon className="w-[30px] h-[30px]" />
 						shivamsharma77607@gmail.com
@@ -120,7 +120,7 @@ function About({ isMobile }) {
 				</Link>
 			</motion.div>
 
-			<div className="mt-14 flex flex-wrap gap-10">
+			<div className="mt-14 flex flex-wrap gap-10 justify-center">
 				{services.map((service, index) => (
 					<ServiceCard
 						key={service.title}

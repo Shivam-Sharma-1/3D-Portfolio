@@ -10,7 +10,7 @@ function PlayerContainer({ isMobile }) {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true }}
-			className="xl:w-1/3 md:w-2/5 w-full xl:h-auto h-[550px]"
+			className="md:w-1/3 w-full md:h-auto h-[550px]"
 		>
 			<PlayerCanvas isMobile={isMobile} />
 		</motion.div>

@@ -7,7 +7,9 @@ import Computers from "./canvas/Computers";
 
 function Hero({ loading, isMobile }) {
 	return (
-		<section className={`relative w-full h-[100dvh] mx-auto flex flex-col`}>
+		<section
+			className={`relative w-full h-[100svh] md:max-h-[800px] max-h-[600px] mx-auto flex flex-col`}
+		>
 			<div
 				className={`absolute inset-0 top-[120px] max-w-7xl mx-auto paddingX flex flex-row items-start gap-5`}
 			>
@@ -51,7 +53,7 @@ function Hero({ loading, isMobile }) {
 				initial="hidden"
 				whileInView={!loading && "show"}
 				viewport={{ once: true, amount: 0.25 }}
-				className="w-full md:h-[800px] h-[200px] absolute md:top-[170px] top-[350px]"
+				className="w-full md:h-[800px] sm:h-[300px] h-[200px] absolute md:top-[170px] sm:top-[280px] top-[350px]"
 			>
 				<ComputersCanvas isMobile={isMobile} />
 			</motion.div>
