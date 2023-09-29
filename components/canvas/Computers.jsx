@@ -7,8 +7,8 @@ import {
 } from "@react-three/drei";
 import * as THREE from "three";
 
-import { Canvas } from "@react-three/fiber";
-import { Suspense, forwardRef, useEffect, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense, forwardRef, useEffect, useRef, useState } from "react";
 import CanvasLoader from "../Loader";
 import ComputerModel from "./models/ComputerModel";
 
@@ -16,7 +16,7 @@ function Computers({ isMobile }) {
 	const { nodes, materials } = useGLTF("/models/desktop_pc/scene.gltf");
 
 	return (
-		<mesh>
+		<>
 			<hemisphereLight intensity={1} groundColor="black" />
 			<ambientLight intensity={0.65} />
 			<spotLight
@@ -45,17 +45,18 @@ function Computers({ isMobile }) {
 				enableDamping={true}
 				dampingFactor={0.05}
 				enablePan={false}
-				autoRotate={false}
+				autoRotateSpeed={4}
+				autoRotate={isMobile && true}
 				makeDefault
 			/>
 			<ComputerModel
 				nodes={nodes}
 				materials={materials}
 				scale={isMobile ? 0.45 : 0.35}
-				position={isMobile ? [-0.45, -0.7, 0] : [-0.5, -0.5, 0]}
+				position={isMobile ? [-0.75, -0.7, 0] : [-0.5, -0.5, 0]}
 				rotation={[-0.01, 1.6, -0.1]}
 			/>
-		</mesh>
+		</>
 	);
 }
 
@@ -73,13 +74,6 @@ function ComputersCanvas({ isMobile }) {
 				alpha: true
 			}}
 		>
-			<OrbitControls
-				enableZoom={false}
-				maxPolarAngle={Math.PI / 2}
-				minPolarAngle={Math.PI / 2}
-				enableDamping={true}
-				dampingFactor={0.05}
-			/>
 			<Suspense fallback={<CanvasLoader />}>
 				<Computers isMobile={isMobile} />
 			</Suspense>

@@ -1,6 +1,6 @@
-function EarthModel({ nodes, materials, scale, position }) {
+function EarthModel({ nodes, materials, scale, position, earthRef }) {
 	return (
-		<group dispose={null} scale={scale} position={position}>
+		<group dispose={null} scale={scale} position={position} ref={earthRef}>
 			<group name="Sketchfab_Scene">
 				<group name="Sketchfab_model" rotation={[-1.54, -0.064, 0]}>
 					<group name="root">

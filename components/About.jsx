@@ -39,7 +39,7 @@ const ServiceCard = ({ index, title, icon }) => (
 function About({ isMobile }) {
 	return (
 		<div
-			className="xl:my-36 md:w-2/3 w-full md:ml-36 p-8 -mt-16"
+			className="xl:my-36 md:w-2/3 w-full h-full md:ml-36 p-8 md:-mt-16 "
 			id="about"
 		>
 			<motion.div
@@ -51,7 +51,7 @@ function About({ isMobile }) {
 				<p className={"sectionSubText"}>Introduction</p>
 				<h2 className={"sectionHeadText"}>Overview.</h2>
 			</motion.div>
-			{isMobile ? <PlayerContainer isMobile={isMobile} /> : ""}
+			{/* {isMobile ? <PlayerContainer isMobile={isMobile} /> : ""} */}
 
 			<motion.div
 				variants={fadeIn("", "", 0.1, 1)}
@@ -80,7 +80,7 @@ function About({ isMobile }) {
 						href="mailto:shivamsharma77607@gmail.com"
 						target="_blank"
 						rel="noreferrer"
-						className="hover:text-primary transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-col word-break"
+						className="hover:text-primary w-full transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-col word-break"
 					>
 						<EmailIcon className="w-[30px] h-[30px]" />
 						shivamsharma77607@gmail.com

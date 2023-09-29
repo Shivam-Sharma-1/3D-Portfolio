@@ -52,7 +52,7 @@ function App({ loading }) {
 					<HeroBackground />
 					<Hero loading={loading} isMobile={isMobile} />
 				</div>
-				<div className="relative z-0 flex md:flex-row flex-col-reverse w-full h-full overflow-x-hidden">
+				<div className="relative z-0 flex md:flex-row flex-col-reverse w-full h-full overflow-hidden">
 					<About isMobile={isMobile} />
 					{!isMobile && <PlayerContainer isMobile={isMobile} />}
 				</div>
@@ -62,7 +62,7 @@ function App({ loading }) {
 				{/* <Feedbacks /> */}
 				<div className="relative z-0 flex md:flex-row flex-col-reverse w-full h-full overflow-x-hidden p-8">
 					<Contact />
-					<EarthContainer />
+					<EarthContainer isMobile={isMobile} />
 					<StarsCanvas />
 				</div>
 				<button

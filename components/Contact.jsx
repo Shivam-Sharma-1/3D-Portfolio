@@ -5,9 +5,11 @@ import emailjs from "@emailjs/browser";
 // import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn, staggerContainer } from "../utils/motion";
+import { useFrame } from "@react-three/fiber";
 
 function Contact() {
 	const formRef = useRef();
+
 	const [form, setForm] = useState({
 		name: "",
 		email: "",
