@@ -8,7 +8,7 @@ import HeroSvg from "../public/assets/background/hero-wave.svg";
 
 const HeroBackground = () => {
 	return (
-		<div className="absolute top-0 w-full h-[100dvh] bg-gradient-to-b from-opacity-[6.33%] dark:from-[#322d6d] from-[#ffffff] to-opacity-[39.13%] dark:to-[#663182] to-[#51afda] overflow-hidden md:overflow-visible">
+		<div className="absolute top-0 w-full h-[100dvh] bg-gradient-to-b from-opacity-[6.33%] dark:from-[#322d6d] from-[#ffffff] to-opacity-[39.13%] dark:to-[#663182] to-[#51afda]">
 			<Mountain1 className="w-full h-[446px] wave top-[170px]" />
 			<Mountain2 className="w-full h-[464px] wave top-[160px]" />
 			<div className="w-full h-[1503px] wave top-[-200px]">
@@ -21,7 +21,7 @@ const HeroBackground = () => {
 			<Mountain3 className="w-full h-[408px] wave top-[347px]" />
 			{/* <Mountain4 className="w-full h-[457px] wave top-[466px]" /> */}
 			<Mountain5 className="w-full h-[867px] wave md:top-[450px] top-[300px]" />
-			<HeroSvg className="md:w-full w-[150vw] h-[1200px] wave md:top-[100dvh] md:left-0 top-[520px]  dark:text-[#181826] text-bgPrimaryLight" />
+			<HeroSvg className="md:w-full w-[100dvw] h-[1200px] wave md:top-[100dvh] md:left-0 top-[520px]  dark:text-[#181826] text-bgPrimaryLight" />
 		</div>
 	);
 };
