@@ -18,24 +18,12 @@ function ExperienceCard({ experience, theme }) {
 	return (
 		<VerticalTimelineElement
 			contentStyle={{
-				background: theme
-					? theme === "dark"
-						? "#2b2b42"
-						: "#e0eaf0"
-					: "#2b2b42",
-				color: theme
-					? theme === "dark"
-						? "#e5e6e9"
-						: "#2e384d"
-					: "#e5e6e9"
+				background: theme === "dark" ? "#2b2b42" : "#e0eaf0",
+				color: theme === "dark" ? "#e5e6e9" : "#2e384d"
 			}}
 			contentArrowStyle={{
 				borderRight: `7px solid ${
-					theme
-						? theme !== "dark"
-							? "#e0eaf0"
-							: "#2b2b42"
-						: "#2b2b42"
+					theme !== "dark" ? "#e0eaf0" : "#2b2b42"
 				}`
 			}}
 			date={experience.date}
@@ -83,7 +71,6 @@ function Experience() {
 	const { systemTheme, theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
-	// useEffect only runs on the client, so now we can safely show the UI
 	useEffect(() => {
 		setMounted(true);
 	}, []);
