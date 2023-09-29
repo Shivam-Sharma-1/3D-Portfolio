@@ -8,7 +8,7 @@ import HeroSvg from "../public/assets/background/hero-wave.svg";
 
 const HeroBackground = () => {
 	return (
-		<div className="absolute top-0 w-full h-[100svh] bg-gradient-to-b from-opacity-[6.33%] dark:from-[#1e1575] from-[#b0afb1] to-opacity-[39.13%] dark:to-[#663182] to-[#51afda]">
+		<div className="absolute top-0 w-full h-[100svh] bg-gradient-to-b from-opacity-[6.33%] dark:from-[#322d6d] from-[#b0afb1] to-opacity-[39.13%] dark:to-[#663182] to-[#51afda]">
 			<Mountain1 className="w-full h-[446px] wave top-[170px]" />
 			<Mountain2 className="w-full h-[464px] wave top-[160px]" />
 			<div className="w-full h-[1503px] wave top-[-200px]">
