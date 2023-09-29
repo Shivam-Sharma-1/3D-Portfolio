@@ -25,7 +25,7 @@ function Tech() {
 				initial="hidden"
 				whileInView="show"
 				viewport={{ once: true, amount: 0.25 }}
-				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight dark:bg-bgSecondaryDark bg-bgSecondaryLight text-[17px] w-full h-full leading-[30px] flex gap-4 p-8 px-10 rounded-lg justify-between backdrop-filter backdrop-blur-xl bg-opacity-10 shadow-sm shadow-primary"
+				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight dark:bg-bgSecondaryDark bg-bgSecondaryLight text-[17px] w-full h-full leading-[30px] flex md:flex-row flex-col gap-4 p-8 px-10 rounded-lg justify-between backdrop-filter backdrop-blur-xl bg-opacity-10 shadow-sm shadow-primary"
 			>
 				<div className="flex flex-col justify-between h-full gap-5">
 					<h3 className="h-[50px] flex items-center">Languages</h3>
@@ -34,7 +34,7 @@ function Tech() {
 					<h3 className="h-[50px] flex items-center">Databases</h3>
 					<h3 className="h-[50px] flex items-center">Tools</h3>
 				</div>
-				<div className="w-[2px] h-[340px] dark:bg-ctnSecondaryDark bg-ctnSecondaryLight rounded-lg" />
+				<div className="w-[2px] h-[340px] dark:bg-ctnSecondaryDark bg-ctnSecondaryLight rounded-lg md:flex hidden" />
 				<div className="w-[80%] h-full flex flex-col gap-5">
 					<div className="w-full h-fit flex gap-2">
 						{technologies.languages.map((tech, index) => (

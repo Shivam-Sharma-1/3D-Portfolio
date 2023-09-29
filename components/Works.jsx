@@ -23,14 +23,19 @@ function ProjectCard({
 	const CHAR_LIMIT = 280;
 
 	return (
-		<motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+		<motion.div
+			variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+			initial="hidden"
+			whileInView="show"
+			viewport={{ once: true, amount: 0.25 }}
+		>
 			<Tilt
 				options={{
 					max: 45,
 					scale: 1,
 					speed: 450
 				}}
-				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full h-[540px]"
+				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full h-fit min-h-[540px]"
 			>
 				<div className="relative w-full h-[230px]">
 					<div className="w-full h-full object-cover rounded-2xl relative">
@@ -89,8 +94,13 @@ function ProjectCard({
 
 function Works() {
 	return (
-		<>
-			<motion.div variants={textVariant()}>
+		<section className="xl:my-36 md:mx-36 p-8 " id="works">
+			<motion.div
+				variants={textVariant()}
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.25 }}
+			>
 				<p className={"sectionSubText"}>My work</p>
 				<h2 className={"sectionHeadText"}>Projects.</h2>
 			</motion.div>
@@ -99,6 +109,9 @@ function Works() {
 				<motion.p
 					variants={fadeIn("", "", 0.1, 1)}
 					className="mt-3 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] max-w-3xl leading-[30px]"
+					initial="hidden"
+					whileInView="show"
+					viewport={{ once: true, amount: 0.25 }}
 				>
 					These projects showcase my practical skills and experience,
 					each with descriptions and links to code repositories and
@@ -108,7 +121,7 @@ function Works() {
 				</motion.p>
 			</div>
 
-			<div className="mt-20 flex justify-center flex-wrap gap-7">
+			<div className="md:mt-20 mt-10 flex justify-center flex-wrap gap-7">
 				{projects.map((project, index) => (
 					<ProjectCard
 						key={`project-${index}`}
@@ -117,8 +130,8 @@ function Works() {
 					/>
 				))}
 			</div>
-		</>
+		</section>
 	);
 }
 
-export default SectionWrapper(Works, "");
+export default Works;

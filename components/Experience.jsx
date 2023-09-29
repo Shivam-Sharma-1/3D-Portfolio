@@ -93,7 +93,7 @@ function Experience() {
 	}
 
 	return (
-		<>
+		<motion.section className="w-full p-8">
 			<motion.div variants={textVariant()}>
 				<p className={`sectionSubText text-center`}>
 					What I have done so far
@@ -116,7 +116,7 @@ function Experience() {
 					))}
 				</VerticalTimeline>
 			</div>
-		</>
+		</motion.section>
 	);
 }
 
