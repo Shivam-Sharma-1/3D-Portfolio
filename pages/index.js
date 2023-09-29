@@ -52,9 +52,9 @@ function App({ loading }) {
 					<HeroBackground />
 					<Hero loading={loading} isMobile={isMobile} />
 				</div>
-				<div className="relative z-0 flex w-full h-full overflow-x-hidden">
-					<About />
-					<PlayerContainer isMobile={isMobile} />
+				<div className="relative z-0 flex md:flex-row flex-col-reverse w-full h-full overflow-x-hidden">
+					<About isMobile={isMobile} />
+					{!isMobile && <PlayerContainer isMobile={isMobile} />}
 				</div>
 				<Experience />
 				<Tech />

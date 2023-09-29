@@ -69,23 +69,25 @@ function Player({ isMobile }) {
 				position={[-1, 0.5, 1]}
 				color={"#804dee"}
 			/>
-			<OrbitControls
-				makeDefault
-				enableZoom={false}
-				maxPolarAngle={Math.PI / 2}
-				minPolarAngle={Math.PI / 2}
-				enableDamping={true}
-				dampingFactor={0.05}
-				enablePan={false}
-				autoRotate={false}
-			/>
+			{!isMobile && (
+				<OrbitControls
+					makeDefault
+					enableZoom={false}
+					maxPolarAngle={Math.PI / 2}
+					minPolarAngle={Math.PI / 2}
+					enableDamping={true}
+					dampingFactor={0.05}
+					enablePan={false}
+					autoRotate={false}
+				/>
+			)}
 			<Suspense fallback={<CanvasLoader />}>
 				<PlayerModel
 					nodes={nodes}
 					materials={materials}
 					rotation={[-1.6, 0, 0]}
-					position={[0, -1.4, 0]}
-					scale={2}
+					position={isMobile ? [0, -2.7, 0] : [0, -1.4, 0]}
+					scale={isMobile ? 3 : 2}
 					group={group}
 				/>
 			</Suspense>
@@ -107,7 +109,7 @@ function PlayerCanvas({ isMobile }) {
 				alpha: true
 			}}
 		>
-			<Player />
+			<Player isMobile={isMobile} />
 		</Canvas>
 	);
 }

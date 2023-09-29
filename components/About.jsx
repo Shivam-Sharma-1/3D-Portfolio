@@ -8,6 +8,7 @@ import { styles } from "@/constants/styles";
 import Link from "next/link";
 import EmailIcon from "./../public/assets/icons/email.svg";
 import Image from "next/image";
+import PlayerContainer from "./PlayerContainer";
 
 const ServiceCard = ({ index, title, icon }) => (
 	<Tilt className="lg:w-[250px] w-full">
@@ -35,18 +36,22 @@ const ServiceCard = ({ index, title, icon }) => (
 	</Tilt>
 );
 
-const About = () => {
+function About({ isMobile }) {
 	return (
-		<div className="xl:my-36 w-2/3 ml-36 p-8" id="about">
+		<div
+			className="xl:my-36 md:w-2/3 w-full md:ml-36 p-8 -mt-16"
+			id="about"
+		>
 			<motion.div
 				variants={textVariant()}
 				initial="hidden"
 				whileInView="show"
-				viewport={{ once: true, amount: 0.25 }}
+				viewport={{ once: true, amount: isMobile ? 0 : 0.25 }}
 			>
 				<p className={"sectionSubText"}>Introduction</p>
 				<h2 className={"sectionHeadText"}>Overview.</h2>
 			</motion.div>
+			{isMobile ? <PlayerContainer isMobile={isMobile} /> : ""}
 
 			<motion.div
 				variants={fadeIn("", "", 0.1, 1)}
@@ -70,15 +75,15 @@ const About = () => {
 					<br className="sm:block hidden" />
 					Let&apos;s collaborate to bring your ideas to life!
 				</div>
-				<div>
+				<div className="w-full break-words">
 					<Link
 						href="mailto:shivamsharma77607@gmail.com"
 						target="_blank"
 						rel="noreferrer"
-						className="hover:text-primary transition-all duration-100 ease-in flex items-center gap-2"
+						className="hover:text-primary transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-col word-break"
 					>
 						<EmailIcon className="w-[30px] h-[30px]" />
-						&nbsp;shivamsharma77607@gmail.com
+						shivamsharma77607@gmail.com
 					</Link>
 				</div>
 				<div className="flex gap-5 items-center">
@@ -126,6 +131,6 @@ const About = () => {
 			</div>
 		</div>
 	);
-};
+}
 
 export default About;
