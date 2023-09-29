@@ -18,13 +18,20 @@ function ExperienceCard({ experience, theme }) {
 	return (
 		<VerticalTimelineElement
 			contentStyle={{
-				background: theme === "dark" ? "#2b2b42" : "#e0eaf0",
-				color: theme === "dark" ? "#e5e6e9" : "#2e384d"
+				background:
+					theme !== "dark"
+						? "linear-gradient(90deg, rgba(224,234,240,1) 0%, rgba(232,239,243,1) 50%, rgba(224,234,240,1) 100%)"
+						: "linear-gradient(90deg, rgba(33,33,52,1) 0%, rgba(39,39,61,1) 50%, rgba(33,33,52,1) 100%)",
+				color: theme !== "dark" ? "#7e8c9f" : "#e5e6e9",
+				boxShadow: "0 1px 2px 0 rgb(128, 77, 238)"
 			}}
 			contentArrowStyle={{
 				borderRight: `7px solid ${
 					theme !== "dark" ? "#e0eaf0" : "#2b2b42"
 				}`
+			}}
+			style={{
+				boxShadow: "0 1px 2px 0 rgb(128, 77, 238 / 0.05)"
 			}}
 			date={experience.date}
 			iconStyle={{ background: experience.iconBg }}

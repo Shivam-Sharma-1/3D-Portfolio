@@ -48,8 +48,8 @@ function About({ isMobile }) {
 				whileInView="show"
 				viewport={{ once: true, amount: 0.25 }}
 			>
-				<p className={"sectionSubText"}>Introduction</p>
-				<h2 className={"sectionHeadText"}>Overview.</h2>
+				<p className={"sectionSubText text-gray-300"}>Introduction</p>
+				<h2 className={"sectionHeadText text-white-100"}>Overview.</h2>
 			</motion.div>
 			{/* {isMobile ? <PlayerContainer isMobile={isMobile} /> : ""} */}
 
@@ -58,7 +58,7 @@ function About({ isMobile }) {
 				initial="hidden"
 				whileInView="show"
 				viewport={{ once: true, amount: 0.25 }}
-				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] w-full leading-[30px] flex flex-col justify-between gap-4"
+				className="mt-4 dark:text-ctnSecondaryDark text-gray-300 text-[17px] w-full leading-[30px] flex flex-col justify-between gap-4"
 			>
 				<div>
 					Hello! I&apos;m Shivam Sharma, a passionate web developer
