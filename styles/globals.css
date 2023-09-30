@@ -94,7 +94,6 @@ body {
 		rgba(79, 79, 79, 1) 50%,
 		rgba(46, 47, 47, 1) 100%
 	);
-	scrollbar-gutter: stable;
 }
 
 *::-webkit-scrollbar {
