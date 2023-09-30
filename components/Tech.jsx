@@ -30,7 +30,13 @@ function Tech() {
 			key={index}
 		>
 			<h3 className="md:hidden">{techVariants[index]}</h3>
-			<div className="w-full flex flex-row flex-wrap gap-2">
+			<motion.div
+				className="w-full flex flex-row flex-wrap gap-2"
+				variants={fadeIn("right", "spring", index * 0.4, 0.75)}
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.25 }}
+			>
 				{technology.map((tech, index) => (
 					<Link
 						href={tech.link}
@@ -38,18 +44,7 @@ function Tech() {
 						target="_blank"
 						className="flex flex-row"
 					>
-						<motion.div
-							variants={fadeIn(
-								"right",
-								"spring",
-								index * 0.2,
-								0.75
-							)}
-							initial="hidden"
-							whileInView="show"
-							viewport={{ once: true, amount: 0.25 }}
-							className="w-[40px] h-[40px] relative flex flex-row items-center group cursor-pointer"
-						>
+						<div className="w-[40px] h-[40px] relative flex flex-row items-center group cursor-pointer">
 							<Image
 								src={tech.icon}
 								alt={tech.name}
@@ -60,10 +55,10 @@ function Tech() {
 							<div className="opacity-0 w-fit min-w-[80px] bg-bgPrimaryLight dark:bg-bgPrimaryDark text-ctnPrimaryLight dark:text-ctnPrimaryDark text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 px-3 -top-3/4 -left-1/3 pointer-events-none">
 								{tech.name}
 							</div>
-						</motion.div>
+						</div>
 					</Link>
 				))}
-			</div>
+			</motion.div>
 		</div>
 	));
 
