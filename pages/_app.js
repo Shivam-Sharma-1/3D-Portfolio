@@ -23,7 +23,8 @@ export default function App({ Component, pageProps }) {
 	const title = "Portfolio | Shivam Sharma";
 	const description =
 		"Hello! I'm Shivam Sharma, a passionate web developer and problem solver. Welcome to my portfolio";
-	const avatar = "./../public/assets/avatar-meta.png";
+	const avatar =
+		"https://res.cloudinary.com/dyle3hnpw/image/upload/v1696089522/portfolio/avatar-meta_tkdkin.png";
 	const url = "https://shivam-sharma-myportfolio.vercel.app/";
 
 	return (
