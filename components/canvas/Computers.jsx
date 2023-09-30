@@ -1,82 +1,74 @@
-/* eslint-disable react/no-unknown-property */
-import { Preload, useGLTF, OrbitControls } from "@react-three/drei";
+import {
+	Preload,
+	useGLTF,
+	OrbitControls,
+	View,
+	PerspectiveCamera
+} from "@react-three/drei";
 import * as THREE from "three";
 
-import { Canvas } from "@react-three/fiber";
-import { Suspense, useEffect, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense, forwardRef, useEffect, useRef, useState } from "react";
 import CanvasLoader from "../Loader";
+import ComputerModel from "./models/ComputerModel";
 
-const Computers = ({ isMobile }) => {
-	const computer = useGLTF("desktop_pc/scene.gltf");
+function Computers({ isMobile }) {
+	const { nodes, materials } = useGLTF("/models/desktop_pc/scene.gltf");
 
 	return (
-		<mesh>
+		<>
 			<hemisphereLight intensity={1} groundColor="black" />
 			<ambientLight intensity={0.65} />
-			<spotLight
-				intensity={1}
-				position={[-20, 50, 10]}
-				angle={0.12}
-				penumbra={1}
-				castShadow
-				shadow-mapSize={1024}
+			<spotLight intensity={1} position={[0, 1.5, 0.7]} angle={0.12} />
+			<PerspectiveCamera makeDefault position={[0, 0, -8]} fov={30} />
+			<pointLight
+				intensity={2}
+				position={[1, 1.3, 0]}
+				color={"#804dee"}
 			/>
-			<pointLight intensity={1} />
-			<primitive
-				object={computer.scene}
-				scale={isMobile ? 0.6 : 0.75}
-				position={isMobile ? [0, -3, -1.2] : [0, -3.6, -1.5]}
-				rotation={[-0.01, -0.2, -0.1]}
+			<pointLight
+				intensity={2}
+				position={[-1, 1.3, 1]}
+				color={"#804dee"}
 			/>
-		</mesh>
+			<OrbitControls
+				enableZoom={false}
+				maxPolarAngle={Math.PI / 2}
+				minPolarAngle={Math.PI / 2}
+				enableDamping={true}
+				dampingFactor={0.05}
+				enablePan={false}
+				autoRotateSpeed={4}
+				autoRotate={isMobile && true}
+				makeDefault
+			/>
+			<ComputerModel
+				nodes={nodes}
+				materials={materials}
+				scale={isMobile ? 0.45 : 0.35}
+				position={isMobile ? [-0.75, -0.7, 0] : [-0.5, -0.5, 0]}
+				rotation={[-0.01, 1.6, -0.1]}
+			/>
+		</>
 	);
-};
+}
 
-const ComputersCanvas = () => {
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		const mediaQuery = window.matchMedia("(max-width: 768px)");
-		setIsMobile(mediaQuery.matches);
-
-		const handleMediaQueryChange = (event) => {
-			setIsMobile(event.matches);
-		};
-
-		mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-		return () => {
-			mediaQuery.removeEventListener("change", handleMediaQueryChange);
-		};
-	}, []);
-
+function ComputersCanvas({ isMobile }) {
 	return (
 		<Canvas
-			shadows
 			dpr={[1, 2]}
 			camera={{ position: [20, 3, 5], fov: 25 }}
 			gl={{
-				preserveDrawingBuffer: true,
-				antialias: true,
-				toneMappingExposure: 0.7,
 				outputColorSpace: THREE.SRGBColorSpace,
 				alpha: true
 			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
-				<OrbitControls
-					enableZoom={false}
-					maxPolarAngle={Math.PI / 2}
-					minPolarAngle={Math.PI / 2}
-					enableDamping={true}
-					dampingFactor={0.05}
-					enablePan={false}
-				/>
 				<Computers isMobile={isMobile} />
 			</Suspense>
 			<Preload all />
 		</Canvas>
 	);
-};
+}
 
 export default ComputersCanvas;

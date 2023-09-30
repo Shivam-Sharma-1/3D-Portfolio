@@ -1,42 +1,35 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React, {
+	Suspense,
+	forwardRef,
+	use,
+	useEffect,
+	useRef,
+	useState
+} from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import {
+	OrbitControls,
+	Preload,
+	View,
+	useAnimations,
+	useGLTF
+} from "@react-three/drei";
 import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
+import EarthModel from "./models/EarthModel";
 
-function Earth() {
-	const earth = useGLTF("./planet/scene.gltf");
+function Earth({ isMobile }) {
+	const { nodes, materials } = useGLTF("models/planet/scene.gltf");
+	const earthRef = useRef();
+
+	useFrame(() => {
+		earthRef.current.rotation.y += 0.01;
+	});
 
 	return (
-		<primitive
-			object={earth.scene}
-			scale={2.5}
-			position-y={0}
-			rotation-y={0}
-		/>
-	);
-}
-
-function EarthCanvas() {
-	return (
-		<Canvas
-			shadows
-			dpr={[1, 2]}
-			gl={{
-				preserveDrawingBuffer: true,
-				antialias: true,
-				toneMappingExposure: 0.7,
-				outputColorSpace: THREE.SRGBColorSpace
-			}}
-			camera={{
-				fov: 45,
-				near: 0.1,
-				far: 200,
-				position: [-4, 3, 6]
-			}}
-		>
-			<Suspense fallback={<CanvasLoader />}>
+		<>
+			{!isMobile && (
 				<OrbitControls
 					autoRotate
 					enableZoom={false}
@@ -45,11 +38,33 @@ function EarthCanvas() {
 					enableDamping={true}
 					dampingFactor={0.05}
 					enablePan={false}
+					enableRotate={isMobile ? false : true}
+					makeDefault
 				/>
-				<Earth />
-
-				<Preload all />
+			)}
+			<Suspense fallback={<CanvasLoader />}>
+				<EarthModel
+					materials={materials}
+					nodes={nodes}
+					scale={2.2}
+					position={[0, 0, 0]}
+					earthRef={earthRef}
+				/>
 			</Suspense>
+		</>
+	);
+}
+
+function EarthCanvas({ isMobile }) {
+	return (
+		<Canvas
+			dpr={[1, 2]}
+			gl={{
+				outputColorSpace: THREE.SRGBColorSpace,
+				alpha: true
+			}}
+		>
+			<Earth isMobile={isMobile} />
 		</Canvas>
 	);
 }

@@ -1,15 +1,22 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
-import { services } from "../constants";
+import { services, socials } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "@/constants/styles";
+import Link from "next/link";
+import EmailIcon from "./../public/assets/icons/email.svg";
+import Image from "next/image";
+import PlayerContainer from "./PlayerContainer";
 
 const ServiceCard = ({ index, title, icon }) => (
-	<Tilt className="lg:w-[250px] w-full">
+	<Tilt className="w-[250px]">
 		<motion.div
 			variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+			initial="hidden"
+			whileInView="show"
+			viewport={{ once: true, amount: 0.25 }}
 			className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
 		>
 			<div
@@ -20,12 +27,7 @@ const ServiceCard = ({ index, title, icon }) => (
 				}}
 				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
 			>
-				<img
-					src={icon}
-					alt="web-development"
-					className="w-16 h-16 object-contain"
-				/>
-
+				<div className="w-16 h-16 object-contain relative">{icon}</div>
 				<h3 className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[20px] font-bold text-center w-[80%]">
 					{title}
 				</h3>
@@ -34,33 +36,91 @@ const ServiceCard = ({ index, title, icon }) => (
 	</Tilt>
 );
 
-const About = () => {
+function About({ isMobile }) {
 	return (
-		<>
-			<motion.div variants={textVariant()}>
-				<p className={"sectionSubText"}>Introduction</p>
-				<h2 className={"sectionHeadText"}>Overview.</h2>
+		<div
+			className="md:my-36 md:w-2/3 w-full h-full xl:ml-36 lg:ml-12 p-8 md:mt-[40svh] xl:mt-[150px]"
+			id="about"
+		>
+			<motion.div
+				variants={textVariant()}
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.25 }}
+			>
+				<p className={"sectionSubText text-gray-300"}>Introduction</p>
+				<h2 className={"sectionHeadText text-white-100"}>Overview.</h2>
+			</motion.div>
+			{/* {isMobile ? <PlayerContainer isMobile={isMobile} /> : ""} */}
+
+			<motion.div
+				variants={fadeIn("", "", 0.1, 1)}
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.25 }}
+				className="mt-4 dark:text-ctnSecondaryDark text-gray-300 text-[17px] w-full leading-[30px] flex flex-col justify-between gap-4"
+			>
+				<div>
+					Hello! I&apos;m Shivam Sharma, a passionate web developer
+					and problem solver. Currently, I&apos;m the Tech Team Lead
+					at GDSC MVJCE, and I&apos;m pursuing a B.E. degree in
+					Computer Science and Engineering at MVJ College Of
+					Engineering in Bengaluru, India, with an expected graduation
+					year of 2025. I&apos;m a software developer with experience
+					in TypeScript, TailwindCSS, and JavaScript. I specialize in
+					frameworks such as React, Node.js, Next.js,
+					React-Three-Fiber, and Three.js. My knowledge extends to
+					fundamental data structures and algorithms, making me
+					well-versed in frontend web development.
+					<br className="sm:block hidden" />
+					Let&apos;s collaborate to bring your ideas to life!
+				</div>
+				<div className="w-full break-words">
+					<Link
+						href="mailto:shivamsharma77607@gmail.com"
+						target="_blank"
+						rel="noreferrer"
+						className="hover:text-primary w-full transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-wrap word-break"
+					>
+						<EmailIcon className="w-[30px] h-[30px]" />
+						shivamsharma77607@gmail.com
+					</Link>
+				</div>
+				<div className="flex gap-5 items-center">
+					{socials.map((social) => (
+						<Link
+							href={social.link}
+							target="_blank"
+							key={social.id}
+							className="w-8 h-8"
+						>
+							{social.icon}
+						</Link>
+					))}
+				</div>
+				<Link
+					href="document/shivam-resume.pdf"
+					target="_blank"
+					rel="noreferrer"
+					className="w-fit"
+				>
+					<div className="btn w-fit bg-tertiary text-white px-7 py-2 rounded-md overflow-hidden relative cursor-pointer">
+						<div className="original bg-primary text-white px-7 py-2">
+							Resume
+						</div>
+						<div className="letters">
+							<span>R</span>
+							<span>e</span>
+							<span>s</span>
+							<span>u</span>
+							<span>m</span>
+							<span>e</span>
+						</div>
+					</div>
+				</Link>
 			</motion.div>
 
-			<motion.p
-				variants={fadeIn("", "", 0.1, 1)}
-				className="mt-4 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] max-w-3xl leading-[30px]"
-			>
-				Hello! I&apos;m Shivam Sharma, a passionate web developer and
-				problem solver. Currently, I&apos;m the Tech Team Lead at GDSC
-				MVJCE, and I&apos;m pursuing a B.E. degree in Computer Science
-				and Engineering at MVJ College Of Engineering in Bengaluru,
-				India, with an expected graduation year of 2025. I&apos;m a
-				software developer with experience in TypeScript, TailwindCSS,
-				and JavaScript. I specialize in frameworks such as React,
-				Node.js, Next.js, React-Fiber, and Three.js. My knowledge
-				extends to fundamental data structures and algorithms, making me
-				well-versed in frontend web development.
-				<br className="sm:block hidden" />
-				Let&apos;s collaborate to bring your ideas to life!
-			</motion.p>
-
-			<div className="mt-20 flex flex-wrap gap-10">
+			<div className="mt-14 flex flex-wrap gap-10 justify-center">
 				{services.map((service, index) => (
 					<ServiceCard
 						key={service.title}
@@ -69,8 +129,8 @@ const About = () => {
 					/>
 				))}
 			</div>
-		</>
+		</div>
 	);
-};
+}
 
-export default SectionWrapper(About, "about");
+export default About;

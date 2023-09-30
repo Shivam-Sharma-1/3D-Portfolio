@@ -12,40 +12,39 @@ import { textVariant } from "../utils/motion";
 import { styles } from "@/constants/styles";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function ExperienceCard({ experience, theme }) {
 	return (
 		<VerticalTimelineElement
 			contentStyle={{
-				background: theme
-					? theme === "dark"
-						? "#212134"
-						: "#e0eaf0"
-					: "#212134",
-				color: theme
-					? theme === "dark"
-						? "#e5e6e9"
-						: "#2e384d"
-					: "#e5e6e9"
+				background:
+					theme !== "dark"
+						? "linear-gradient(90deg, rgba(224,234,240,1) 0%, rgba(232,239,243,1) 50%, rgba(224,234,240,1) 100%)"
+						: "linear-gradient(90deg, rgba(33,33,52,1) 0%, rgba(39,39,61,1) 50%, rgba(33,33,52,1) 100%)",
+				color: theme !== "dark" ? "#7e8c9f" : "#e5e6e9",
+				boxShadow: "0 1px 2px 0 rgb(128, 77, 238)"
 			}}
 			contentArrowStyle={{
 				borderRight: `7px solid ${
-					theme
-						? theme !== "dark"
-							? "#e0eaf0"
-							: "#212134"
-						: "#212134"
+					theme !== "dark" ? "#e0eaf0" : "#2b2b42"
 				}`
+			}}
+			style={{
+				boxShadow: "0 1px 2px 0 rgb(128, 77, 238 / 0.05)"
 			}}
 			date={experience.date}
 			iconStyle={{ background: experience.iconBg }}
 			icon={
 				<div className="flex justify-center items-center w-full h-full">
-					<img
-						src={experience.icon}
-						alt={experience.company_name}
-						className="w-[60%] h-[60%] object-contain"
-					/>
+					<div className="w-[60%] h-[60%] relative">
+						<Image
+							src={experience.icon}
+							alt={experience.company_name}
+							fill={true}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+						/>
+					</div>
 				</div>
 			}
 		>
@@ -79,7 +78,6 @@ function Experience() {
 	const { systemTheme, theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
-	// useEffect only runs on the client, so now we can safely show the UI
 	useEffect(() => {
 		setMounted(true);
 	}, []);
@@ -89,7 +87,7 @@ function Experience() {
 	}
 
 	return (
-		<>
+		<motion.section className="w-full p-8">
 			<motion.div variants={textVariant()}>
 				<p className={`sectionSubText text-center`}>
 					What I have done so far
@@ -112,7 +110,7 @@ function Experience() {
 					))}
 				</VerticalTimeline>
 			</div>
-		</>
+		</motion.section>
 	);
 }
 

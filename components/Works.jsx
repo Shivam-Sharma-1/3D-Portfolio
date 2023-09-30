@@ -6,6 +6,10 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "@/constants/styles";
+import truncateText from "@/utils/truncate";
+import GithubLogo from "./../public/assets/icons/github.svg";
+import RocketLogo from "./../public/assets/icons/rocket.svg";
+import Image from "next/image";
 
 function ProjectCard({
 	index,
@@ -13,25 +17,45 @@ function ProjectCard({
 	description,
 	tags,
 	image,
-	source_code_link
+	source_code_link,
+	deployed_link
 }) {
+	const CHAR_LIMIT = 280;
+
 	return (
-		<motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+		<motion.div
+			variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+			initial="hidden"
+			whileInView="show"
+			viewport={{ once: true, amount: 0.25 }}
+		>
 			<Tilt
 				options={{
 					max: 45,
 					scale: 1,
 					speed: 450
 				}}
-				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full"
+				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full h-fit min-h-[540px] shadow-sm shadow-primary"
 			>
 				<div className="relative w-full h-[230px]">
-					<img
-						src={image}
-						alt="project_image"
-						className="w-full h-full object-cover rounded-2xl"
-					/>
+					<div className="w-full h-full object-cover rounded-2xl relative">
+						<Image
+							src={image}
+							alt="project_image"
+							fill={true}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+							className="object-cover"
+						/>
+					</div>
 
+					<div className="absolute inset-0 flex justify-start m-3 card-img_hover">
+						<div
+							onClick={() => window.open(deployed_link, "_blank")}
+							className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+						>
+							<RocketLogo className="w-1/2 h-1/2 mr-[2px] z-10" />
+						</div>
+					</div>
 					<div className="absolute inset-0 flex justify-end m-3 card-img_hover">
 						<div
 							onClick={() =>
@@ -39,11 +63,7 @@ function ProjectCard({
 							}
 							className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
 						>
-							<img
-								src={"/assets/github.png"}
-								alt="source code"
-								className="w-1/2 h-1/2 object-contain"
-							/>
+							<GithubLogo className="w-2/3 h-2/3 z-10" />
 						</div>
 					</div>
 				</div>
@@ -53,7 +73,7 @@ function ProjectCard({
 						{name}
 					</h3>
 					<p className="mt-2 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[14px]">
-						{description}
+						{truncateText(description, CHAR_LIMIT)}
 					</p>
 				</div>
 
@@ -74,8 +94,13 @@ function ProjectCard({
 
 function Works() {
 	return (
-		<>
-			<motion.div variants={textVariant()}>
+		<section className="xl:my-36 md:mx-36 p-8 " id="works">
+			<motion.div
+				variants={textVariant()}
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.25 }}
+			>
 				<p className={"sectionSubText"}>My work</p>
 				<h2 className={"sectionHeadText"}>Projects.</h2>
 			</motion.div>
@@ -84,6 +109,9 @@ function Works() {
 				<motion.p
 					variants={fadeIn("", "", 0.1, 1)}
 					className="mt-3 dark:text-ctnSecondaryDark text-ctnSecondaryLight text-[17px] max-w-3xl leading-[30px]"
+					initial="hidden"
+					whileInView="show"
+					viewport={{ once: true, amount: 0.25 }}
 				>
 					These projects showcase my practical skills and experience,
 					each with descriptions and links to code repositories and
@@ -93,7 +121,7 @@ function Works() {
 				</motion.p>
 			</div>
 
-			<div className="mt-20 flex justify-center flex-wrap gap-7">
+			<div className="md:mt-20 mt-10 flex justify-center flex-wrap gap-7">
 				{projects.map((project, index) => (
 					<ProjectCard
 						key={`project-${index}`}
@@ -102,8 +130,8 @@ function Works() {
 					/>
 				))}
 			</div>
-		</>
+		</section>
 	);
 }
 
-export default SectionWrapper(Works, "");
+export default Works;

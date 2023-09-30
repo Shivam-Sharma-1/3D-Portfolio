@@ -1,3 +1,11 @@
+import GithubIcon from "./../public/assets/icons/github.svg";
+import LinkedInIcon from "./../public/assets/icons/linkedin.svg";
+import XIcon from "./../public/assets/icons/x.svg";
+import InstagramIcon from "./../public/assets/icons/instagram.svg";
+import FrontendIcon from "./../public/assets/icons/frontend.svg";
+import LeaderShipIcon from "./../public/assets/icons/leadership.svg";
+import ProblemSolvingIcon from "./../public/assets/icons/problem-solving.svg";
+
 export const navLinks = [
 	{
 		id: "about",
@@ -20,108 +28,152 @@ const services = [
 	// },
 	{
 		title: "Frontend Developer",
-		icon: "/assets/web.png"
+		icon: <FrontendIcon />
+	},
+	{
+		title: "Leadership",
+		icon: <LeaderShipIcon />
+	},
+	{
+		title: "Problem Solving",
+		icon: <ProblemSolvingIcon />
 	}
 	// {
 	// 	title: "Backend Developer",
 	// 	icon: backend
 	// }
 	// {
-	// 	title: "Content Creator",
-	// 	icon: creator
-	// }
 ];
 
-const technologies = [
-	{
-		name: "HTML5",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "CSS3",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "JavaScript",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "TypeScript",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "React",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Next.js",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Three.js",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Styled-Components",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "TailwindCSS",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Framer-motion",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Node.js",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "MongoDB",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Express.js",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Firebase",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "NextAuth.js",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Prisma",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "C",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Java",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Python",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "git",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "Postman",
-		icon: "/assets/tech/html.png"
-	},
-	{
-		name: "figma",
-		icon: "/assets/tech/html.png"
-	}
-];
+const technologies = {
+	languages: [
+		{
+			name: "HTML5",
+			icon: "/assets/tech/html.png",
+			link: "https://html.spec.whatwg.org/multipage/"
+		},
+		{
+			name: "CSS3",
+			icon: "/assets/tech/css.png",
+			link: "https://www.w3.org/Style/CSS/Overview.en.html"
+		},
+		{
+			name: "JavaScript",
+			icon: "/assets/tech/javascript.png",
+			link: "https://262.ecma-international.org/"
+		},
+		{
+			name: "TypeScript",
+			icon: "/assets/tech/typescript.png",
+			link: "https://www.typescriptlang.org/"
+		},
+		{
+			name: "C",
+			icon: "/assets/tech/c.png",
+			link: "https://en.cppreference.com/w/c"
+		},
+		{
+			name: "Java",
+			icon: "/assets/tech/java.png",
+			link: "https://www.java.com/en/"
+		},
+		{
+			name: "Python",
+			icon: "/assets/tech/python.png",
+			link: "https://www.python.org/"
+		}
+	],
+	frameworks: [
+		{
+			name: "Next.js",
+			icon: "/assets/tech/nextjs.png",
+			link: "https://nextjs.org/"
+		},
+		{
+			name: "TailwindCSS",
+			icon: "/assets/tech/tailwindcss.png",
+			link: "https://tailwindcss.com/"
+		},
+		{
+			name: "Express.js",
+			icon: "/assets/tech/expressjs.png",
+			link: "https://expressjs.com/"
+		}
+	],
+	libraries: [
+		{
+			name: "React",
+			icon: "/assets/tech/react.png",
+			link: "https://react.dev/"
+		},
+		{
+			name: "Three.js",
+			icon: "/assets/tech/threejs.png",
+			link: "https://threejs.org/"
+		},
+		{
+			name: "Styled-Components",
+			icon: "/assets/tech/styled-components.png",
+			link: "https://styled-components.com/"
+		},
+		{
+			name: "Framer-motion",
+			icon: "/assets/tech/framer-motion.png",
+			link: "https://www.framer.com/motion/"
+		},
+		{
+			name: "NextAuth.js",
+			icon: "/assets/tech/nextauthjs.png",
+			link: "https://next-auth.js.org/"
+		},
+		{
+			name: "Prisma",
+			icon: "/assets/tech/prisma.png",
+			link: "https://www.prisma.io/"
+		}
+	],
+	tools: [
+		{
+			name: "Git",
+			icon: "/assets/tech/git.png",
+			link: "https://git-scm.com/"
+		},
+		{
+			name: "Github",
+			icon: "/assets/icons/github.svg",
+			link: "https://github.com/"
+		},
+		{
+			name: "Postman",
+			icon: "/assets/tech/postman.png",
+			link: "https://www.postman.com/"
+		},
+		{
+			name: "Figma",
+			icon: "/assets/tech/figma.png",
+			link: "https://www.figma.com/"
+		}
+	],
+	environments: [
+		{
+			name: "Node.js",
+			icon: "/assets/tech/nodejs.png",
+			link: "https://nodejs.org/en"
+		}
+	],
+	databases: [
+		{
+			name: "MongoDB",
+			icon: "/assets/tech/mongodb.png",
+			link: "https://www.mongodb.com/"
+		},
+		{
+			name: "Firebase",
+			icon: "/assets/tech/firebase.png",
+			link: "https://firebase.google.com/"
+		}
+	]
+};
 
 const experiences = [
 	{
@@ -203,7 +255,9 @@ const projects = [
 			}
 		],
 		image: "/assets/projects/netflix-clone.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Netflix-Clone.git"
+		source_code_link:
+			"https://github.com/Shivam-Sharma-1/Netflix-Clone.git",
+		deployed_link: "https://netflix-clone12345.vercel.app"
 	},
 	{
 		name: "Van-Life",
@@ -224,7 +278,8 @@ const projects = [
 			}
 		],
 		image: "/assets/projects/vanlife.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Van-Life.git"
+		source_code_link: "https://github.com/Shivam-Sharma-1/Van-Life.git",
+		deployed_link: "https://myvanlife.netlify.app"
 	},
 	{
 		name: "Spooky-Run",
@@ -245,8 +300,32 @@ const projects = [
 			}
 		],
 		image: "/assets/projects/spooky-run.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git"
+		source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git",
+		deployed_link: "https://shivam-sharma-1.github.io/Spooky-Run"
 	}
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const socials = [
+	{
+		id: "github",
+		icon: <GithubIcon />,
+		link: "https://github.com/Shivam-Sharma-1"
+	},
+	{
+		id: "linkedin",
+		icon: <LinkedInIcon />,
+		link: "https://www.linkedin.com/in/shivamsharma77607"
+	},
+	{
+		id: "x",
+		icon: <XIcon />,
+		link: "https://twitter.com/Shivam_1_Sharma"
+	},
+	{
+		id: "instagram",
+		icon: <InstagramIcon />,
+		link: "https://www.instagram.com/_.shivam._.here._"
+	}
+];
+
+export { services, technologies, experiences, testimonials, projects, socials };
