@@ -37,6 +37,7 @@ export default function App({ Component, pageProps }) {
 					content="width=device-width, initial-scale=1.0"
 				/>
 				<meta property="og:title" content={title} />
+				<meta property="og:site_name" content={title}></meta>
 				<meta property="og:description" content={description} />
 				<meta property="og:image" content={avatar} />
 				<meta property="og:image:width" content="612" />
