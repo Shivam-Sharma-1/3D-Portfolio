@@ -20,14 +20,29 @@ export default function App({ Component, pageProps }) {
 		}
 	}, [loading]);
 
+	const title = "Portfolio | Shivam Sharma";
+	const description = "Welcome to my portfolio";
+	const avatar = "/avatar-meta.png";
+	const url = "https://shivam-sharma-myportfolio.vercel.app/";
+
 	return (
 		<>
 			<Head>
-				<title>Portfolio | Shivam Sharma</title>
+				<title>{title}</title>
+				<meta name="description" content={description} key="desc" />
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1.0"
 				/>
+				<meta property="og:title" content={title} />
+				<meta property="og:description" content={description} />
+				<meta property="og:image" content={avatar} />
+				<meta property="og:image:width" content="612" />
+				<meta property="og:image:height" content="612" />
+				<meta property="og:url" content={url} />
+				<meta property="og:type" content="website" />
+
+				<link rel="canonical" href={url} />
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"
