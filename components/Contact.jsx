@@ -23,8 +23,6 @@ function Contact() {
 		e.preventDefault();
 		setLoading(true);
 
-		console.log(form, process.env.NEXT_APP_KEY);
-
 		emailjs
 			.send(
 				process.env.NEXT_PUBLIC_SERVICE_ID,
