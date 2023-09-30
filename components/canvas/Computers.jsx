@@ -19,14 +19,7 @@ function Computers({ isMobile }) {
 		<>
 			<hemisphereLight intensity={1} groundColor="black" />
 			<ambientLight intensity={0.65} />
-			<spotLight
-				intensity={1}
-				position={[0, 1.5, 0.7]}
-				angle={0.12}
-				penumbra={1}
-				castShadow
-				shadow-mapSize={1024}
-			/>
+			<spotLight intensity={1} position={[0, 1.5, 0.7]} angle={0.12} />
 			<PerspectiveCamera makeDefault position={[0, 0, -8]} fov={30} />
 			<pointLight
 				intensity={2}
@@ -63,13 +56,9 @@ function Computers({ isMobile }) {
 function ComputersCanvas({ isMobile }) {
 	return (
 		<Canvas
-			shadows
 			dpr={[1, 2]}
 			camera={{ position: [20, 3, 5], fov: 25 }}
 			gl={{
-				preserveDrawingBuffer: true,
-				antialias: true,
-				toneMappingExposure: 0.7,
 				outputColorSpace: THREE.SRGBColorSpace,
 				alpha: true
 			}}

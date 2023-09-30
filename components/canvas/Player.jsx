@@ -98,13 +98,8 @@ function Player({ isMobile }) {
 function PlayerCanvas({ isMobile }) {
 	return (
 		<Canvas
-			shadows
 			dpr={[1, 2]}
-			// camera={{ position: [-150, 10, 5], fov: 25 }}
 			gl={{
-				preserveDrawingBuffer: true,
-				antialias: true,
-				toneMappingExposure: 0.7,
 				outputColorSpace: THREE.SRGBColorSpace,
 				alpha: true
 			}}

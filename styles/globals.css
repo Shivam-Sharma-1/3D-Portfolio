@@ -87,6 +87,28 @@ body {
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: linear-gradient(
+		0deg,
+		rgba(46, 47, 47, 1) 0%,
+		rgba(79, 79, 79, 1) 50%,
+		rgba(46, 47, 47, 1) 100%
+	);
+	scrollbar-gutter: stable;
+}
+
+*::-webkit-scrollbar {
+	width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+	width: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #4f4f4f;
+	border-radius: 14px;
 }
 
 body {
