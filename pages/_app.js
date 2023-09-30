@@ -1,8 +1,10 @@
-import { PreLoader } from "@/components/Loader";
-import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+
+import "@/styles/globals.css";
+
+import { PreLoader } from "@/components/Loader";
 
 export default function App({ Component, pageProps }) {
 	const [loading, setLoading] = useState(true);

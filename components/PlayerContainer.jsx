@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
-import Player from "./canvas/Player";
-import PlayerCanvas from "./canvas/Player";
+import { PlayerCanvas } from "./canvas";
 
 function PlayerContainer({ isMobile }) {
 	return (

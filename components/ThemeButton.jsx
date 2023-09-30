@@ -1,11 +1,12 @@
 import { useTheme } from "next-themes";
-import Sun from "./../public/assets/sun_icon.svg";
-import Moon from "./../public/assets/moon_icon.svg";
 import { useEffect, useState } from "react";
 
-const ThemeButton = () => {
+import Sun from "./../public/assets/sun_icon.svg";
+import Moon from "./../public/assets/moon_icon.svg";
+
+function ThemeButton() {
 	const [mounted, setMounted] = useState(false);
-	const { systemTheme, theme, setTheme } = useTheme("dark");
+	const { theme, setTheme } = useTheme("dark");
 
 	useEffect(() => {
 		setMounted(true);
@@ -25,6 +26,6 @@ const ThemeButton = () => {
 			{theme === "dark" ? <Moon /> : <Sun />}
 		</button>
 	);
-};
+}
 
 export default ThemeButton;

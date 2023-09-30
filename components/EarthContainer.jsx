@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
+
 import { slideIn } from "@/utils/motion";
-import Earth from "./canvas/Earth";
-import EarthCanvas from "./canvas/Earth";
+import { EarthCanvas } from "./canvas";
 
 function EarthContainer({ isMobile }) {
 	return (

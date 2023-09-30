@@ -1,11 +1,10 @@
-import { BallCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { technologies } from "../constants";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { fadeIn, slideIn, textVariant } from "@/utils/motion";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+import { SectionWrapper } from "../hoc";
+import { technologies } from "../constants";
+import { fadeIn, textVariant } from "@/utils/motion";
 
 const tech = [
 	technologies.languages,
@@ -34,7 +33,7 @@ function Tech() {
 			<h3 className="md:hidden">{techVariants[index]}</h3>
 			<motion.div
 				className="w-full flex flex-row flex-wrap gap-2"
-				variants={fadeIn("right", "spring", index * 0.4, 0.75)}
+				variants={fadeIn("right", "spring", index * 0.6, 0.75)}
 				initial="hidden"
 				whileInView="show"
 				viewport={{ once: true, amount: 0.25 }}

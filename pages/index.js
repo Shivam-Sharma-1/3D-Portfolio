@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import {
 	About,
 	Contact,
@@ -9,18 +11,9 @@ import {
 	Works
 } from "@/components";
 import HeroBackground from "@/components/HeroBackground";
-import MainCanvas from "@/components/canvas/Canvas";
-import { Canvas } from "@react-three/fiber";
-import Head from "next/head";
-import { use, useEffect, useRef, useState } from "react";
-import * as THREE from "three";
-import { motion } from "framer-motion";
-import { slideIn } from "@/utils/motion";
 import EarthContainer from "@/components/EarthContainer";
 import PlayerContainer from "@/components/PlayerContainer";
 import UpArrow from "./../public/assets/icons/up-arrow.svg";
-import { PreLoader } from "@/components/Loader";
-import { technologies } from "@/constants";
 
 function App({ loading }) {
 	useEffect(() => {
@@ -53,7 +46,7 @@ function App({ loading }) {
 					<Hero loading={loading} isMobile={isMobile} />
 				</div>
 				<div className="relative z-0 flex md:flex-row flex-col-reverse w-full h-full overflow-hidden">
-					<About isMobile={isMobile} />
+					<About />
 					{!isMobile && <PlayerContainer isMobile={isMobile} />}
 				</div>
 				<Experience />

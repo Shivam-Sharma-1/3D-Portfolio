@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 import { navLinks } from "../constants";
-import Link from "next/link";
 import ThemeButton from "./ThemeButton";
-import Image from "next/image";
-
 import Menu from "./../public/assets/icons/menu.svg";
 import Close from "./../public/assets/icons/close.svg";
 import { slideIn } from "@/utils/motion";
 
-const Navbar = () => {
+function Navbar() {
 	const [active, setActive] = useState("");
 	const [toggle, setToggle] = useState(false);
 
@@ -111,6 +110,6 @@ const Navbar = () => {
 			</div>
 		</nav>
 	);
-};
+}
 
 export default Navbar;

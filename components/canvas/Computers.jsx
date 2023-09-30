@@ -2,13 +2,12 @@ import {
 	Preload,
 	useGLTF,
 	OrbitControls,
-	View,
 	PerspectiveCamera
 } from "@react-three/drei";
 import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Suspense, forwardRef, useEffect, useRef, useState } from "react";
 import CanvasLoader from "../Loader";
 import ComputerModel from "./models/ComputerModel";
 

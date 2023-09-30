@@ -1,19 +1,6 @@
-import React, {
-	Suspense,
-	forwardRef,
-	use,
-	useEffect,
-	useRef,
-	useState
-} from "react";
+import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import {
-	OrbitControls,
-	Preload,
-	View,
-	useAnimations,
-	useGLTF
-} from "@react-three/drei";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 import CanvasLoader from "../Loader";

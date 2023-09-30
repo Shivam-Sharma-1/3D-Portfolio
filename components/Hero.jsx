@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import ComputersCanvas from "./canvas/Computers";
-import { forwardRef } from "react";
 import { TypeAnimation } from "react-type-animation";
+
+import { ComputersCanvas } from "./canvas";
 import { fadeIn, textVariant } from "@/utils/motion";
-import Computers from "./canvas/Computers";
 
 function Hero({ loading, isMobile }) {
 	return (

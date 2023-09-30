@@ -1,7 +1,8 @@
-import { useState, useRef, Suspense } from "react";
+import { useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as THREE from "three";
+
 import CanvasLoader from "../Loader";
 
 function Stars(props) {
@@ -51,7 +52,6 @@ function StarsCanvas() {
 				<Suspense fallback={<CanvasLoader />}>
 					<Stars />
 				</Suspense>
-
 				<Preload all />
 			</Canvas>
 		</div>

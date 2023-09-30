@@ -1,3 +1,6 @@
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import {
 	VerticalTimeline,
 	VerticalTimelineElement
@@ -9,10 +12,6 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { styles } from "@/constants/styles";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import Image from "next/image";
 
 function ExperienceCard({ experience, theme }) {
 	return (
@@ -75,7 +74,7 @@ function ExperienceCard({ experience, theme }) {
 }
 
 function Experience() {
-	const { systemTheme, theme, setTheme } = useTheme();
+	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {

@@ -1,11 +1,8 @@
-import React, { forwardRef, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-// import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn, staggerContainer } from "../utils/motion";
-import { useFrame } from "@react-three/fiber";
+import { slideIn } from "../utils/motion";
 
 function Contact() {
 	const formRef = useRef();
@@ -26,12 +23,12 @@ function Contact() {
 		e.preventDefault();
 		setLoading(true);
 
-		console.log(form, NEXT_APP_KEY);
+		console.log(form, process.env.NEXT_APP_KEY);
 
 		emailjs
 			.send(
-				NEXT_PUBLIC_SERVICE_ID,
-				NEXT_PUBLIC_TEMPLATE_ID,
+				process.env.NEXT_PUBLIC_SERVICE_ID,
+				process.env.NEXT_PUBLIC_TEMPLATE_ID,
 				{
 					from_name: form.name,
 					to_name: "Shivam Sharma",
@@ -39,7 +36,7 @@ function Contact() {
 					to_email: "shivamsharma77607@gmail.com",
 					message: form.message
 				},
-				NEXT_PUBLIC_EMAILJS_KEY
+				process.env.NEXT_PUBLIC_EMAILJS_KEY
 			)
 			.then(
 				() => {

@@ -2,23 +2,22 @@ import {
 	OrbitControls,
 	PerspectiveCamera,
 	RandomizedLight,
-	View,
 	useAnimations,
 	useFBX,
 	useGLTF
 } from "@react-three/drei";
-import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
-import CanvasLoader from "../Loader";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Vector3 } from "three";
-import PlayerModel from "./models/PlayerModel";
+import { Suspense, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+
+import CanvasLoader from "../Loader";
+import PlayerModel from "./models/PlayerModel";
 
 function Player({ isMobile }) {
 	const group = useRef();
 	const [animationsLoaded, setAnimationsLoaded] = useState(false);
 
-	const { nodes, materials, scene } = useGLTF("models/player/player.glb");
+	const { nodes, materials, scene } = useGLTF("models/player/player.gltf");
 	const { animations: waveAnimation } = useFBX(
 		"animations/standing-greeting.fbx"
 	);
