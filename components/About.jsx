@@ -75,7 +75,7 @@ function About({ isMobile }) {
 					<br className="sm:block hidden" />
 					Let&apos;s collaborate to bring your ideas to life!
 				</div>
-				<div className="w-full break-words">
+				<div className="w-fit break-words">
 					<Link
 						href="mailto:shivamsharma77607@gmail.com"
 						target="_blank"

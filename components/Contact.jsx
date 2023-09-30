@@ -26,12 +26,12 @@ function Contact() {
 		e.preventDefault();
 		setLoading(true);
 
-		console.log(form, process.env.NEXT_APP_KEY);
+		console.log(form, NEXT_APP_KEY);
 
 		emailjs
 			.send(
-				process.env.NEXT_PUBLIC_SERVICE_ID,
-				process.env.NEXT_PUBLIC_TEMPLATE_ID,
+				NEXT_PUBLIC_SERVICE_ID,
+				NEXT_PUBLIC_TEMPLATE_ID,
 				{
 					from_name: form.name,
 					to_name: "Shivam Sharma",
@@ -39,7 +39,7 @@ function Contact() {
 					to_email: "shivamsharma77607@gmail.com",
 					message: form.message
 				},
-				process.env.NEXT_PUBLIC_EMAILJS_KEY
+				NEXT_PUBLIC_EMAILJS_KEY
 			)
 			.then(
 				() => {

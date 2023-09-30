@@ -47,6 +47,7 @@ export default function App({ Component, pageProps }) {
 
 				<meta property="twitter:image" content={avatar} />
 				<meta property="twitter:card" content="summary_large_image" />
+				<meta name="twitter:creator" content="@Shivam_1_Sharma" />
 				<meta property="twitter:title" content={title} />
 				<meta property="twitter:description" content={description} />
 

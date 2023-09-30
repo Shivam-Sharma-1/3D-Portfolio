@@ -49,49 +49,49 @@ const technologies = {
 	languages: [
 		{
 			name: "HTML5",
-			icon: "/assets/tech/html.png",
+			icon: "/assets/tech/html5.svg",
 			link: "https://html.spec.whatwg.org/multipage/"
 		},
 		{
 			name: "CSS3",
-			icon: "/assets/tech/css.png",
+			icon: "/assets/tech/css3.svg",
 			link: "https://www.w3.org/Style/CSS/Overview.en.html"
 		},
 		{
 			name: "JavaScript",
-			icon: "/assets/tech/javascript.png",
+			icon: "/assets/tech/javascript.svg",
 			link: "https://262.ecma-international.org/"
 		},
 		{
 			name: "TypeScript",
-			icon: "/assets/tech/typescript.png",
+			icon: "/assets/tech/typescript.svg",
 			link: "https://www.typescriptlang.org/"
 		},
 		{
 			name: "C",
-			icon: "/assets/tech/c.png",
+			icon: "/assets/tech/c.svg",
 			link: "https://en.cppreference.com/w/c"
 		},
 		{
 			name: "Java",
-			icon: "/assets/tech/java.png",
+			icon: "/assets/tech/java.svg",
 			link: "https://www.java.com/en/"
 		},
 		{
 			name: "Python",
-			icon: "/assets/tech/python.png",
+			icon: "/assets/tech/python.svg",
 			link: "https://www.python.org/"
 		}
 	],
 	frameworks: [
 		{
 			name: "Next.js",
-			icon: "/assets/tech/nextjs.png",
+			icon: "/assets/tech/nextjs.svg",
 			link: "https://nextjs.org/"
 		},
 		{
 			name: "TailwindCSS",
-			icon: "/assets/tech/tailwindcss.png",
+			icon: "/assets/tech/tailwindcss.svg",
 			link: "https://tailwindcss.com/"
 		},
 		{
@@ -103,12 +103,12 @@ const technologies = {
 	libraries: [
 		{
 			name: "React",
-			icon: "/assets/tech/react.png",
+			icon: "/assets/tech/react.svg",
 			link: "https://react.dev/"
 		},
 		{
 			name: "Three.js",
-			icon: "/assets/tech/threejs.png",
+			icon: "/assets/tech/threejs.svg",
 			link: "https://threejs.org/"
 		},
 		{
@@ -118,7 +118,7 @@ const technologies = {
 		},
 		{
 			name: "Framer-motion",
-			icon: "/assets/tech/framer-motion.png",
+			icon: "/assets/tech/framer.svg",
 			link: "https://www.framer.com/motion/"
 		},
 		{
@@ -128,14 +128,14 @@ const technologies = {
 		},
 		{
 			name: "Prisma",
-			icon: "/assets/tech/prisma.png",
+			icon: "/assets/tech/prisma.svg",
 			link: "https://www.prisma.io/"
 		}
 	],
 	tools: [
 		{
 			name: "Git",
-			icon: "/assets/tech/git.png",
+			icon: "/assets/tech/git.svg",
 			link: "https://git-scm.com/"
 		},
 		{
@@ -145,31 +145,31 @@ const technologies = {
 		},
 		{
 			name: "Postman",
-			icon: "/assets/tech/postman.png",
+			icon: "/assets/tech/postman.svg",
 			link: "https://www.postman.com/"
 		},
 		{
 			name: "Figma",
-			icon: "/assets/tech/figma.png",
+			icon: "/assets/tech/figma.svg",
 			link: "https://www.figma.com/"
 		}
 	],
 	environments: [
 		{
 			name: "Node.js",
-			icon: "/assets/tech/nodejs.png",
+			icon: "/assets/tech/nodejs.svg",
 			link: "https://nodejs.org/en"
 		}
 	],
 	databases: [
 		{
 			name: "MongoDB",
-			icon: "/assets/tech/mongodb.png",
+			icon: "/assets/tech/mongodb.svg",
 			link: "https://www.mongodb.com/"
 		},
 		{
 			name: "Firebase",
-			icon: "/assets/tech/firebase.png",
+			icon: "/assets/tech/firebase.svg",
 			link: "https://firebase.google.com/"
 		}
 	]
