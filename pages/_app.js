@@ -21,7 +21,8 @@ export default function App({ Component, pageProps }) {
 	}, [loading]);
 
 	const title = "Portfolio | Shivam Sharma";
-	const description = "Welcome to my portfolio";
+	const description =
+		"Hello! I'm Shivam Sharma, a passionate web developer and problem solver. Welcome to my portfolio";
 	const avatar = "/avatar-meta.png";
 	const url = "https://shivam-sharma-myportfolio.vercel.app/";
 
@@ -41,6 +42,11 @@ export default function App({ Component, pageProps }) {
 				<meta property="og:image:height" content="612" />
 				<meta property="og:url" content={url} />
 				<meta property="og:type" content="website" />
+
+				<meta property="twitter:image" content={avatar} />
+				<meta property="twitter:card" content="summary_large_image" />
+				<meta property="twitter:title" content={title} />
+				<meta property="twitter:description" content={description} />
 
 				<link rel="canonical" href={url} />
 				<link
