@@ -26,7 +26,7 @@ export function PreLoader() {
 			for (let i = 0; i < 100; i++) {
 				setTimeout(() => {
 					setProgress(i);
-				}, 46 * i);
+				}, 30 * i);
 			}
 		};
 
