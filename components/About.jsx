@@ -49,7 +49,7 @@ function About() {
 				viewport={{ once: true, amount: 0.25 }}
 			>
 				<p className={"sectionSubText text-gray-300"}>Introduction</p>
-				<h2 className={"sectionHeadText text-white-100"}>Overview.</h2>
+				<h2 className={"sectionHeadText text-white"}>Overview.</h2>
 			</motion.div>
 			<motion.div
 				variants={fadeIn("", "", 0.1, 1)}
