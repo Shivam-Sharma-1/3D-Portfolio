@@ -38,7 +38,7 @@ function App({ loading }) {
 	}, []);
 
 	return (
-		<div className="relative z-0 w-full h-full">
+		<main className="relative z-0 w-full h-full">
 			<div className=" bg-cover bg-no-repeat bg-center">
 				<Navbar />
 				<HeroBackground />
@@ -69,7 +69,7 @@ function App({ loading }) {
 			>
 				<UpArrow />
 			</button>
-		</div>
+		</main>
 	);
 }
 
