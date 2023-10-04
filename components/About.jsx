@@ -97,7 +97,7 @@ function About() {
 					))}
 				</div>
 				<Link
-					href="document/shivam-resume.pdf"
+					href="document/Shivam_Sharma_Resume.pdf"
 					target="_blank"
 					rel="noreferrer"
 					className="w-fit"
