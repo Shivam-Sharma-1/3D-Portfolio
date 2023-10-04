@@ -70,7 +70,7 @@ function Tech() {
 	));
 
 	return (
-		<div className="w-full h-fit p-8" id="about">
+		<section className="w-full h-fit p-8" id="about">
 			<motion.div
 				variants={textVariant()}
 				initial="hidden"
@@ -103,7 +103,7 @@ function Tech() {
 					{languages}
 				</div>
 			</motion.div>
-		</div>
+		</section>
 	);
 }
 

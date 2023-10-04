@@ -38,7 +38,7 @@ function ServiceCard({ index, title, icon }) {
 
 function About() {
 	return (
-		<div
+		<section
 			className="md:my-36 md:w-2/3 w-full h-full xl:ml-36 lg:ml-12 p-8 md:mt-[40svh] xl:mt-[150px]"
 			id="about"
 		>
@@ -127,7 +127,7 @@ function About() {
 					/>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 }
 
