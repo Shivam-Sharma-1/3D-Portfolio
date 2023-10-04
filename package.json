@@ -13,6 +13,7 @@
         "@react-three/drei": "^9.80.0",
         "@react-three/fiber": "^8.11.1",
         "@svgr/webpack": "^8.1.0",
+        "@vercel/analytics": "^1.0.2",
         "eslint": "8.49.0",
         "eslint-config-next": "13.4.19",
         "framer-motion": "^10.15.0",
