@@ -122,6 +122,20 @@ svg {
 	background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
+.modal {
+	transition: all 0.3s ease-in-out;
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .btn {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-appearance: button;
