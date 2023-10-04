@@ -10,34 +10,19 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// primary: "#00ff00",
-				// secondary: "#00b300",
-				// tertiary: "#bfffbf",
-				// quaternary: "#80ff80",
-
 				primary: "#804dee",
 				secondary: "#4b42a7",
 				tertiary: "#9b4dee",
 				quaternary: "#4d9aee",
 				five: "#cbb8f5",
 
-				// bgPrimaryLight: "#e7eff4",
-				// bgSecondaryLight: "#e0eaf0",
 				ctnPrimaryLight: "#2e384d",
 				ctnSecondaryLight: "#4b42a7",
 
 				// bgPrimaryDark: "#181826",
 				// bgSecondaryDark: "#212134",
 				ctnPrimaryDark: "#e5e6e9",
-				ctnSecondaryDark: "#7e8c9f",
-
-				// primary: "#050816",
-				// secondary: "#aaa6c3",
-				// tertiary: "#151030",
-				// #181826, #212134
-				"black-100": "#100d25",
-				"black-200": "#090325",
-				"white-100": "#f3f3f3"
+				ctnSecondaryDark: "#7e8c9f"
 			},
 			boxShadow: {
 				card: "0px 35px 120px -15px #211e35"
