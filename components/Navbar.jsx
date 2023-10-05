@@ -26,16 +26,16 @@ function Navbar() {
 		return (
 			<aside className="w-[100svw] h-[100svh] flex justify-center items-center bg-[#0000007a] fixed top-0 left-0">
 				<div className="sm:w-[500px] sm:h-[500px] xs:w-[400px] xs:h-[400px] w-[200px] h-[200px] dark:bg-[#2b2b42d2] bg-[#e0eaf0] flex justify-center items-center backdrop-blur-sm backdrop-filter bg-opacity-80 rounded-md modal">
-					<div className="relative w-[80%] h-[80%]">
+					<div className="relative w-[80%] h-[80%] rounded-md">
 						<Image
 							src="/assets/avatar.png"
 							alt="avatar"
 							fill={true}
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
-							className="w-9 h-9 object-cover"
+							className="w-9 h-9 object-cover rounded-md"
 						/>
 						<div
-							className="w-[28px] h-[28px] object-contain text-ctnPrimaryLight dark:text-ctnPrimaryDark flex justify-center items-center cursor-pointer absolute top-0 right-0"
+							className="w-[28px] h-[28px] object-contain text-ctnPrimaryLight dark:text-ctnPrimaryDark flex justify-center items-center cursor-pointer absolute top-[-30px] right-[-30px]"
 							onClick={() => setAvatarToggle(!avatarToggle)}
 						>
 							<Close className="w-5 h-5" />

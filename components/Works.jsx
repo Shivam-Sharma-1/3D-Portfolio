@@ -92,7 +92,7 @@ function ProjectCard({
 
 function Works() {
 	return (
-		<section className="xl:my-36 md:mx-36 p-8 " id="works">
+		<section className="xl:my-36 md:mx-36 p-8 " id="projects">
 			<motion.div
 				variants={textVariant()}
 				initial="hidden"
