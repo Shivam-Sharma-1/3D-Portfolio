@@ -233,6 +233,28 @@ const testimonials = [
 
 const projects = [
 	{
+		name: "GDSC Website",
+		description:
+			"Welcome to the official repository for the GDSC MVJCE Website, built with Next.js, Styled Components, and Prisma! This website serves as the central hub for all things tech-related at GDSC MVJCE. From insightful blog posts to incredible community projects, and from exciting tech events to getting to know our team, you'll find it all here.",
+		tags: [
+			{
+				name: "next.js",
+				color: "blue-text-gradient"
+			},
+			{
+				name: "styled-components",
+				color: "green-text-gradient"
+			},
+			{
+				name: "three.js",
+				color: "pink-text-gradient"
+			}
+		],
+		image: "/assets/projects/gdsc-website.png",
+		source_code_link: "https://github.com/GDSC-MVJCE/gdscmvjce-website.git",
+		deployed_link: "https://gdscmvjce.tech/"
+	},
+	{
 		name: "Netflix Clone",
 		description:
 			"Netflix-Clone is a fully responsive web application that replicates the popular streaming platform Netflix. It is built using Next.js, Prisma, React, NextAuth.js, Tailwind CSS, MongoDB and TypeScript. This project aims to showcase the implementation of these technologies to create a feature-rich clone of Netflix.",
@@ -280,29 +302,29 @@ const projects = [
 		image: "/assets/projects/vanlife.png",
 		source_code_link: "https://github.com/Shivam-Sharma-1/Van-Life.git",
 		deployed_link: "https://myvanlife.netlify.app"
-	},
-	{
-		name: "Spooky-Run",
-		description:
-			"Spooky Run is a web based 2D arcade style game that allows players to play as a lost dog finding its way back home through a spooky forest. The game is built using vanilla JavaScript and utilizes HTML5 and the 'canvas' element to render graphics and handle user input.",
-		tags: [
-			{
-				name: "html5",
-				color: "blue-text-gradient"
-			},
-			{
-				name: "css3",
-				color: "green-text-gradient"
-			},
-			{
-				name: "javascript",
-				color: "pink-text-gradient"
-			}
-		],
-		image: "/assets/projects/spooky-run.png",
-		source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git",
-		deployed_link: "https://shivam-sharma-1.github.io/Spooky-Run"
 	}
+	// {
+	// 	name: "Spooky-Run",
+	// 	description:
+	// 		"Spooky Run is a web based 2D arcade style game that allows players to play as a lost dog finding its way back home through a spooky forest. The game is built using vanilla JavaScript and utilizes HTML5 and the 'canvas' element to render graphics and handle user input.",
+	// 	tags: [
+	// 		{
+	// 			name: "html5",
+	// 			color: "blue-text-gradient"
+	// 		},
+	// 		{
+	// 			name: "css3",
+	// 			color: "green-text-gradient"
+	// 		},
+	// 		{
+	// 			name: "javascript",
+	// 			color: "pink-text-gradient"
+	// 		}
+	// 	],
+	// 	image: "/assets/projects/spooky-run.png",
+	// 	source_code_link: "https://github.com/Shivam-Sharma-1/Spooky-Run.git",
+	// 	deployed_link: "https://shivam-sharma-1.github.io/Spooky-Run"
+	// }
 ];
 
 const socials = [

@@ -33,7 +33,7 @@ function ProjectCard({
 					scale: 1,
 					speed: 450
 				}}
-				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full h-fit min-h-[540px] shadow-sm shadow-primary"
+				className="dark:bg-bgSecondaryDark bg-bgSecondaryLight p-5 rounded-2xl sm:w-[360px] w-full h-fit min-h-[560px] shadow-sm shadow-primary"
 			>
 				<div className="relative w-full h-[230px]">
 					<div className="w-full h-full object-cover rounded-2xl relative">
