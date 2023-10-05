@@ -251,7 +251,7 @@ const projects = [
 			},
 			{
 				name: "mongodb",
-				color: "white-text-gradient"
+				color: "orange-text-gradient"
 			}
 		],
 		image: "/assets/projects/netflix-clone.png",

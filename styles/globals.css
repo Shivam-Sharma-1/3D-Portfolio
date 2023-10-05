@@ -122,6 +122,51 @@ svg {
 	background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
+.black-gradient {
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #434343, #000000);
+	background: linear-gradient(to right, #434343, #000000);
+}
+
+.green-pink-gradient {
+	background: "#00cea8";
+	background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+	background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.orange-text-gradient {
+	background: #f12711;
+	background: -webkit-linear-gradient(to top, #f12711, #f5af19);
+	background: linear-gradient(to top, #f12711, #f5af19);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.green-text-gradient {
+	background: #11998e;
+	background: -webkit-linear-gradient(to top, #11998e, #38ef7d);
+	background: linear-gradient(to top, #11998e, #38ef7d);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+	/* background: -webkit-linear-gradient(#eee, #333); */
+	background: #56ccf2;
+	background: -webkit-linear-gradient(to top, #2f80ed, #56ccf2);
+	background: linear-gradient(to top, #2f80ed, #56ccf2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+	background: #ec008c;
+	background: -webkit-linear-gradient(to top, #ec008c, #fc6767);
+	background: linear-gradient(to top, #ec008c, #fc6767);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .modal {
 	transition: all 0.3s ease-in-out;
 	animation: fadeIn 0.3s ease-in-out;
@@ -161,9 +206,7 @@ svg {
 .btn span {
 	opacity: 0;
 	transform: translateY(-15px);
-	transition:
-		transform 0.2s cubic-bezier(0.87, 0, 0.13, 1),
-		opacity 0.2s;
+	transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
 }
 
 .btn span:nth-child(2n) {
@@ -242,8 +285,7 @@ svg {
 @keyframes mulShdSpin {
 	0%,
 	100% {
-		box-shadow:
-			0em -2.6em 0em 0em #ffffff,
+		box-shadow: 0em -2.6em 0em 0em #ffffff,
 			1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
 			2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
 			1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
@@ -253,10 +295,8 @@ svg {
 			-1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
 	}
 	12.5% {
-		box-shadow:
-			0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
-			1.8em -1.8em 0 0em #ffffff,
-			2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+		box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
+			1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
 			1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
 			0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
 			-1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
@@ -264,10 +304,8 @@ svg {
 			-1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
 	}
 	25% {
-		box-shadow:
-			0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
-			1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7),
-			2.5em 0em 0 0em #ffffff,
+		box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
+			1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff,
 			1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
 			0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
 			-1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
@@ -275,8 +313,7 @@ svg {
 			-1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
 	}
 	37.5% {
-		box-shadow:
-			0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+		box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
 			1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
 			2.5em 0em 0 0em rgba(255, 255, 255, 0.7),
 			1.75em 1.75em 0 0em #ffffff,
@@ -286,30 +323,25 @@ svg {
 			-1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
 	}
 	50% {
-		box-shadow:
-			0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+		box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
 			1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
 			2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
 			1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7),
-			0em 2.5em 0 0em #ffffff,
-			-1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+			0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
 			-2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
 			-1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
 	}
 	62.5% {
-		box-shadow:
-			0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+		box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
 			1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
 			2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
 			1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
-			0em 2.5em 0 0em rgba(255, 255, 255, 0.7),
-			-1.8em 1.8em 0 0em #ffffff,
+			0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff,
 			-2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
 			-1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
 	}
 	75% {
-		box-shadow:
-			0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+		box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
 			1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
 			2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
 			1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
@@ -319,8 +351,7 @@ svg {
 			-1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
 	}
 	87.5% {
-		box-shadow:
-			0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+		box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
 			1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
 			2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
 			1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
