@@ -25,7 +25,7 @@ function Earth({ isMobile }) {
 					enableDamping={true}
 					dampingFactor={0.05}
 					enablePan={false}
-					enableRotate={isMobile ? false : true}
+					enableRotate={true}
 					makeDefault
 				/>
 			)}
