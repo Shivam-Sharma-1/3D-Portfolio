@@ -1,38 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 3D Portfolio
 
-## Getting Started
+![Portfolio Screenshot](/public/assets/readme_assets/screenshot.png)
 
-First, run the development server:
+3D Portfolio is my personal portfolio website created using Next.js, Tailwind CSS, Three.js, React Three Fiber, and a collection of other technologies. This website showcases my skills, experiences, projects, and allows users to contact me. It also offers a dark and light theme to enhance the user experience.
+
+## Table of Contents
+
+1.  [Demo](#demo)
+2.  [Features](#features)
+3.  [Technologies Used](#technologies-used)
+4.  [Packages Used](#packages-used)
+5.  [Getting started](#getting-started)
+6.  [Project Structure](#project-structure)
+7.  [Author](#author)
+
+## Demo
+
+You can see a live demo of the portfolio website at [https://shivam-sharma-myportfolio.vercel.app/](https://shivam-sharma-myportfolio.vercel.app/).
+
+## Features
+
+-   **About Me**: A brief introduction about myself.
+-   **Experience**: Highlighted my work experience.
+-   **Skills**: Listed my skills and expertise.
+-   **Projects**: Showcased my projects.
+-   **Contact**: Provided a contact form for users to get in touch with me.
+-   **Responsive Design**: The website is fully responsive to provide an optimal experience on all devices.
+-   **Dark and Light Themes**: Users can switch between dark and light themes to suit their preferences.
+
+## Technologies Used
+
+-   [Next.js](https://nextjs.org)
+-   [React](https://reactjs.dev)
+-   [Tailwind CSS](https://tailwindcss.com)
+-   [Three.js](https://threejs.org)
+-   [React Three Fiber](https://github.com/pmndrs/react-three-fiber)
+
+## Packages Used
+
+-   [react-parallax-tilt](https://www.npmjs.com/package/react-parallax-tilt)
+-   [react-type-animation](https://www.npmjs.com/package/react-type-animation)
+-   [react-vertical-timeline-component](https://www.npmjs.com/package/react-vertical-timeline-component)
+
+## Getting started
+
+1. Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/Shivam-Sharma-1/3D-Portfolio
+```
+
+2. Change to the project directory:
+
+```bash
+cd 3d-portfolio
+```
+
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+4. To run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your web browser and visit http://localhost:3000 to see the website in action during development.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The project structure is organized as follows:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-   `components`: React components used to build different sections of the portfolio.
+-   `styles`: Styles and theme configurations, including the dark and light themes.
+-   `public`: Static assets, such as images and fonts.
+-   `pages`: Individual pages of the website.
+-   `utils`: Utility functions or helper scripts.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Author
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   [@Shivam-Sharma-1](https://github.com/Shivam-Sharma-1)
