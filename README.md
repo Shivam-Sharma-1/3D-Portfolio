@@ -1,85 +1,52 @@
-# 3D Portfolio
+# Hi! ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Shivam Sharma
 
-![Portfolio Screenshot](/public/assets/readme_assets/screenshot.png)
+## Full Stack Developer | React/Next.js | MERN Developer
 
-3D Portfolio is my personal portfolio website created using Next.js, Tailwind CSS, Three.js, React Three Fiber, and a collection of other technologies. This website showcases my skills, experiences, projects, and allows users to contact me. It also offers a dark and light theme to enhance the user experience.
+---
 
-## Table of Contents
+I love coding and I am always curious to learn new tech and level up my skills.
 
-1.  [Demo](#demo)
-2.  [Features](#features)
-3.  [Technologies Used](#technologies-used)
-4.  [Packages Used](#packages-used)
-5.  [Getting started](#getting-started)
-6.  [Project Structure](#project-structure)
-7.  [Author](#author)
+-   🌍  I'm based in Bengaluru, India
+-   ✉️  You can contact me at [shivamsharma77607@gmail.com](mailto:shivamsharma77607@gmail.com)
+-   🧠  I'm learning backend development
+-   🤝  I'm open to collaborating on any web project which is interesting and fun to work on
+-   ⚡  If overthinking was a sport then I would be in the hall of fame😶‍🌫️
 
-## Demo
+### Skills
 
-You can see a live demo of the portfolio website at [https://shivam-sharma-myportfolio.vercel.app/](https://shivam-sharma-myportfolio.vercel.app/).
+<p align="left">
+    <img src="https://skillicons.dev/icons?i=html,css,javascript,typescript,threejs,c,java,python,react,nextjs,tailwind,styledcomponents,nodejs,expressjs,prisma,mongo,firebase,git,github,postman,figma,vscode,idea,eclipse" />
+</p>
 
-## Features
+### Socials
 
--   **About Me**: A brief introduction about myself.
--   **Experience**: Highlighted my work experience.
--   **Skills**: Listed my skills and expertise.
--   **Projects**: Showcased my projects.
--   **Contact**: Provided a contact form for users to get in touch with me.
--   **Responsive Design**: The website is fully responsive to provide an optimal experience on all devices.
--   **Dark and Light Themes**: Users can switch between dark and light themes to suit their preferences.
+<p align="left">
+    <a href="https://www.dev.to/shivamsharma1" target="_blank" rel="noreferrer">
+        <img src="https://skillicons.dev/icons?i=devto" />
+    </a>
+    <a href="https://www.github.com/Shivam-Sharma-1" target="_blank" rel="noreferrer">
+        <img src="https://skillicons.dev/icons?i=github" />
+    </a>
+    <a href="https://www.linkedin.com/in/shivam-sharma-605351226" target="_blank" rel="noreferrer">
+        <img src="https://skillicons.dev/icons?i=linkedin" />
+    </a>
+    <a href="https://www.twitter.com/Shivam_1_Sharma" target="_blank" rel="noreferrer">
+        <img src="https://skillicons.dev/icons?i=twitter" />
+    </a>
+</p>
 
-## Technologies Used
+### Badges
 
--   [Next.js](https://nextjs.org)
--   [React](https://reactjs.dev)
--   [Tailwind CSS](https://tailwindcss.com)
--   [Three.js](https://threejs.org)
--   [React Three Fiber](https://github.com/pmndrs/react-three-fiber)
+<b>My GitHub Stats</b>
 
-## Packages Used
+<a href="http://www.github.com/Shivam-Sharma-1">
+    <img src="https://github-readme-stats.vercel.app/api?username=Shivam-Sharma-1&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=22272e&hide_border=true&show_icons=true" alt="Shivam-Sharma-1's GitHub stats" />
+</a>
 
--   [react-parallax-tilt](https://www.npmjs.com/package/react-parallax-tilt)
--   [react-type-animation](https://www.npmjs.com/package/react-type-animation)
--   [react-vertical-timeline-component](https://www.npmjs.com/package/react-vertical-timeline-component)
+<a href="http://www.github.com/Shivam-Sharma-1">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shivam-Sharma-1&stroke=ffffff&background=22272e&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" />
+</a>
 
-## Getting started
-
-1. Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/Shivam-Sharma-1/3D-Portfolio
-```
-
-2. Change to the project directory:
-
-```bash
-cd 3d-portfolio
-```
-
-3. Install the project dependencies:
-
-```bash
-npm install
-```
-
-4. To run the development server:
-
-```bash
-npm run dev
-```
-
-Open your web browser and visit http://localhost:3000 to see the website in action during development.
-
-## Project Structure
-
-The project structure is organized as follows:
-
--   `components`: React components used to build different sections of the portfolio.
--   `styles`: Styles and theme configurations, including the dark and light themes.
--   `public`: Static assets, such as images and fonts.
--   `pages`: Individual pages of the website.
--   `utils`: Utility functions or helper scripts.
-
-## Author
-
--   [@Shivam-Sharma-1](https://github.com/Shivam-Sharma-1)
+<a href="https://github.com/Shivam-Sharma-1" align="left">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shivam-Sharma-1&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=22272e&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" />
+</a>
