@@ -7,7 +7,7 @@ import LeaderShipIcon from "./../public/assets/icons/leadership.svg";
 import ProblemSolvingIcon from "./../public/assets/icons/problem-solving.svg";
 import FreelancerIcon from "./../public/assets/icons/freelance.svg";
 
-export const navLinks = [
+const navLinks = [
   {
     id: "about",
     title: "About",
@@ -19,6 +19,10 @@ export const navLinks = [
   {
     id: "projects",
     title: "Projects",
+  },
+  {
+    id: "skills",
+    title: "Skills",
   },
   {
     id: "contact",
@@ -332,7 +336,7 @@ const projects = [
   {
     name: "Facility Management System",
     description:
-      "The Facility Management System is a comprehensive management solution developed using the MERN (MongoDB, Express.js, React, Node.js) stack. It allows users to book time slots in facilities and provides role-based access control for various functionalities. This is a modified version of the one which was created as a project for DRDO Cabs internship.",
+      "The Facility Management System is a comprehensive management solution developed using the MERN (MongoDB, Express.js, React, Node.js) stack. It allows users to book time slots in facilities and provides role-based access control for various functionalities.",
     tags: [
       {
         name: "typescript",
@@ -468,6 +472,7 @@ const heroTexts = [
 ];
 
 export {
+  navLinks,
   services,
   technologies,
   experiences,
