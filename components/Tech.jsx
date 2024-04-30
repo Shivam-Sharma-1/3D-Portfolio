@@ -67,7 +67,7 @@ function Tech() {
   ));
 
   return (
-    <section className="w-full h-fit p-8" id="skills">
+    <section className="w-full h-fit p-8 mt-20" id="skills">
       <motion.div
         variants={textVariant()}
         initial="hidden"
