@@ -31,7 +31,7 @@ function Hero({ loading, isMobile }) {
           <p className={`heroSubText mt-2 tracking-wide`}>
             <TypeAnimation
               sequence={heroTexts}
-              preRenderFirstString={true}
+              // preRenderFirstString={true}
               wrapper="span"
               cursor={true}
               repeat={Infinity}
