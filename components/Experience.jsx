@@ -31,7 +31,7 @@ function ExperienceCard({ experience, theme }) {
         boxShadow: "0 1px 2px 0 rgb(128, 77, 238 / 0.05)",
       }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: experience.iconBg, backgroundColor: "#e0eaf0" }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <div className="w-[60%] h-[60%] relative">
