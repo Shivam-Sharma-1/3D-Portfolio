@@ -1,38 +1,9 @@
 import Link from "next/link";
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
-import { services, socials } from "../constants";
+import { socials } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import EmailIcon from "./../public/assets/icons/email.svg";
-
-function ServiceCard({ index, title, icon }) {
-  return (
-    <Tilt className="w-[250px]" tiltMaxAngleX="10" tiltMaxAngleY="10">
-      <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-      >
-        <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}
-          className="dark:bg-bgSecondaryDark bg-bgSecondaryLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
-          <div className="w-16 h-16 object-contain relative">{icon}</div>
-          <h3 className="dark:text-ctnPrimaryDark text-ctnPrimaryLight text-[20px] font-bold text-center w-[80%]">
-            {title}
-          </h3>
-        </div>
-      </motion.div>
-    </Tilt>
-  );
-}
 
 function About() {
   return (
@@ -54,7 +25,7 @@ function About() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className="mt-4 dark:text-ctnSecondaryDark text-gray-300 text-[17px] w-full leading-[30px] flex flex-col justify-between gap-4"
+        className="mt-4 dark:text-ctnSecondaryDark text-gray-300 text-[17px] w-full leading-[30px] flex flex-col justify-between gap-6"
       >
         <div>
           Hello! I&apos;m Shivam Sharma, a passionate web developer and problem
@@ -74,7 +45,7 @@ function About() {
             href="mailto:shivamsharma77607@gmail.com"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-primary w-full transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-wrap word-break"
+            className="hover:text-primary w-full transition-all duration-100 ease-in flex md:items-center gap-2 md:flex-row flex-wrap word-break hover:-translate-y-2"
           >
             <EmailIcon className="w-[30px] h-[30px]" />
             shivamsharma77607@gmail.com
@@ -86,7 +57,7 @@ function About() {
               href={social.link}
               target="_blank"
               key={social.id}
-              className="w-8 h-8"
+              className="w-8 h-8 hover:-translate-y-2 ease-in transition-all duration-100 cursor-pointer"
             >
               {social.icon}
             </Link>
@@ -113,12 +84,6 @@ function About() {
           </div>
         </Link>
       </motion.div>
-
-      <div className="mt-14 flex flex-wrap gap-10 justify-center">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
     </section>
   );
 }
