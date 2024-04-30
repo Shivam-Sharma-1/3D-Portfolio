@@ -117,6 +117,11 @@ const technologies = {
       icon: "/assets/tech/expressjs.png",
       link: "https://expressjs.com/",
     },
+    {
+      name: "Flutter",
+      icon: "/assets/tech/flutter.svg",
+      link: "https://flutter.dev/",
+    },
   ],
   libraries: [
     {
@@ -218,7 +223,7 @@ const experiences = [
     ],
   },
   {
-    title: "Frontend Developer",
+    title: "Frontend Developer Intern",
     company_name: "Intern at DRDO CABS",
     icon: "/assets/company/drdo-cabs.png",
     iconBg: "#E6DEDD",
