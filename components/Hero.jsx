@@ -49,7 +49,7 @@ function Hero({ loading, isMobile }) {
         <ComputersCanvas isMobile={isMobile} />
       </motion.div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full justify-center items-center z-20 hidden md:flex">
+      <div className="absolute xs:bottom-10 bottom-32 left-1/2 justify-center items-center z-20 hidden md:flex">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-2 border-[#aaa6c3] flex justify-center items-start p-2">
             <motion.div
