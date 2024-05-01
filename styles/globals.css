@@ -27,6 +27,7 @@
 
   .sectionHeadText {
     @apply dark:text-ctnPrimaryDark text-ctnPrimaryLight font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px];
+    animation: lights 5s 750ms linear infinite;
   }
 
   .sectionSubText {
@@ -186,6 +187,43 @@ svg {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes lights {
+  0% {
+    text-shadow: 0 0 1em rgba(128, 77, 238, 0.1),
+      0 0 0.125em rgba(128, 77, 238, 0.2),
+      -1em -0.125em 0.5em rgba(128, 77, 238, 0),
+      1em 0.125em 0.5em rgba(128, 77, 238, 0);
+  }
+
+  30% {
+    text-shadow: 0 0 1em rgba(128, 77, 238, 0.4),
+      0 0 0.125em rgba(128, 77, 238, 0.4),
+      -0.5em -0.125em 0.25em rgba(128, 77, 238, 0.1),
+      0.5em 0.125em 0.25em rgba(128, 77, 238, 0.3);
+  }
+
+  40% {
+    text-shadow: 0 0 1em rgba(128, 77, 238, 0.4),
+      0 0 0.125em rgba(128, 77, 238, 0.4),
+      -0.25em -0.125em 0.125em rgba(128, 77, 238, 0.1),
+      0.25em 0.125em 0.125em rgba(128, 77, 238, 0.3);
+  }
+
+  70% {
+    text-shadow: 0 0 1em rgba(128, 77, 238, 0.4),
+      0 0 0.125em rgba(128, 77, 238, 0.4),
+      0.5em -0.125em 0.25em rgba(128, 77, 238, 0.1),
+      -0.5em 0.125em 0.25em rgba(128, 77, 238, 0.4);
+  }
+
+  100% {
+    text-shadow: 0 0 1em rgba(128, 77, 238, 0.1),
+      0 0 0.125em rgba(128, 77, 238, 0.2),
+      1em -0.125em 0.5em rgba(128, 77, 238, 0),
+      -1em 0.125em 0.5em rgba(128, 77, 238, 0);
   }
 }
 
