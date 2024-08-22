@@ -6,6 +6,8 @@ import FrontendIcon from "./../public/assets/icons/frontend.svg";
 import LeaderShipIcon from "./../public/assets/icons/leadership.svg";
 import ProblemSolvingIcon from "./../public/assets/icons/problem-solving.svg";
 import FreelancerIcon from "./../public/assets/icons/freelance.svg";
+import BackendIcon from "./../public/assets/icons/backend.svg";
+import FullStackIcon from "./../public/assets/icons/full-stack.svg";
 
 const navLinks = [
   {
@@ -31,17 +33,17 @@ const navLinks = [
 ];
 
 const services = [
-  // {
-  // 	title: "Full Stack Developer",
-  // 	icon: web
-  // },
+  {
+    title: "Full Stack Developer",
+    icon: <FullStackIcon />,
+  },
   {
     title: "Frontend Developer",
     icon: <FrontendIcon />,
   },
   {
-    title: "Leadership",
-    icon: <LeaderShipIcon />,
+    title: "Backend Developer",
+    icon: <BackendIcon />,
   },
   {
     title: "Problem Solving",
@@ -51,11 +53,10 @@ const services = [
     title: "Freelancer",
     icon: <FreelancerIcon />,
   },
-  // {
-  // 	title: "Backend Developer",
-  // 	icon: backend
-  // }
-  // {
+  {
+    title: "Leadership",
+    icon: <LeaderShipIcon />,
+  },
 ];
 
 const technologies = {
@@ -210,7 +211,7 @@ const technologies = {
 
 const experiences = [
   {
-    title: "Frontend Developer",
+    title: "Full Stack Developer",
     company_name: "Tech Lead at GDSC MVJCE",
     icon: "/assets/company/gdsc-logo.svg",
     iconBg: "#E6DEDD",
@@ -223,7 +224,7 @@ const experiences = [
     ],
   },
   {
-    title: "Frontend Developer Intern",
+    title: "Full Stack Developer Intern",
     company_name: "Intern at DRDO CABS",
     icon: "/assets/company/drdo-cabs.png",
     iconBg: "#E6DEDD",
@@ -470,7 +471,11 @@ const heroTexts = [
   500,
   "Freelancer",
   500,
+  "Full-Stack developer",
+  500,
   "Frontend developer",
+  500,
+  "Backend developer",
   500,
   "Tech Team Lead at GDSC MVJCE",
   500,
