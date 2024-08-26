@@ -337,7 +337,7 @@ const projects = [
     ],
     image: "/assets/projects/gdsc-website.png",
     source_code_link: "https://github.com/GDSC-MVJCE/gdscmvjce-website.git",
-    deployed_link: "https://gdscmvjce.tech/",
+    deployed_link: "https://gdscmvjce.vercel.app/",
   },
   {
     name: "Facility Management System",
