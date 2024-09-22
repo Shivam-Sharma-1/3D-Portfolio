@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import DOMPurify from "dompurify";
 
 import { slideIn } from "../utils/motion";
 
@@ -16,11 +17,25 @@ function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    const sanitizedValue = DOMPurify.sanitize(value);
+
+    setForm({ ...form, [name]: sanitizedValue });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!form.name || !form.email || !form.message) {
+      alert("All fields are required.");
+      return;
+    }
+
+    const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    if (!emailPattern.test(form.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -28,11 +43,11 @@ function Contact() {
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
         {
-          from_name: form.name,
+          from_name: DOMPurify.sanitize(form.name),
           to_name: "Shivam Sharma",
-          from_email: form.email,
+          from_email: DOMPurify.sanitize(form.email),
           to_email: "shivamsharma77607@gmail.com",
-          message: form.message,
+          message: DOMPurify.sanitize(form.message),
         },
         process.env.NEXT_PUBLIC_EMAILJS_KEY
       )
