@@ -1,7 +1,5 @@
 import GithubIcon from "./../public/assets/icons/github.svg";
 import LinkedInIcon from "./../public/assets/icons/linkedin.svg";
-import XIcon from "./../public/assets/icons/x.svg";
-import InstagramIcon from "./../public/assets/icons/instagram.svg";
 import FrontendIcon from "./../public/assets/icons/frontend.svg";
 import LeaderShipIcon from "./../public/assets/icons/leadership.svg";
 import ProblemSolvingIcon from "./../public/assets/icons/problem-solving.svg";
@@ -509,16 +507,6 @@ const socials = [
     id: "linkedin",
     icon: <LinkedInIcon />,
     link: "https://www.linkedin.com/in/shivamsharma77607",
-  },
-  {
-    id: "x",
-    icon: <XIcon />,
-    link: "https://twitter.com/Shivam_1_Sharma",
-  },
-  {
-    id: "instagram",
-    icon: <InstagramIcon />,
-    link: "https://www.instagram.com/_.shivam._.here._",
   },
 ];
 
