@@ -8,6 +8,9 @@
     "github": "@Shivam-Sharma-1",
     "linkedin": "https://www.linkedin.com/in/shivamsharma77607"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
