@@ -220,27 +220,42 @@ const technologies = {
 };
 
 const experiences = [
-  // {
-  //   title: "Full Stack Developer",
-  //   company_name: "Tech Lead at GDSC MVJCE",
-  //   icon: "/assets/company/gdsc-logo.svg",
-  //   iconBg: "#E6DEDD",
-  //   date: "July 2023 - Present",
-  //   points: [
-  //     "Currently serving as the Tech Lead of GDSC, responsible for guiding technical aspects, fostering collaboration, and contributing to strategic decisions.",
-  //     "Led induction programs, ensured new member alignment with GDSC's mission, and provided technical mentorship.",
-  //     "Developed GDSC MVJCE website, enhancing the organization's online visibility.",
-  //     "Spearheaded promotional campaigns, actively engaged with the GDSC community, and played a key role in planning and executing events.",
-  //   ],
-  // },
+  {
+    title: "Software Engineer I",
+    company_name: "Nike",
+    icon: "/assets/company/gdsc-logo.svg",
+    iconBg: "#E6DEDD",
+    date: "June 2025 - Present",
+    points: [
+      "Architected and delivered a serverless full-stack CRUD platform using API Gateway, AWS Lambda, DynamoDB, OpenSearch, designing REST APIs following Domain-Driven Design (DDD) principles to consolidate 3 legacy APIs into a single solution and eliminate ˜33K lines of code.",
+      "Engineered a secure REST API with AWS Lambda and a reusable React custom hook, closing a critical QR-tracking gap across 40% of the product catalog while owning feature implementation through production release.",
+      "Designed and implemented a serverless typeahead search using OpenSearch, AWS Lambda, and React, reducing manual product lookup effort by 65% for 1,200+ internal users.",
+      "Led development of a two-application Nx monorepo with a shared Vite component library and Rspack host shell, becoming the team’s top contributor with over 2× the commit volume of the next highest contributor.",
+      "Built and integrated Module Federation-based React microfrontends following strict TypeScript standards, ensuring 100% design parity across multiple host applications.",
+      "Developed and shipped a schema-validated CRUD interface for color and pricing management, reducing operational turnaround time by 50% for 1,200+ users.",
+    ],
+  },
+  {
+    title: "Tech Lead",
+    company_name: "Google Developer Student Clubs(GDSC) MVJCE",
+    icon: "/assets/company/gdsc-logo.svg",
+    iconBg: "#E6DEDD",
+    date: "July 2023 - September 2024",
+    points: [
+      "Served as the Tech Lead of GDSC, responsible for guiding technical aspects, fostering collaboration, and contributing to strategic decisions.",
+      "Led induction programs, ensured new member alignment with GDSC's mission, and provided technical mentorship.",
+      "Developed GDSC MVJCE website, enhancing the organization's online visibility.",
+      "Spearheaded promotional campaigns, actively engaged with the GDSC community, and played a key role in planning and executing events.",
+    ],
+  },
   {
     title: "Frontend Developer Intern",
-    company_name: "Intern at Curowell Healthcare Private Ltd",
+    company_name: "Curowell Healthcare Private Ltd",
     icon: "/assets/company/curowell-logo.svg",
     iconBg: "#E6DEDD",
-    date: "November 2023",
+    date: "October 2024 - April 2025",
     points: [
-      "Developing a healthcare SaaS platform using Next.js, TypeScript, and Tailwind CSS, significantly enhancing user experience.",
+      "Developed a healthcare SaaS platform using Next.js, TypeScript, and Tailwind CSS, significantly enhancing user experience.",
       "Maintaining an efficient codebase under senior guidance, ensuring adherence to best practices in software development.",
       "Contributing to the DND form microfrontend, improving user interaction by 30%.",
       "Collaborating in UI/UX design efforts, leading to a 25% reduction in component development time.",
@@ -248,7 +263,7 @@ const experiences = [
   },
   {
     title: "Full Stack Developer Intern",
-    company_name: "Intern at DRDO CABS",
+    company_name: "Defence Research and Development Organisation (DRDO)",
     icon: "/assets/company/drdo-cabs.png",
     iconBg: "#E6DEDD",
     date: "November 2023",
@@ -259,19 +274,6 @@ const experiences = [
       "Collaborated with a backend intern throughout the internship to deliver a comprehensive solution tailored to DRDO CABS's needs.",
     ],
   },
-  // {
-  //   title: "Frontend Developer",
-  //   company_name: "Tech team member at GDSC MVJCE",
-  //   icon: "/assets/company/gdsc-logo.svg",
-  //   iconBg: "#E6DEDD",
-  //   date: "February 2022 - July 2023",
-  //   points: [
-  //     "Successfully planned and executed induction programs, providing new members with crucial information about the organization's goals and values.",
-  //     "Demonstrated web development expertise by conducting CSS workshops, equipping participants with practical web design and styling skills.",
-  //     "Played a crucial role in promoting GDSC events and actively collaborated with cross-functional teams to deliver high-quality projects, fostering teamwork and innovation.",
-  //     "Actively engaged with the GDSC community, assisted in workshops, and contributed to planning and managing GDSC events, ensuring their success and growth.",
-  //   ],
-  // },
 ];
 
 const testimonials = [
