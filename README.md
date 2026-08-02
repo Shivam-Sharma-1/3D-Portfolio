@@ -20,27 +20,27 @@ You can see a live demo of the portfolio website at [https://shivam-sharma-mypor
 
 ## Features
 
--   **About Me**: A brief introduction about myself.
--   **Experience**: Highlighted my work experience.
--   **Skills**: Listed my skills and expertise.
--   **Projects**: Showcased my projects.
--   **Contact**: Provided a contact form for users to get in touch with me.
--   **Responsive Design**: The website is fully responsive to provide an optimal experience on all devices.
--   **Dark and Light Themes**: Users can switch between dark and light themes to suit their preferences.
+- **About Me**: A brief introduction about myself.
+- **Experience**: Highlighted my work experience.
+- **Skills**: Listed my skills and expertise.
+- **Projects**: Showcased my projects.
+- **Contact**: Provided a contact form for users to get in touch with me.
+- **Responsive Design**: The website is fully responsive to provide an optimal experience on all devices.
+- **Dark and Light Themes**: Users can switch between dark and light themes to suit their preferences.
 
 ## Technologies Used
 
--   [Next.js](https://nextjs.org)
--   [React](https://reactjs.dev)
--   [Tailwind CSS](https://tailwindcss.com)
--   [Three.js](https://threejs.org)
--   [React Three Fiber](https://github.com/pmndrs/react-three-fiber)
+- [Next.js](https://nextjs.org)
+- [React](https://reactjs.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Three.js](https://threejs.org)
+- [React Three Fiber](https://github.com/pmndrs/react-three-fiber)
 
 ## Packages Used
 
--   [react-parallax-tilt](https://www.npmjs.com/package/react-parallax-tilt)
--   [react-type-animation](https://www.npmjs.com/package/react-type-animation)
--   [react-vertical-timeline-component](https://www.npmjs.com/package/react-vertical-timeline-component)
+- [react-parallax-tilt](https://www.npmjs.com/package/react-parallax-tilt)
+- [react-type-animation](https://www.npmjs.com/package/react-type-animation)
+- [react-vertical-timeline-component](https://www.npmjs.com/package/react-vertical-timeline-component)
 
 ## Getting started
 
@@ -74,12 +74,12 @@ Open your web browser and visit http://localhost:3000 to see the website in acti
 
 The project structure is organized as follows:
 
--   `components`: React components used to build different sections of the portfolio.
--   `styles`: Styles and theme configurations, including the dark and light themes.
--   `public`: Static assets, such as images and fonts.
--   `pages`: Individual pages of the website.
--   `utils`: Utility functions or helper scripts.
+- `components`: React components used to build different sections of the portfolio.
+- `styles`: Styles and theme configurations, including the dark and light themes.
+- `public`: Static assets, such as images and fonts.
+- `pages`: Individual pages of the website.
+- `utils`: Utility functions or helper scripts.
 
 ## Author
 
--   [@Shivam-Sharma-1](https://github.com/Shivam-Sharma-1)
+- [@Shivam-Sharma-1](https://github.com/Shivam-Sharma-1)

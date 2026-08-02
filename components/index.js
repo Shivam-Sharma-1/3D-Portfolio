@@ -9,13 +9,13 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 
 export {
-	Hero,
-	Navbar,
-	About,
-	Tech,
-	Experience,
-	Works,
-	Feedbacks,
-	Contact,
-	StarsCanvas
+  Hero,
+  Navbar,
+  About,
+  Tech,
+  Experience,
+  Works,
+  Feedbacks,
+  Contact,
+  StarsCanvas,
 };
