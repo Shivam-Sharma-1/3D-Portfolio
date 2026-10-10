@@ -90,7 +90,7 @@ function About() {
           ))}
         </div>
         <Link
-          href="document/Shivam_Sharma_Resume.pdf"
+          href="https://drive.google.com/drive/u/1/folders/1Pi_Hkj-JR4wmG3fyulMqThBZlW6Qz9m_"
           target="_blank"
           rel="noreferrer"
           className="w-fit"
